@@ -1,0 +1,35 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Construtora'
+  ClientHeight = 627
+  ClientWidth = 954
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SplitView1: TSplitView
+    Left = 0
+    Top = 0
+    Width = 200
+    Height = 627
+    OpenedWidth = 200
+    Placement = svpLeft
+    TabOrder = 0
+    ExplicitLeft = 200
+    ExplicitTop = 328
+    ExplicitHeight = 41
+  end
+  object MainMenu1: TMainMenu
+    Left = 520
+    Top = 520
+  end
+end
