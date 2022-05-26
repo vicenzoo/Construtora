@@ -209,5 +209,10 @@ namespace Construtora
                 conn.Close();
             }
         }
+
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

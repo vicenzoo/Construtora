@@ -34,6 +34,14 @@ namespace Construtora
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pecas));
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cODPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRICAOPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vALORUNIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pECABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +63,12 @@ namespace Construtora
             this.label14 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -74,24 +88,12 @@ namespace Construtora
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pECABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
-            this.cODPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESCRICAOPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vALORUNIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.construtoraDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pECATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.PECATableAdapter();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -100,8 +102,6 @@ namespace Construtora
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +138,61 @@ namespace Construtora
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(557, 481);
             this.dataGridView1.TabIndex = 12;
+            // 
+            // cODPECADataGridViewTextBoxColumn
+            // 
+            this.cODPECADataGridViewTextBoxColumn.DataPropertyName = "CODPECA";
+            this.cODPECADataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.cODPECADataGridViewTextBoxColumn.Name = "cODPECADataGridViewTextBoxColumn";
+            this.cODPECADataGridViewTextBoxColumn.ReadOnly = true;
+            this.cODPECADataGridViewTextBoxColumn.Width = 50;
+            // 
+            // dESCRICAOPECADataGridViewTextBoxColumn
+            // 
+            this.dESCRICAOPECADataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO_PECA";
+            this.dESCRICAOPECADataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.dESCRICAOPECADataGridViewTextBoxColumn.Name = "dESCRICAOPECADataGridViewTextBoxColumn";
+            this.dESCRICAOPECADataGridViewTextBoxColumn.ReadOnly = true;
+            this.dESCRICAOPECADataGridViewTextBoxColumn.Width = 150;
+            // 
+            // qUANTIDADEDataGridViewTextBoxColumn
+            // 
+            this.qUANTIDADEDataGridViewTextBoxColumn.DataPropertyName = "QUANTIDADE";
+            this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "Qnt";
+            this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
+            this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.qUANTIDADEDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // vALORUNIDADEDataGridViewTextBoxColumn
+            // 
+            this.vALORUNIDADEDataGridViewTextBoxColumn.DataPropertyName = "VALOR_UNIDADE";
+            this.vALORUNIDADEDataGridViewTextBoxColumn.HeaderText = "Valor Unidade";
+            this.vALORUNIDADEDataGridViewTextBoxColumn.Name = "vALORUNIDADEDataGridViewTextBoxColumn";
+            this.vALORUNIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cUSTOPRODUCAODataGridViewTextBoxColumn
+            // 
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.DataPropertyName = "CUSTO_PRODUCAO";
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.HeaderText = "Valor Produção";
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.Name = "cUSTOPRODUCAODataGridViewTextBoxColumn";
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pROJCUSTOMAOOBRADataGridViewTextBoxColumn
+            // 
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.HeaderText = "Proj Mão Obra";
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.Name = "pROJCUSTOMAOOBRADataGridViewTextBoxColumn";
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pECABindingSource
+            // 
+            this.pECABindingSource.DataMember = "PECA";
+            this.pECABindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // construtoraDataSet
+            // 
+            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
+            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -357,8 +412,55 @@ namespace Construtora
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(537, 206);
             this.dataGridView2.TabIndex = 13;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODPECA";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCRICAO_PECA";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "QUANTIDADE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Qnt";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "VALOR_UNIDADE";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Valor Unidade";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "CUSTO_PRODUCAO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor Produção";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Proj Mão Obra";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // panel5
             // 
@@ -561,106 +663,6 @@ namespace Construtora
             this.panel1.Size = new System.Drawing.Size(261, 481);
             this.panel1.TabIndex = 3;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODPECA";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCRICAO_PECA";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "QUANTIDADE";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Qnt";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "VALOR_UNIDADE";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Valor Unidade";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "CUSTO_PRODUCAO";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor Produção";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Proj Mão Obra";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // pECABindingSource
-            // 
-            this.pECABindingSource.DataMember = "PECA";
-            this.pECABindingSource.DataSource = this.construtoraDataSet;
-            // 
-            // construtoraDataSet
-            // 
-            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
-            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cODPECADataGridViewTextBoxColumn
-            // 
-            this.cODPECADataGridViewTextBoxColumn.DataPropertyName = "CODPECA";
-            this.cODPECADataGridViewTextBoxColumn.HeaderText = "Cod";
-            this.cODPECADataGridViewTextBoxColumn.Name = "cODPECADataGridViewTextBoxColumn";
-            this.cODPECADataGridViewTextBoxColumn.ReadOnly = true;
-            this.cODPECADataGridViewTextBoxColumn.Width = 50;
-            // 
-            // dESCRICAOPECADataGridViewTextBoxColumn
-            // 
-            this.dESCRICAOPECADataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO_PECA";
-            this.dESCRICAOPECADataGridViewTextBoxColumn.HeaderText = "Descrição";
-            this.dESCRICAOPECADataGridViewTextBoxColumn.Name = "dESCRICAOPECADataGridViewTextBoxColumn";
-            this.dESCRICAOPECADataGridViewTextBoxColumn.ReadOnly = true;
-            this.dESCRICAOPECADataGridViewTextBoxColumn.Width = 150;
-            // 
-            // qUANTIDADEDataGridViewTextBoxColumn
-            // 
-            this.qUANTIDADEDataGridViewTextBoxColumn.DataPropertyName = "QUANTIDADE";
-            this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "Qnt";
-            this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
-            this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qUANTIDADEDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // vALORUNIDADEDataGridViewTextBoxColumn
-            // 
-            this.vALORUNIDADEDataGridViewTextBoxColumn.DataPropertyName = "VALOR_UNIDADE";
-            this.vALORUNIDADEDataGridViewTextBoxColumn.HeaderText = "Valor Unidade";
-            this.vALORUNIDADEDataGridViewTextBoxColumn.Name = "vALORUNIDADEDataGridViewTextBoxColumn";
-            this.vALORUNIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cUSTOPRODUCAODataGridViewTextBoxColumn
-            // 
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.DataPropertyName = "CUSTO_PRODUCAO";
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.HeaderText = "Valor Produção";
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.Name = "cUSTOPRODUCAODataGridViewTextBoxColumn";
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pROJCUSTOMAOOBRADataGridViewTextBoxColumn
-            // 
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.HeaderText = "Proj Mão Obra";
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.Name = "pROJCUSTOMAOOBRADataGridViewTextBoxColumn";
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // construtoraDataSetBindingSource
             // 
             this.construtoraDataSetBindingSource.DataSource = this.construtoraDataSet;
@@ -686,6 +688,8 @@ namespace Construtora
             this.Load += new System.EventHandler(this.Pecas_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -696,8 +700,6 @@ namespace Construtora
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
