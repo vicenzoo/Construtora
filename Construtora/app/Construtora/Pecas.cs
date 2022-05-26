@@ -175,51 +175,35 @@ namespace Construtora
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
             SqlConnection conn;
-            SqlCommand comm;
-            SqlDataReader reader;
+            SqlDataAdapter adapter;
 
             string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
             conn = new SqlConnection(connectionString);
 
-            comm = new SqlCommand(
-              "SELECT CODPECA,DESCRICAO_PECA " +
-              "FROM PECA " +
-              "WHERE DESCRICAO_PECA LIKE @PECA", conn);
-
-            comm.Parameters.Add("@PECA", System.Data.SqlDbType.NVarChar);
-            comm.Parameters["@PECA"].Value = textBox2.Text;
             try
             {
-                try
-                {
-                    conn.Open();
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                try
-                {
+                conn.Open();
+                adapter = new SqlDataAdapter(
+                "SELECT CODPECA,DESCRICAO_PECA,QUANTIDADE,VALOR_UNIDADE,CUSTO_PRODUCAO,PROJ_CUSTO_MAO_OBRA " +
+                "FROM PECA " +
+                "WHERE DESCRICAO_PECA like '%" + textBox2.Text + "%'", conn);
 
-                    reader = comm.ExecuteReader();
+                DataSet table = new DataSet();
+                SqlCommandBuilder cmd = new SqlCommandBuilder(adapter);
+                adapter.Fill(table);
+                dataGridView2.DataSource = table.Tables[0];
 
-                    if (reader.Read())
-                    {
-                        int codpeca = Convert.ToInt32(reader["CODUSER"].ToString());
-                    }
-                    reader.Close();
 
-                }
-
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message, "Erro ao Achar Peça no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
             }
-            catch (Exception error) { }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             finally
             {
                 conn.Close();

@@ -50,35 +50,13 @@ namespace Construtora
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pECABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
-            this.cODPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESCRICAOPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vALORUNIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.construtoraDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pECATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.PECATableAdapter();
             this.label16 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -90,20 +68,41 @@ namespace Construtora
             this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pECABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
+            this.cODPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRICAOPECADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vALORUNIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.construtoraDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pECATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.PECATableAdapter();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -300,70 +299,6 @@ namespace Construtora
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro";
             // 
-            // pECABindingSource
-            // 
-            this.pECABindingSource.DataMember = "PECA";
-            this.pECABindingSource.DataSource = this.construtoraDataSet;
-            // 
-            // construtoraDataSet
-            // 
-            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
-            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cODPECADataGridViewTextBoxColumn
-            // 
-            this.cODPECADataGridViewTextBoxColumn.DataPropertyName = "CODPECA";
-            this.cODPECADataGridViewTextBoxColumn.HeaderText = "Cod";
-            this.cODPECADataGridViewTextBoxColumn.Name = "cODPECADataGridViewTextBoxColumn";
-            this.cODPECADataGridViewTextBoxColumn.ReadOnly = true;
-            this.cODPECADataGridViewTextBoxColumn.Width = 50;
-            // 
-            // dESCRICAOPECADataGridViewTextBoxColumn
-            // 
-            this.dESCRICAOPECADataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO_PECA";
-            this.dESCRICAOPECADataGridViewTextBoxColumn.HeaderText = "Descrição";
-            this.dESCRICAOPECADataGridViewTextBoxColumn.Name = "dESCRICAOPECADataGridViewTextBoxColumn";
-            this.dESCRICAOPECADataGridViewTextBoxColumn.ReadOnly = true;
-            this.dESCRICAOPECADataGridViewTextBoxColumn.Width = 150;
-            // 
-            // qUANTIDADEDataGridViewTextBoxColumn
-            // 
-            this.qUANTIDADEDataGridViewTextBoxColumn.DataPropertyName = "QUANTIDADE";
-            this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "Qnt";
-            this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
-            this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qUANTIDADEDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // vALORUNIDADEDataGridViewTextBoxColumn
-            // 
-            this.vALORUNIDADEDataGridViewTextBoxColumn.DataPropertyName = "VALOR_UNIDADE";
-            this.vALORUNIDADEDataGridViewTextBoxColumn.HeaderText = "Valor Unidade";
-            this.vALORUNIDADEDataGridViewTextBoxColumn.Name = "vALORUNIDADEDataGridViewTextBoxColumn";
-            this.vALORUNIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cUSTOPRODUCAODataGridViewTextBoxColumn
-            // 
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.DataPropertyName = "CUSTO_PRODUCAO";
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.HeaderText = "Valor Produção";
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.Name = "cUSTOPRODUCAODataGridViewTextBoxColumn";
-            this.cUSTOPRODUCAODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pROJCUSTOMAOOBRADataGridViewTextBoxColumn
-            // 
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.HeaderText = "Proj Mão Obra";
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.Name = "pROJCUSTOMAOOBRADataGridViewTextBoxColumn";
-            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // construtoraDataSetBindingSource
-            // 
-            this.construtoraDataSetBindingSource.DataSource = this.construtoraDataSet;
-            this.construtoraDataSetBindingSource.Position = 0;
-            // 
-            // pECATableAdapter
-            // 
-            this.pECATableAdapter.ClearBeforeFill = true;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -397,10 +332,11 @@ namespace Construtora
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(76, 257);
+            this.textBox2.Location = new System.Drawing.Point(76, 46);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 20);
+            this.textBox2.Size = new System.Drawing.Size(235, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // dataGridView2
             // 
@@ -417,67 +353,12 @@ namespace Construtora
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.dataGridView2.DataSource = this.pECABindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(9, 45);
+            this.dataGridView2.Location = new System.Drawing.Point(8, 71);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(537, 206);
             this.dataGridView2.TabIndex = 13;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Proj Mão Obra";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "CUSTO_PRODUCAO";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Valor Produção";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "VALOR_UNIDADE";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Valor Unidade";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "QUANTIDADE";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Qnt";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCRICAO_PECA";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODPECA";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(341, 256);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Buscar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel5
             // 
@@ -494,7 +375,6 @@ namespace Construtora
             this.panel5.Controls.Add(this.maskedTextBox6);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.textBox3);
-            this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.dataGridView2);
             this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.label14);
@@ -506,78 +386,16 @@ namespace Construtora
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(557, 481);
             this.panel5.TabIndex = 17;
+            this.panel5.Visible = false;
             // 
-            // panel2
+            // label17
             // 
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(261, 165);
-            this.panel2.TabIndex = 12;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 165);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(261, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 188);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(261, 21);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Novo";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.Location = new System.Drawing.Point(0, 209);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(261, 21);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Editar";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 481);
-            this.panel1.TabIndex = 3;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 49);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 13);
+            this.label17.TabIndex = 27;
+            this.label17.Text = "Buscar:";
             // 
             // numericUpDown2
             // 
@@ -671,14 +489,186 @@ namespace Construtora
             this.textBox3.Size = new System.Drawing.Size(156, 20);
             this.textBox3.TabIndex = 16;
             // 
-            // label17
+            // panel2
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 260);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 13);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "Peça:";
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(261, 165);
+            this.panel2.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(261, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 165);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(261, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Consultar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Location = new System.Drawing.Point(0, 188);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(261, 21);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Novo";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.Location = new System.Drawing.Point(0, 209);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(261, 21);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Editar";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(261, 481);
+            this.panel1.TabIndex = 3;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODPECA";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCRICAO_PECA";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "QUANTIDADE";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Qnt";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "VALOR_UNIDADE";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Valor Unidade";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "CUSTO_PRODUCAO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Valor Produção";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Proj Mão Obra";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // pECABindingSource
+            // 
+            this.pECABindingSource.DataMember = "PECA";
+            this.pECABindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // construtoraDataSet
+            // 
+            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
+            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cODPECADataGridViewTextBoxColumn
+            // 
+            this.cODPECADataGridViewTextBoxColumn.DataPropertyName = "CODPECA";
+            this.cODPECADataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.cODPECADataGridViewTextBoxColumn.Name = "cODPECADataGridViewTextBoxColumn";
+            this.cODPECADataGridViewTextBoxColumn.ReadOnly = true;
+            this.cODPECADataGridViewTextBoxColumn.Width = 50;
+            // 
+            // dESCRICAOPECADataGridViewTextBoxColumn
+            // 
+            this.dESCRICAOPECADataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO_PECA";
+            this.dESCRICAOPECADataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.dESCRICAOPECADataGridViewTextBoxColumn.Name = "dESCRICAOPECADataGridViewTextBoxColumn";
+            this.dESCRICAOPECADataGridViewTextBoxColumn.ReadOnly = true;
+            this.dESCRICAOPECADataGridViewTextBoxColumn.Width = 150;
+            // 
+            // qUANTIDADEDataGridViewTextBoxColumn
+            // 
+            this.qUANTIDADEDataGridViewTextBoxColumn.DataPropertyName = "QUANTIDADE";
+            this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "Qnt";
+            this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
+            this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.qUANTIDADEDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // vALORUNIDADEDataGridViewTextBoxColumn
+            // 
+            this.vALORUNIDADEDataGridViewTextBoxColumn.DataPropertyName = "VALOR_UNIDADE";
+            this.vALORUNIDADEDataGridViewTextBoxColumn.HeaderText = "Valor Unidade";
+            this.vALORUNIDADEDataGridViewTextBoxColumn.Name = "vALORUNIDADEDataGridViewTextBoxColumn";
+            this.vALORUNIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cUSTOPRODUCAODataGridViewTextBoxColumn
+            // 
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.DataPropertyName = "CUSTO_PRODUCAO";
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.HeaderText = "Valor Produção";
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.Name = "cUSTOPRODUCAODataGridViewTextBoxColumn";
+            this.cUSTOPRODUCAODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pROJCUSTOMAOOBRADataGridViewTextBoxColumn
+            // 
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.DataPropertyName = "PROJ_CUSTO_MAO_OBRA";
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.HeaderText = "Proj Mão Obra";
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.Name = "pROJCUSTOMAOOBRADataGridViewTextBoxColumn";
+            this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // construtoraDataSetBindingSource
+            // 
+            this.construtoraDataSetBindingSource.DataSource = this.construtoraDataSet;
+            this.construtoraDataSetBindingSource.Position = 0;
+            // 
+            // pECATableAdapter
+            // 
+            this.pECATableAdapter.ClearBeforeFill = true;
             // 
             // Pecas
             // 
@@ -699,16 +689,16 @@ namespace Construtora
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -755,7 +745,6 @@ namespace Construtora
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label9;
