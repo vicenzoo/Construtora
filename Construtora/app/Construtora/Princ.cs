@@ -24,5 +24,13 @@ namespace Construtora
 
             p1.Show();
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Equipamento e1 = new Equipamento();
+            e1.MdiParent = this;
+
+            e1.Show();
+        }
     }
 }

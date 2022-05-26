@@ -23,3 +23,18 @@ C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.csproj.CoreCom
 C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.csproj.CopyComplete
 C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.exe
 C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.pdb
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\bin\Debug\Construtora.exe.config
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\bin\Debug\Construtora.exe
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\bin\Debug\Construtora.pdb
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\bin\Debug\MetroSet UI.dll
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.csproj.AssemblyReference.cache
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.csproj.SuggestedBindingRedirects.cache
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Pecas.resources
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Principal.resources
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Properties.Resources.resources
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.csproj.GenerateResource.cache
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.csproj.CoreCompileInputs.cache
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.csproj.CopyComplete
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.exe
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.pdb
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Equipamento.resources

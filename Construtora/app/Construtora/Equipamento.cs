@@ -1,5 +1,4 @@
-﻿using MetroSet_UI.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,20 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Construtora
 {
-    public partial class Pecas : Form
+    public partial class Equipamento : Form
     {
         bool newcad = false; //Variavel para Controlar Novo Cadastro (Sair Sem Salvar)
-        public Pecas()
+        public Equipamento()
         {
             InitializeComponent();
         }
 
-        private void Pecas_Load(object sender, EventArgs e)
+        private void Equipamento_Load(object sender, EventArgs e)
         {
-            this.pECATableAdapter.Fill(this.construtoraDataSet.PECA);
+            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.EQUIPAMENTO'. Você pode movê-la ou removê-la conforme necessário.
+            this.eQUIPAMENTOTableAdapter.Fill(this.construtoraDataSet.EQUIPAMENTO);
+
         }
 
         private void visiblepanel()
@@ -30,16 +30,6 @@ namespace Construtora
             //Função para deixar Painels Não visiveis
             panel3.Visible = false;
             panel4.Visible = false;
-        }
-
-        private void ClearForm()
-        {
-            //Função para Limpar Forms
-            this.textBox1.Clear();
-            this.textBox2.Clear();
-            this.maskedTextBox1.Clear();
-            this.maskedTextBox2.Clear();
-            this.maskedTextBox3.Clear();
         }
 
 
@@ -63,26 +53,14 @@ namespace Construtora
                 visiblepanel();
                 panel3.Visible = true;
             }
-
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             //Botão Novo
             visiblepanel();
             panel4.Visible = true;
             newcad = true;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //Botão Confirmar Cadastro
-            newcad = false;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //Botão Limpar Form
-            ClearForm();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
