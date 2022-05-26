@@ -1,0 +1,25 @@
+C:\Construtora2\Construtora\Construtora\bin\Debug\Construtora.exe.config
+C:\Construtora2\Construtora\Construtora\bin\Debug\Construtora.exe
+C:\Construtora2\Construtora\Construtora\bin\Debug\Construtora.pdb
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.csprojAssemblyReference.cache
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.Pecas.resources
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.Principal.resources
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.Properties.Resources.resources
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.csproj.GenerateResource.cache
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.csproj.CoreCompileInputs.cache
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.exe
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.pdb
+C:\Construtora2\Construtora\Construtora\bin\Debug\MetroSet UI.dll
+C:\Construtora2\Construtora\Construtora\obj\Debug\Construtora.csproj.CopyComplete
+C:\Construtora2\Construtora\app\Construtora\bin\Debug\Construtora.exe.config
+C:\Construtora2\Construtora\app\Construtora\bin\Debug\Construtora.exe
+C:\Construtora2\Construtora\app\Construtora\bin\Debug\Construtora.pdb
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.csprojAssemblyReference.cache
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.Pecas.resources
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.Principal.resources
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.Properties.Resources.resources
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.csproj.GenerateResource.cache
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.csproj.CoreCompileInputs.cache
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.csproj.CopyComplete
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.exe
+C:\Construtora2\Construtora\app\Construtora\obj\Debug\Construtora.pdb
