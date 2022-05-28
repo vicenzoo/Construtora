@@ -90,6 +90,7 @@ namespace Construtora
             this.panel1 = new System.Windows.Forms.Panel();
             this.construtoraDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pECATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.PECATableAdapter();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).BeginInit();
@@ -367,12 +368,13 @@ namespace Construtora
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(470, 450);
+            this.button6.Location = new System.Drawing.Point(399, 450);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(146, 23);
             this.button6.TabIndex = 1;
-            this.button6.Text = "Salvar";
+            this.button6.Text = "Confirmar Edição";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label14
             // 
@@ -415,6 +417,7 @@ namespace Construtora
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(537, 206);
             this.dataGridView2.TabIndex = 13;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
@@ -527,7 +530,6 @@ namespace Construtora
             // maskedTextBox4
             // 
             this.maskedTextBox4.Location = new System.Drawing.Point(76, 360);
-            this.maskedTextBox4.Mask = "$ 00000.00";
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox4.TabIndex = 23;
@@ -544,7 +546,6 @@ namespace Construtora
             // maskedTextBox5
             // 
             this.maskedTextBox5.Location = new System.Drawing.Point(76, 334);
-            this.maskedTextBox5.Mask = "$ 00000.00";
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox5.TabIndex = 21;
@@ -570,10 +571,10 @@ namespace Construtora
             // maskedTextBox6
             // 
             this.maskedTextBox6.Location = new System.Drawing.Point(76, 308);
-            this.maskedTextBox6.Mask = "$ 00000.00";
             this.maskedTextBox6.Name = "maskedTextBox6";
             this.maskedTextBox6.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox6.TabIndex = 18;
+            this.maskedTextBox6.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox6_MaskInputRejected);
             // 
             // label15
             // 
@@ -652,6 +653,7 @@ namespace Construtora
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -671,6 +673,17 @@ namespace Construtora
             // pECATableAdapter
             // 
             this.pECATableAdapter.ClearBeforeFill = true;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Location = new System.Drawing.Point(0, 230);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(261, 23);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Relatório";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Pecas
             // 
@@ -766,5 +779,6 @@ namespace Construtora
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button5;
     }
 }

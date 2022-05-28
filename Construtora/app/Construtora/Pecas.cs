@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Globalization;
 
 namespace Construtora
 {
     public partial class Pecas : Form
     {
         bool newcad = false; //Variavel para Controlar Novo Cadastro (Sair Sem Salvar)
+        string cod;
         public Pecas()
         {
             InitializeComponent();
@@ -213,6 +214,110 @@ namespace Construtora
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow SelectedRow = dataGridView2.Rows[index];
+            try
+            {
+                cod = SelectedRow.Cells[0].Value.ToString();
+                textBox3.Text = SelectedRow.Cells[1].Value.ToString();
+                numericUpDown2.Text = SelectedRow.Cells[2].Value.ToString();
+                decimal v1 = Convert.ToDecimal(SelectedRow.Cells[3].Value);
+                maskedTextBox6.Text = v1.ToString("C");
+                decimal v2 = Convert.ToDecimal(SelectedRow.Cells[4].Value);
+                maskedTextBox5.Text = v2.ToString("C");
+                decimal v3 = Convert.ToDecimal(SelectedRow.Cells[5].Value);
+                maskedTextBox4.Text = v3.ToString("C");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+        }
+
+        private void maskedTextBox6_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(
+              "UPDATE PECA SET DESCRICAO_PECA = @DESCRICAO_PECA,QUANTIDADE = @QUANTIDADE,VALOR_UNIDADE = @VALOR_UNIDADE,CUSTO_PRODUCAO = @CUSTO_PRODUCAO,PROJ_CUSTO_MAO_OBRA = @PROJ_CUSTO_MAO_OBRA " +
+              "WHERE CODPECA = @CODPECA", conn);
+            try
+            {
+                comm.Parameters.Add("@CODPECA", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODPECA"].Value = Convert.ToInt32(cod);
+            }
+            catch
+            {
+                MessageBox.Show("Codigo Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            comm.Parameters.Add("@DESCRICAO_PECA", System.Data.SqlDbType.NVarChar);
+            comm.Parameters["@DESCRICAO_PECA"].Value = textBox3.Text;
+
+            comm.Parameters.Add("@QUANTIDADE", System.Data.SqlDbType.SmallInt);
+            comm.Parameters["@QUANTIDADE"].Value = numericUpDown2.Text;
+
+            comm.Parameters.Add("@VALOR_UNIDADE", System.Data.SqlDbType.Money);
+            comm.Parameters["@VALOR_UNIDADE"].Value = maskedTextBox6.Text;
+
+            comm.Parameters.Add("@CUSTO_PRODUCAO", System.Data.SqlDbType.Money);
+            comm.Parameters["@CUSTO_PRODUCAO"].Value = maskedTextBox5.Text;
+
+            comm.Parameters.Add("@PROJ_CUSTO_MAO_OBRA", System.Data.SqlDbType.Money);
+            comm.Parameters["@PROJ_CUSTO_MAO_OBRA"].Value = maskedTextBox6.Text;
+
+
+            try
+            {
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                     comm.ExecuteNonQuery();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception error) { }
+            finally
+            {
+                conn.Close();
+
+                MessageBox.Show("Registro Alterado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.pECATableAdapter.Fill(this.construtoraDataSet.PECA);
+            }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            FRelPecas r1 = new FRelPecas();
+            r1.Show();
         }
     }
 }
