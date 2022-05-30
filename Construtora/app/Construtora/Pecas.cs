@@ -1,5 +1,4 @@
-﻿using MetroSet_UI.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -160,11 +159,14 @@ namespace Construtora
             {
                 panel1.Width = 50;
                 button1.Text = "Cons.";
+                button5.Text = "Rel.";
+
             }
             else
             {
                 panel1.Width = 261;
                 button1.Text = "Consultar";
+                button5.Text = "Relatório";
             }
         }
         private void Button4_Click(object sender, EventArgs e)

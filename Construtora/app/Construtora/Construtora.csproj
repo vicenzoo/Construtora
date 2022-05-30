@@ -70,6 +70,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConstrutoraDataSet.cs">
+      <DependentUpon>ConstrutoraDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConstrutoraDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +83,18 @@
     </Compile>
     <Compile Include="Equipamento.Designer.cs">
       <DependentUpon>Equipamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRelEquip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRelEquip.Designer.cs">
+      <DependentUpon>FRelEquip.cs</DependentUpon>
     </Compile>
     <Compile Include="FRelPecas.cs">
       <SubType>Form</SubType>
@@ -105,6 +120,12 @@
     <EmbeddedResource Include="Equipamento.resx">
       <DependentUpon>Equipamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRelEquip.resx">
+      <DependentUpon>FRelEquip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRelPecas.resx">
       <DependentUpon>FRelPecas.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +144,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rel\RelEquip.rdlc" />
     <EmbeddedResource Include="Rel\RelPeca.rdlc" />
     <None Include="ConstrutoraDataSet.xsc">
       <DependentUpon>ConstrutoraDataSet.xsd</DependentUpon>

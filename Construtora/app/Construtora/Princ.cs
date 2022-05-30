@@ -32,5 +32,13 @@ namespace Construtora
 
             e1.Show();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Estoque es1 = new Estoque();
+            es1.MdiParent = this;
+
+            es1.Show();
+        }
     }
 }
