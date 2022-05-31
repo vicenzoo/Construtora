@@ -189,3 +189,4 @@ C:\Construtora-main\Construtora-main\Construtora\app\Construtora\bin\Debug\zh-CH
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.FRelPecas.resources
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.FRelEquip.resources
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Estoque.resources
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Venda.resources
