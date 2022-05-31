@@ -51,7 +51,9 @@
             this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.eSTOQUETableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.ESTOQUETableAdapter();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cUSTOVENDABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -78,10 +80,8 @@
             this.eSTOQUEBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pECATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.PECATableAdapter();
             this.eQUIPAMENTOTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.EQUIPAMENTOTableAdapter();
-            this.cUSTOVENDABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cUSTO_VENDATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.CUSTO_VENDATableAdapter();
             this.cUSTOVENDABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -97,7 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,6 +146,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Novo";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -157,6 +158,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -319,6 +321,15 @@
             this.panel4.TabIndex = 20;
             this.panel4.Visible = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(212, 342);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Venda:";
+            // 
             // comboBox3
             // 
             this.comboBox3.DataSource = this.cUSTOVENDABindingSource;
@@ -328,6 +339,11 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(155, 21);
             this.comboBox3.TabIndex = 30;
+            // 
+            // cUSTOVENDABindingSource
+            // 
+            this.cUSTOVENDABindingSource.DataMember = "CUSTO_VENDA";
+            this.cUSTOVENDABindingSource.DataSource = this.construtoraDataSet;
             // 
             // checkedListBox1
             // 
@@ -497,7 +513,6 @@
             this.label3.Size = new System.Drawing.Size(242, 37);
             this.label3.TabIndex = 5;
             this.label3.Text = "Movimento Estoque";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -550,11 +565,6 @@
             // 
             this.eQUIPAMENTOTableAdapter.ClearBeforeFill = true;
             // 
-            // cUSTOVENDABindingSource
-            // 
-            this.cUSTOVENDABindingSource.DataMember = "CUSTO_VENDA";
-            this.cUSTOVENDABindingSource.DataSource = this.construtoraDataSet;
-            // 
             // cUSTO_VENDATableAdapter
             // 
             this.cUSTO_VENDATableAdapter.ClearBeforeFill = true;
@@ -563,15 +573,6 @@
             // 
             this.cUSTOVENDABindingSource1.DataMember = "CUSTO_VENDA";
             this.cUSTOVENDABindingSource1.DataSource = this.construtoraDataSet;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(212, 342);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 13);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "Venda:";
             // 
             // Estoque
             // 
@@ -595,6 +596,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -604,7 +606,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.eQUIPAMENTOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource1)).EndInit();
             this.ResumeLayout(false);
 

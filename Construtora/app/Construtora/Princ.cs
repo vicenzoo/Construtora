@@ -40,5 +40,13 @@ namespace Construtora
 
             es1.Show();
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Venda v1 = new Venda();
+            v1.MdiParent = this;
+
+            v1.Show();
+        }
     }
 }

@@ -16,5 +16,12 @@ namespace Construtora
         {
             InitializeComponent();
         }
+
+        private void Venda_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.CUSTO_VENDA'. Você pode movê-la ou removê-la conforme necessário.
+            this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
+
+        }
     }
 }

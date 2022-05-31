@@ -33,8 +33,8 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.construtoraDataSet1 = new Construtora.ConstrutoraDataSet();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.construtoraDataSet1 = new Construtora.ConstrutoraDataSet();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet1)).BeginInit();
             this.SuspendLayout();
@@ -43,9 +43,9 @@
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
             this.toolStripButton2,
             this.toolStripButton1,
-            this.toolStripButton3,
             this.toolStripButton4});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -80,15 +80,10 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(41, 35);
-            this.toolStripButton3.Text = "Peças";
+            this.toolStripButton3.Size = new System.Drawing.Size(43, 35);
+            this.toolStripButton3.Text = "Estoq.";
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // construtoraDataSet1
-            // 
-            this.construtoraDataSet1.DataSetName = "ConstrutoraDataSet";
-            this.construtoraDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // toolStripButton4
             // 
@@ -98,6 +93,12 @@
             this.toolStripButton4.Size = new System.Drawing.Size(43, 35);
             this.toolStripButton4.Text = "Venda";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // construtoraDataSet1
+            // 
+            this.construtoraDataSet1.DataSetName = "ConstrutoraDataSet";
+            this.construtoraDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Principal
             // 

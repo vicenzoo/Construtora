@@ -357,6 +357,7 @@ namespace Construtora
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(537, 206);
             this.dataGridView2.TabIndex = 13;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -409,6 +410,7 @@ namespace Construtora
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(235, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label14
             // 
@@ -429,6 +431,7 @@ namespace Construtora
             this.button6.TabIndex = 1;
             this.button6.Text = "Confirmar Edição";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label16
             // 
@@ -578,6 +581,7 @@ namespace Construtora
             this.button4.TabIndex = 2;
             this.button4.Text = "Limpar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button3
             // 
@@ -587,6 +591,7 @@ namespace Construtora
             this.button3.TabIndex = 1;
             this.button3.Text = "Salvar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 

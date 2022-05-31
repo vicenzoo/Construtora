@@ -51,9 +51,16 @@ namespace Construtora
            // this.maskedTextBox3.Clear();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            visiblepanel();
+            panel3.Visible = true;
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            visiblepanel();
+            panel4.Visible = true;
         }
     }
 }

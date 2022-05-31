@@ -4,4 +4,9 @@
 
 namespace Construtora
 {
+}namespace Construtora {
+    
+    
+    public partial class ConstrutoraDataSet {
+    }
 }
