@@ -1,1 +1,7 @@
-﻿
+﻿namespace Construtora
+{
+}
+
+namespace Construtora
+{
+}

@@ -117,6 +117,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venda.Designer.cs">
+      <DependentUpon>Venda.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Equipamento.resx">
       <DependentUpon>Equipamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
     </Compile>
     <EmbeddedResource Include="Rel\RelEquip.rdlc" />
     <EmbeddedResource Include="Rel\RelPeca.rdlc" />
+    <EmbeddedResource Include="Venda.resx">
+      <DependentUpon>Venda.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ConstrutoraDataSet.xsc">
       <DependentUpon>ConstrutoraDataSet.xsd</DependentUpon>
     </None>
