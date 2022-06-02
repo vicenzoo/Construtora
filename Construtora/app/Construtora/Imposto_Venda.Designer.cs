@@ -33,18 +33,18 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.cODIMPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMPOSTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMPOSTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.label14 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
-            this.iMPOSTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iMPOSTOTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.IMPOSTOTableAdapter();
-            this.cODIMPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iMPOSTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMPOSTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -96,8 +96,32 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(537, 206);
+            this.dataGridView2.Size = new System.Drawing.Size(245, 206);
             this.dataGridView2.TabIndex = 13;
+            // 
+            // cODIMPDataGridViewTextBoxColumn
+            // 
+            this.cODIMPDataGridViewTextBoxColumn.DataPropertyName = "CODIMP";
+            this.cODIMPDataGridViewTextBoxColumn.HeaderText = "CODIMP";
+            this.cODIMPDataGridViewTextBoxColumn.Name = "cODIMPDataGridViewTextBoxColumn";
+            this.cODIMPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iMPOSTODataGridViewTextBoxColumn
+            // 
+            this.iMPOSTODataGridViewTextBoxColumn.DataPropertyName = "IMPOSTO";
+            this.iMPOSTODataGridViewTextBoxColumn.HeaderText = "IMPOSTO";
+            this.iMPOSTODataGridViewTextBoxColumn.Name = "iMPOSTODataGridViewTextBoxColumn";
+            this.iMPOSTODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iMPOSTOBindingSource
+            // 
+            this.iMPOSTOBindingSource.DataMember = "IMPOSTO";
+            this.iMPOSTOBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // construtoraDataSet
+            // 
+            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
+            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label14
             // 
@@ -130,33 +154,9 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Adicionar";
             // 
-            // construtoraDataSet
-            // 
-            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
-            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // iMPOSTOBindingSource
-            // 
-            this.iMPOSTOBindingSource.DataMember = "IMPOSTO";
-            this.iMPOSTOBindingSource.DataSource = this.construtoraDataSet;
-            // 
             // iMPOSTOTableAdapter
             // 
             this.iMPOSTOTableAdapter.ClearBeforeFill = true;
-            // 
-            // cODIMPDataGridViewTextBoxColumn
-            // 
-            this.cODIMPDataGridViewTextBoxColumn.DataPropertyName = "CODIMP";
-            this.cODIMPDataGridViewTextBoxColumn.HeaderText = "CODIMP";
-            this.cODIMPDataGridViewTextBoxColumn.Name = "cODIMPDataGridViewTextBoxColumn";
-            this.cODIMPDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iMPOSTODataGridViewTextBoxColumn
-            // 
-            this.iMPOSTODataGridViewTextBoxColumn.DataPropertyName = "IMPOSTO";
-            this.iMPOSTODataGridViewTextBoxColumn.HeaderText = "IMPOSTO";
-            this.iMPOSTODataGridViewTextBoxColumn.Name = "iMPOSTODataGridViewTextBoxColumn";
-            this.iMPOSTODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Imposto_Venda
             // 
@@ -170,8 +170,8 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMPOSTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
