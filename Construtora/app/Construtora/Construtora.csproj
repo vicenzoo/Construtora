@@ -102,6 +102,18 @@
     <Compile Include="FRelPecas.Designer.cs">
       <DependentUpon>FRelPecas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Imposto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imposto.Designer.cs">
+      <DependentUpon>Imposto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imposto_Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imposto_Venda.Designer.cs">
+      <DependentUpon>Imposto_Venda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pecas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRelPecas.resx">
       <DependentUpon>FRelPecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imposto.resx">
+      <DependentUpon>Imposto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imposto_Venda.resx">
+      <DependentUpon>Imposto_Venda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pecas.resx">
       <DependentUpon>Pecas.cs</DependentUpon>

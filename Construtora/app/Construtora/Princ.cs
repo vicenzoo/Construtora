@@ -48,5 +48,13 @@ namespace Construtora
 
             v1.Show();
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Imposto i1 = new Imposto();
+            i1.MdiParent = this;
+
+            i1.Show();
+        }
     }
 }
