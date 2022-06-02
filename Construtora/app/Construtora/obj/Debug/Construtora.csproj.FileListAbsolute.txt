@@ -190,3 +190,8 @@ C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Const
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.FRelEquip.resources
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Estoque.resources
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Venda.resources
+C:\Construtora2\Construtora\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Estoque.resources
+C:\Construtora2\Construtora\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.FRelEquip.resources
+C:\Construtora2\Construtora\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Imposto.resources
+C:\Construtora2\Construtora\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Venda.resources
+C:\Construtora2\Construtora\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Imposto_Venda.resources
