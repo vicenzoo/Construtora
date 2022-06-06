@@ -305,18 +305,22 @@ namespace Construtora
                 if (SelectedRow.Cells[8].Value.ToString() == "")
                 {
                     comboBox5.Enabled = false;
+                    comboBox5.SelectedIndex = -1;
                 }
                 else
                 {
                     comboBox5.Enabled = true;
+                    comboBox5.SelectedValue = SelectedRow.Cells[8].Value.ToString();
                 }
                 if (SelectedRow.Cells[9].Value.ToString() == "")
                 {
                     comboBox6.Enabled = false;
+                    comboBox6.SelectedIndex = -1;
                 }
                 else
                 {
                     comboBox6.Enabled = true;
+                    comboBox6.SelectedValue = SelectedRow.Cells[9].Value.ToString();
                 }
                 comboBox4.SelectedValue = SelectedRow.Cells[10].Value.ToString();
 
@@ -334,6 +338,162 @@ namespace Construtora
         {
             visiblepanel();
             panel5.Visible = true;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            if (comboBox5.Enabled == true) //Equipamento
+            {
+
+                comm = new SqlCommand(
+              "UPDATE ESTOQUE SET DATA_ENTRADA = @DATA_ENTRADA,QNT_ENTRADA = @QNT_ENTRADA,DATA_SAIDA = @DATA_SAIDA,QNT_SAIDA = @QNT_SAIDA,VALOR = @VALOR,COMPLEMENTO = @COMPLEMENTO,CODEQUIP = @CODEQUIP,CODVENDA = @CODVENDA " +
+              "WHERE CODESTOQUE = @CODESTOQUE", conn);
+                try
+                {
+                    comm.Parameters.Add("@CODESTOQUE", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODESTOQUE"].Value = Convert.ToInt32(cod);
+                }
+                catch
+                {
+                    MessageBox.Show("Codigo Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                comm.Parameters.Add("@DATA_ENTRADA", System.Data.SqlDbType.Date);
+                comm.Parameters["@DATA_ENTRADA"].Value = dateTimePicker4.Text;
+
+                comm.Parameters.Add("@QNT_ENTRADA", System.Data.SqlDbType.SmallInt);
+                comm.Parameters["@QNT_ENTRADA"].Value = numericUpDown4.Value;
+
+                comm.Parameters.Add("@DATA_SAIDA", System.Data.SqlDbType.Date);
+                comm.Parameters["@DATA_SAIDA"].Value = dateTimePicker3.Text;
+
+                comm.Parameters.Add("@QNT_SAIDA", System.Data.SqlDbType.SmallInt);
+                comm.Parameters["@QNT_SAIDA"].Value = numericUpDown3.Text;
+
+                comm.Parameters.Add("@VALOR", System.Data.SqlDbType.Money);
+                comm.Parameters["@VALOR"].Value = maskedTextBox2.Text;
+
+                comm.Parameters.Add("@CODEQUIP", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODEQUIP"].Value = comboBox5.SelectedValue;
+
+                comm.Parameters.Add("@CODVENDA", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODVENDA"].Value = comboBox4.SelectedValue;
+
+                comm.Parameters.Add("@COMPLEMENTO", System.Data.SqlDbType.NVarChar);
+                comm.Parameters["@COMPLEMENTO"].Value = richTextBox2.Text;
+
+
+                try
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    try
+                    {
+                        comm.ExecuteNonQuery();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (Exception error) { }
+                finally
+                {
+                    conn.Close();
+
+                    MessageBox.Show("Registro Alterado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.eSTOQUETableAdapter.Fill(this.construtoraDataSet1.ESTOQUE);
+
+
+
+                }
+            }
+            if (comboBox6.Enabled == true) //Peça
+            {
+                comm = new SqlCommand(
+                "UPDATE ESTOQUE SET DATA_ENTRADA = @DATA_ENTRADA,QNT_ENTRADA = @QNT_ENTRADA,DATA_SAIDA = @DATA_SAIDA,QNT_SAIDA = @QNT_SAIDA,VALOR = @VALOR,COMPLEMENTO = @COMPLEMENTO,CODPECA = @CODPECA,CODVENDA = @CODVENDA " +
+                "WHERE CODESTOQUE = @CODESTOQUE", conn);
+                try
+                {
+                    comm.Parameters.Add("@CODESTOQUE", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODESTOQUE"].Value = Convert.ToInt32(cod);
+                }
+                catch
+                {
+                    MessageBox.Show("Codigo Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                comm.Parameters.Add("@DATA_ENTRADA", System.Data.SqlDbType.Date);
+                comm.Parameters["@DATA_ENTRADA"].Value = dateTimePicker4.Text;
+
+                comm.Parameters.Add("@QNT_ENTRADA", System.Data.SqlDbType.SmallInt);
+                comm.Parameters["@QNT_ENTRADA"].Value = numericUpDown4.Value;
+
+                comm.Parameters.Add("@DATA_SAIDA", System.Data.SqlDbType.Date);
+                comm.Parameters["@DATA_SAIDA"].Value = dateTimePicker3.Text;
+
+                comm.Parameters.Add("@QNT_SAIDA", System.Data.SqlDbType.SmallInt);
+                comm.Parameters["@QNT_SAIDA"].Value = numericUpDown3.Text;
+
+                comm.Parameters.Add("@VALOR", System.Data.SqlDbType.Money);
+                comm.Parameters["@VALOR"].Value = maskedTextBox2.Text;
+
+                comm.Parameters.Add("@CODVENDA", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODVENDA"].Value = comboBox4.SelectedValue;
+
+                comm.Parameters.Add("@CODPECA", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODPECA"].Value = comboBox6.SelectedValue;
+
+                comm.Parameters.Add("@COMPLEMENTO", System.Data.SqlDbType.NVarChar);
+                comm.Parameters["@COMPLEMENTO"].Value = richTextBox2.Text;
+
+
+                try
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    try
+                    {
+                        comm.ExecuteNonQuery();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (Exception error) { }
+                finally
+                {
+                    conn.Close();
+
+                    MessageBox.Show("Registro Alterado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.eSTOQUETableAdapter.Fill(this.construtoraDataSet1.ESTOQUE);
+                }
+            }
         }
     }
 }
