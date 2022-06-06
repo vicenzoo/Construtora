@@ -4,9 +4,15 @@
 
 namespace Construtora
 {
-}namespace Construtora {
-    
-    
-    public partial class ConstrutoraDataSet {
+}
+namespace Construtora
+{
+
+
+    public partial class ConstrutoraDataSet
+    {
+        partial class ESTOQUEDataTable
+        {
+        }
     }
 }
