@@ -90,11 +90,23 @@
     <Compile Include="Estoque.Designer.cs">
       <DependentUpon>Estoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Financeiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro.Designer.cs">
+      <DependentUpon>Financeiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRelEquip.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRelEquip.Designer.cs">
       <DependentUpon>FRelEquip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRelEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRelEstoque.Designer.cs">
+      <DependentUpon>FRelEstoque.cs</DependentUpon>
     </Compile>
     <Compile Include="FRelPecas.cs">
       <SubType>Form</SubType>
@@ -113,6 +125,12 @@
     </Compile>
     <Compile Include="Imposto_Venda.Designer.cs">
       <DependentUpon>Imposto_Venda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Obras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obras.Designer.cs">
+      <DependentUpon>Obras.cs</DependentUpon>
     </Compile>
     <Compile Include="Pecas.cs">
       <SubType>Form</SubType>
@@ -144,6 +162,9 @@
     <EmbeddedResource Include="FRelEquip.resx">
       <DependentUpon>FRelEquip.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRelEstoque.resx">
+      <DependentUpon>FRelEstoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRelPecas.resx">
       <DependentUpon>FRelPecas.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +189,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rel\RelEstoque.rdlc" />
     <EmbeddedResource Include="Rel\RelEquip.rdlc" />
     <EmbeddedResource Include="Rel\RelPeca.rdlc" />
     <EmbeddedResource Include="Venda.resx">

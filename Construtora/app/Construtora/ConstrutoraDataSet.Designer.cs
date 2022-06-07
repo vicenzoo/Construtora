@@ -7125,12 +7125,24 @@ SELECT CODCUSTOVENDA, ORCAMENTO, CUSTO_ENG, OPER_ESCRITORIO, STATUS_VENDA, PROJ_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CODCUSTOVENDA, ORCAMENTO, CUSTO_ENG, OPER_ESCRITORIO, STATUS_VENDA, PROJ_L" +
                 "UCRO, DESCRICAO FROM CUSTO_VENDA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT CODCUSTOVENDA, ORCAMENTO, CUSTO_ENG, OPER_ESCRITORIO, STATUS_VENDA, PROJ_L" +
+                "UCRO, DESCRICAO FROM CUSTO_VENDA\r\nWHERE (STATUS_VENDA = @STATUS_VENDA)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATUS_VENDA", global::System.Data.SqlDbType.Char, 1, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_VENDA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        CODCUSTOVENDA, DESCRICAO, ORCAMENTO, CUSTO_ENG, OPER_ESCRITORIO, ST" +
+                "ATUS_VENDA, PROJ_LUCRO\r\nFROM            CUSTO_VENDA\r\nWHERE        (STATUS_VENDA " +
+                "= \'O\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7155,6 +7167,38 @@ SELECT CODCUSTOVENDA, ORCAMENTO, CUSTO_ENG, OPER_ESCRITORIO, STATUS_VENDA, PROJ_
             ConstrutoraDataSet.CUSTO_VENDADataTable dataTable = new ConstrutoraDataSet.CUSTO_VENDADataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByVendaNaoFinalizada(ConstrutoraDataSet.CUSTO_VENDADataTable dataTable, string STATUS_VENDA) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((STATUS_VENDA == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(STATUS_VENDA));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByVendaOrcada(ConstrutoraDataSet.CUSTO_VENDADataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

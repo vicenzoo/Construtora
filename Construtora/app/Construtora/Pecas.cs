@@ -175,11 +175,6 @@ namespace Construtora
             ClearForm();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             SqlConnection conn;
@@ -239,11 +234,6 @@ namespace Construtora
                 MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-        }
-
-        private void maskedTextBox6_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
 
         }
 

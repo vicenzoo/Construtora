@@ -21,8 +21,6 @@ namespace Construtora
             InitializeComponent();
         }
 
-
-
         private void Estoque_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet1.ESTOQUE'. Você pode movê-la ou removê-la conforme necessário.
@@ -494,6 +492,12 @@ namespace Construtora
                     this.eSTOQUETableAdapter.Fill(this.construtoraDataSet1.ESTOQUE);
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FRelEstoque est1 = new FRelEstoque();
+            est1.Show();
         }
     }
 }

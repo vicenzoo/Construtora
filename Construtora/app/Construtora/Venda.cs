@@ -40,14 +40,14 @@ namespace Construtora
             {
                 panel1.Width = 50;
                 button1.Text = "Cons.";
-                button5.Text = "Rel.";
+                button7.Text = "Fin.";
 
             }
             else
             {
                 panel1.Width = 261;
                 button1.Text = "Consultar";
-                button5.Text = "Relatório";
+                button7.Text = "Editar | Finalizar";
             }
         }
 
@@ -87,6 +87,23 @@ namespace Construtora
             maskedTextBox3.Clear();
             maskedTextBox4.Clear();
             richTextBox1.Clear();
+        }
+
+        private void DEnableButtons()
+        {
+            maskedTextBox5.Enabled = false;
+            maskedTextBox6.Enabled = false;
+            maskedTextBox7.Enabled = false;
+            maskedTextBox8.Enabled = false;
+            richTextBox2.Enabled = false;
+        }
+        private void EnableButtons()
+        {
+            maskedTextBox5.Enabled = true;
+            maskedTextBox6.Enabled = true;
+            maskedTextBox7.Enabled = true;
+            maskedTextBox8.Enabled = true;
+            richTextBox2.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -163,6 +180,118 @@ namespace Construtora
                 ClearForm();
                 this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            visiblepanel();
+            panel5.Visible = true;
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow SelectedRow = dataGridView2.Rows[index];
+            try
+            {
+                cod = SelectedRow.Cells[0].Value.ToString();
+                decimal v1 = Convert.ToDecimal(SelectedRow.Cells[1].Value);
+                maskedTextBox8.Text = v1.ToString("C");
+                decimal v2 = Convert.ToDecimal(SelectedRow.Cells[2].Value);
+                maskedTextBox7.Text = v2.ToString("C");
+                decimal v3 = Convert.ToDecimal(SelectedRow.Cells[3].Value);
+                maskedTextBox6.Text = v3.ToString("C");
+                if (SelectedRow.Cells[4].Value.ToString() == "O")
+                {
+                    button8.Enabled = true;
+                    EnableButtons();
+                    label12.Text = "Em orçamento";
+
+                }else
+                {
+                    button8.Enabled = false;
+                    DEnableButtons();
+                    label12.Text = "Venda Finalizada";
+                }
+                decimal v4 = Convert.ToDecimal(SelectedRow.Cells[5].Value);
+                maskedTextBox5.Text = v3.ToString("C");
+                richTextBox2.Text = SelectedRow.Cells[6].Value.ToString();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            if ((MessageBox.Show("Deseja Finalizar Orçamento ?", "Finalizar Orçamento ?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes))
+            {
+
+
+
+                SqlConnection conn;
+                SqlCommand comm;
+
+                string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+                conn = new SqlConnection(connectionString);
+
+                comm = new SqlCommand(
+                  "UPDATE CUSTO_VENDA SET STATUS_VENDA = @STATUS_VENDA " +
+                  "WHERE CODCUSTOVENDA = @CODCUSTOVENDA", conn);
+                try
+                {
+                    comm.Parameters.Add("@CODCUSTOVENDA", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODCUSTOVENDA"].Value = Convert.ToInt32(cod);
+                }
+                catch
+                {
+                    MessageBox.Show("Codigo Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                comm.Parameters.Add("@STATUS_VENDA", System.Data.SqlDbType.Char);
+                comm.Parameters["@STATUS_VENDA"].Value = "F";
+
+
+                try
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    try
+                    {
+                        comm.ExecuteNonQuery();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (Exception error) { }
+                finally
+                {
+                    conn.Close();
+
+                    MessageBox.Show("Registro Finalizado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
+                }
+            }
+            else { }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Imposto_Venda i1 = new Imposto_Venda();
+            i1.Show();
         }
     }
 }

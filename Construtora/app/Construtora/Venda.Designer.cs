@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Venda));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -75,14 +74,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -95,8 +96,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -125,16 +125,6 @@
             this.panel1.Size = new System.Drawing.Size(261, 607);
             this.panel1.TabIndex = 4;
             // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 230);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(261, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Relatório";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // button7
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -143,8 +133,9 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(261, 21);
             this.button7.TabIndex = 15;
-            this.button7.Text = "Editar";
+            this.button7.Text = "Editar | Finalizar Venda";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -225,6 +216,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(574, 607);
             this.dataGridView1.TabIndex = 12;
             // 
@@ -497,7 +489,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(387, 567);
+            this.button6.Location = new System.Drawing.Point(399, 572);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(146, 23);
             this.button6.TabIndex = 1;
@@ -551,47 +543,18 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(554, 200);
             this.dataGridView2.TabIndex = 28;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // dataGridViewTextBoxColumn7
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "DESCRICAO";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PROJ_LUCRO";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Proj. Lucro";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "STATUS_VENDA";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Status";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "OPER_ESCRITORIO";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Operação Escritorio";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CUSTO_ENG";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Custo Eng.";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 75;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODCUSTOVENDA";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -601,13 +564,44 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 75;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODCUSTOVENDA";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "CUSTO_ENG";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Custo Eng.";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "OPER_ESCRITORIO";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Operação Escritorio";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "STATUS_VENDA";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PROJ_LUCRO";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Proj. Lucro";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "DESCRICAO";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // panel5
             // 
@@ -640,10 +634,30 @@
             this.panel5.TabIndex = 23;
             this.panel5.Visible = false;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(19, 281);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(146, 23);
+            this.button9.TabIndex = 42;
+            this.button9.Text = "Cons. \\ Adicionar Imposto";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Enabled = false;
+            this.button8.Location = new System.Drawing.Point(399, 281);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(146, 23);
+            this.button8.TabIndex = 41;
+            this.button8.Text = "Finalizar Venda";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // maskedTextBox5
             // 
             this.maskedTextBox5.Location = new System.Drawing.Point(78, 424);
-            this.maskedTextBox5.Mask = "$ 00000.00";
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox5.TabIndex = 40;
@@ -670,7 +684,7 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(74, 450);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(394, 96);
+            this.richTextBox2.Size = new System.Drawing.Size(471, 96);
             this.richTextBox2.TabIndex = 37;
             this.richTextBox2.Text = "";
             // 
@@ -696,7 +710,6 @@
             // maskedTextBox6
             // 
             this.maskedTextBox6.Location = new System.Drawing.Point(78, 395);
-            this.maskedTextBox6.Mask = "$ 00000.00";
             this.maskedTextBox6.Name = "maskedTextBox6";
             this.maskedTextBox6.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox6.TabIndex = 34;
@@ -713,7 +726,6 @@
             // maskedTextBox7
             // 
             this.maskedTextBox7.Location = new System.Drawing.Point(78, 369);
-            this.maskedTextBox7.Mask = "$ 00000.00";
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox7.TabIndex = 32;
@@ -730,7 +742,6 @@
             // maskedTextBox8
             // 
             this.maskedTextBox8.Location = new System.Drawing.Point(78, 343);
-            this.maskedTextBox8.Mask = "$ 00000.00";
             this.maskedTextBox8.Name = "maskedTextBox8";
             this.maskedTextBox8.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox8.TabIndex = 30;
@@ -744,23 +755,15 @@
             this.label19.TabIndex = 29;
             this.label19.Text = "Descrição:";
             // 
-            // button8
+            // button5
             // 
-            this.button8.Location = new System.Drawing.Point(399, 281);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(146, 23);
-            this.button8.TabIndex = 41;
-            this.button8.Text = "Finalizar Venda";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(19, 281);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(146, 23);
-            this.button9.TabIndex = 42;
-            this.button9.Text = "Cons. \\ Adicionar Imposto";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Location = new System.Drawing.Point(0, 230);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(261, 23);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Relatório";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Venda
             // 
@@ -797,7 +800,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -863,5 +865,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox8;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button5;
     }
 }

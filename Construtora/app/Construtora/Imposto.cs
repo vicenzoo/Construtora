@@ -200,7 +200,7 @@ namespace Construtora
             conn = new SqlConnection(connectionString);
 
             comm = new SqlCommand(
-              "UPDATE IMPOSTO SET IMPOSTO = @IMPOSTO" +
+              "UPDATE IMPOSTO SET IMPOSTO = @IMPOSTO " +
               "WHERE CODIMP = @CODIMP", conn);
 
             comm.Parameters.Add("@CODIMP", System.Data.SqlDbType.Int);
