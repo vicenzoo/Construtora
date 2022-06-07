@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Venda));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -82,7 +81,6 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -96,7 +94,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.vENDAIMPOSTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENDA_IMPOSTOTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.VENDA_IMPOSTOTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,12 +111,14 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vENDAIMPOSTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
@@ -124,18 +128,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(261, 607);
             this.panel1.TabIndex = 4;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.Location = new System.Drawing.Point(0, 209);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(261, 21);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Editar | Finalizar Venda";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -495,6 +487,7 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Confirmar Edição";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label14
             // 
@@ -606,7 +599,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Window;
-            this.panel5.Controls.Add(this.button9);
             this.panel5.Controls.Add(this.button8);
             this.panel5.Controls.Add(this.maskedTextBox5);
             this.panel5.Controls.Add(this.label10);
@@ -634,20 +626,10 @@
             this.panel5.TabIndex = 23;
             this.panel5.Visible = false;
             // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(19, 281);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(146, 23);
-            this.button9.TabIndex = 42;
-            this.button9.Text = "Cons. \\ Adicionar Imposto";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // button8
             // 
             this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(399, 281);
+            this.button8.Location = new System.Drawing.Point(13, 572);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(146, 23);
             this.button8.TabIndex = 41;
@@ -755,15 +737,47 @@
             this.label19.TabIndex = 29;
             this.label19.Text = "Descrição:";
             // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.Location = new System.Drawing.Point(0, 209);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(261, 23);
+            this.button9.TabIndex = 43;
+            this.button9.Text = "Adicionar Imposto";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // button5
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 230);
+            this.button5.Location = new System.Drawing.Point(0, 253);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(261, 23);
-            this.button5.TabIndex = 17;
+            this.button5.TabIndex = 46;
             this.button5.Text = "Relatório";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.Location = new System.Drawing.Point(0, 232);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(261, 21);
+            this.button7.TabIndex = 45;
+            this.button7.Text = "Editar | Finalizar";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // vENDAIMPOSTOBindingSource
+            // 
+            this.vENDAIMPOSTOBindingSource.DataMember = "VENDA_IMPOSTO";
+            this.vENDAIMPOSTOBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // vENDA_IMPOSTOTableAdapter
+            // 
+            this.vENDA_IMPOSTOTableAdapter.ClearBeforeFill = true;
             // 
             // Venda
             // 
@@ -793,6 +807,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vENDAIMPOSTOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -800,7 +815,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
@@ -866,5 +880,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.BindingSource vENDAIMPOSTOBindingSource;
+        private ConstrutoraDataSetTableAdapters.VENDA_IMPOSTOTableAdapter vENDA_IMPOSTOTableAdapter;
     }
 }

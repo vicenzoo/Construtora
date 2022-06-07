@@ -22,6 +22,8 @@ namespace Construtora
 
         private void Venda_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.VENDA_IMPOSTO'. Você pode movê-la ou removê-la conforme necessário.
+            this.vENDA_IMPOSTOTableAdapter.Fill(this.construtoraDataSet.VENDA_IMPOSTO);
             // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.CUSTO_VENDA'. Você pode movê-la ou removê-la conforme necessário.
             this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
 
@@ -31,7 +33,7 @@ namespace Construtora
             //Função para deixar Painels Não visiveis
             panel3.Visible = false;
             panel4.Visible = false;
-           // panel5.Visible = false;
+            panel5.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -40,14 +42,17 @@ namespace Construtora
             {
                 panel1.Width = 50;
                 button1.Text = "Cons.";
+                button5.Text = "Rel.";
                 button7.Text = "Fin.";
-
+                button9.Text = "Imp.";
             }
             else
             {
                 panel1.Width = 261;
                 button1.Text = "Consultar";
+                button5.Text = "Relatório";
                 button7.Text = "Editar | Finalizar";
+                button9.Text = "Adicionar Imposto";
             }
         }
 
@@ -292,6 +297,75 @@ namespace Construtora
         {
             Imposto_Venda i1 = new Imposto_Venda();
             i1.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(
+              "UPDATE CUSTO_VENDA SET ORCAMENTO = @ORCAMENTO,CUSTO_ENG = @CUSTO_ENG,OPER_ESCRITORIO = @OPER_ESCRITORIO,PROJ_LUCRO = @PROJ_LUCRO,DESCRICAO = @DESCRICAO " +
+              "WHERE CODCUSTOVENDA = @CODCUSTOVENDA", conn);
+            try
+            {
+                comm.Parameters.Add("@CODCUSTOVENDA", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODCUSTOVENDA"].Value = Convert.ToInt32(cod);
+            }
+            catch
+            {
+                MessageBox.Show("Codigo Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            comm.Parameters.Add("@ORCAMENTO", System.Data.SqlDbType.Money);
+            comm.Parameters["@ORCAMENTO"].Value = maskedTextBox8.Text;
+
+            comm.Parameters.Add("@CUSTO_ENG", System.Data.SqlDbType.Money);
+            comm.Parameters["@CUSTO_ENG"].Value = maskedTextBox7.Text;
+
+            comm.Parameters.Add("@OPER_ESCRITORIO", System.Data.SqlDbType.Money);
+            comm.Parameters["@OPER_ESCRITORIO"].Value = maskedTextBox6.Text;
+
+            comm.Parameters.Add("@PROJ_LUCRO", System.Data.SqlDbType.Money);
+            comm.Parameters["@PROJ_LUCRO"].Value = maskedTextBox5.Text;
+
+            comm.Parameters.Add("@DESCRICAO", System.Data.SqlDbType.NVarChar);
+            comm.Parameters["@DESCRICAO"].Value = richTextBox2.Text;
+
+            try
+            {
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    comm.ExecuteNonQuery();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception error) { }
+            finally
+            {
+                conn.Close();
+
+                MessageBox.Show("Registro Alterado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
+            }
         }
     }
 }
