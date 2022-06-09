@@ -56,5 +56,13 @@ namespace Construtora
 
             i1.Show();
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            Obras o1 = new Obras();
+            o1.MdiParent = this;
+
+            o1.Show();
+        }
     }
 }

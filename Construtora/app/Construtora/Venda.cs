@@ -227,6 +227,17 @@ namespace Construtora
                 MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            try
+            {
+                this.vENDA_IMPOSTOTableAdapter.FillByCodVenda(this.construtoraDataSet.VENDA_IMPOSTO, Convert.ToInt32(cod));
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao tentar Buscar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
         }
 
         private void button8_Click(object sender, EventArgs e)

@@ -59,6 +59,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -114,6 +115,12 @@
     <Compile Include="FRelPecas.Designer.cs">
       <DependentUpon>FRelPecas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRelVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRelVenda.Designer.cs">
+      <DependentUpon>FRelVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imposto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,11 +175,17 @@
     <EmbeddedResource Include="FRelPecas.resx">
       <DependentUpon>FRelPecas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRelVenda.resx">
+      <DependentUpon>FRelVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imposto.resx">
       <DependentUpon>Imposto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Imposto_Venda.resx">
       <DependentUpon>Imposto_Venda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obras.resx">
+      <DependentUpon>Obras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pecas.resx">
       <DependentUpon>Pecas.cs</DependentUpon>
@@ -192,6 +205,7 @@
     <EmbeddedResource Include="Rel\RelEstoque.rdlc" />
     <EmbeddedResource Include="Rel\RelEquip.rdlc" />
     <EmbeddedResource Include="Rel\RelPeca.rdlc" />
+    <EmbeddedResource Include="Rel\RelVenda.rdlc" />
     <EmbeddedResource Include="Venda.resx">
       <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>
