@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Construtora
 {
@@ -38,6 +39,17 @@ namespace Construtora
             panel5.Visible = false;
         }
 
+        private void ClearForm()
+        {
+            //Função para Limpar Forms
+            this.maskedTextBox1.Clear();
+            this.maskedTextBox2.Clear();
+            this.maskedTextBox3.Clear();
+            this.dateTimePicker1.Value = DateTime.Today;
+            this.dateTimePicker2.Value = DateTime.Today;
+            this.dateTimePicker3.Value = DateTime.Today;
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (panel1.Width == 261)
@@ -46,6 +58,7 @@ namespace Construtora
                 button1.Text = "Cons";
                 button3.Text = "Sel.";
                 button5.Text = "Rel.";
+                button7.Text = "Fin.";
 
             }
             else
@@ -54,6 +67,7 @@ namespace Construtora
                 button1.Text = "Consultar Obra";
                 button3.Text = "Selecionar Venda";
                 button5.Text = "Relatório";
+                button7.Text = "Editar | Finalizar";
             }
         }
 
@@ -126,6 +140,88 @@ namespace Construtora
                 label4.Text = cod_venda;
                 label5.Text = venda_desc;
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Botão Confirmar Cadastro
+
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(
+            "INSERT INTO OBRA (CODVENDA,CUSTO_ESTADIA,CUSTO_DESLOCAMENTO,CUSTO_MONTAG_EXTERNA,DATA_INICIO_MONTAG,DATA_FIM_MONTAG,DATA_FIM_OBRA) " +
+            "VALUES (@CODVENDA,@CUSTO_ESTADIA,@CUSTO_DESLOCAMENTO,@CUSTO_MONTAG_EXTERNA,@DATA_INICIO_MONTAG,@DATA_FIM_MONTAG,@DATA_FIM_OBRA)"
+             , conn);
+
+                try
+                {
+
+                    comm.Parameters.Add("@CODVENDA", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODVENDA"].Value = label4.Text;
+
+                    comm.Parameters.Add("@CUSTO_ESTADIA", System.Data.SqlDbType.Money);
+                    comm.Parameters["@CUSTO_ESTADIA"].Value = maskedTextBox1.Text;
+
+                    comm.Parameters.Add("@CUSTO_DESLOCAMENTO", System.Data.SqlDbType.Money);
+                    comm.Parameters["@CUSTO_DESLOCAMENTO"].Value = maskedTextBox2.Text;
+
+                    comm.Parameters.Add("@CUSTO_MONTAG_EXTERNA", System.Data.SqlDbType.Money);
+                    comm.Parameters["@CUSTO_MONTAG_EXTERNA"].Value = maskedTextBox3.Text;
+
+                    comm.Parameters.Add("@DATA_INICIO_MONTAG", System.Data.SqlDbType.Date);
+                    comm.Parameters["@DATA_INICIO_MONTAG"].Value = dateTimePicker1.Value;
+
+                    comm.Parameters.Add("@DATA_FIM_MONTAG", System.Data.SqlDbType.Date);
+                    comm.Parameters["@DATA_FIM_MONTAG"].Value = dateTimePicker2.Value;
+
+                    comm.Parameters.Add("@DATA_FIM_OBRA", System.Data.SqlDbType.Date);
+                    comm.Parameters["@DATA_FIM_OBRA"].Value = dateTimePicker3.Value;
+
+
+            }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Campo Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    try
+                    {
+                        comm.ExecuteNonQuery();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (Exception error) { }
+                finally
+                {
+                    conn.Close();
+                    MessageBox.Show("Registro Cadastrado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearForm();
+                    this.oBRATableAdapter.Fill(this.construtoraDataSet.OBRA);
+                }
         }
     }
 }
