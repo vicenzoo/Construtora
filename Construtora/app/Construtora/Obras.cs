@@ -35,7 +35,7 @@ namespace Construtora
             //Função para deixar Painels Não visiveis
             panel3.Visible = false;
             panel4.Visible = false;
-            fillByVendaFinalizadaToolStrip.Visible = false;
+           // fillByVendaFinalizadaToolStrip.Visible = false;
             panel5.Visible = false;
         }
 
@@ -83,7 +83,8 @@ namespace Construtora
         {
             visiblepanel();
             panel4.Visible = true;
-            fillByVendaFinalizadaToolStrip.Visible = true;
+            //fillByVendaFinalizadaToolStrip.Visible = true;
+            this.cUSTO_VENDATableAdapter.FillByVendaFinalizada(this.construtoraDataSet.CUSTO_VENDA);
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -116,7 +117,7 @@ namespace Construtora
         {
             try
             {
-                this.cUSTO_VENDATableAdapter.FillByVendaFinalizada(this.construtoraDataSet.CUSTO_VENDA);
+                
             }
             catch (System.Exception ex)
             {

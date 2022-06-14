@@ -60,11 +60,11 @@
             this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STATUS_VENDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cUSTOVENDABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fillByVendaFinalizadaToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByVendaFinalizadaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.oBRATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.OBRATableAdapter();
             this.cUSTO_VENDATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.CUSTO_VENDATableAdapter();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -82,8 +82,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,11 +92,10 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).BeginInit();
-            this.fillByVendaFinalizadaToolStrip.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -357,13 +354,13 @@
             this.dESCRICAODataGridViewTextBoxColumn,
             this.STATUS_VENDA});
             this.dataGridView2.DataSource = this.cUSTOVENDABindingSource;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 57);
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(940, 423);
+            this.dataGridView2.Size = new System.Drawing.Size(940, 480);
             this.dataGridView2.TabIndex = 25;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -394,25 +391,6 @@
             // 
             this.cUSTOVENDABindingSource.DataMember = "CUSTO_VENDA";
             this.cUSTOVENDABindingSource.DataSource = this.construtoraDataSet;
-            // 
-            // fillByVendaFinalizadaToolStrip
-            // 
-            this.fillByVendaFinalizadaToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByVendaFinalizadaToolStripButton});
-            this.fillByVendaFinalizadaToolStrip.Location = new System.Drawing.Point(261, 0);
-            this.fillByVendaFinalizadaToolStrip.Name = "fillByVendaFinalizadaToolStrip";
-            this.fillByVendaFinalizadaToolStrip.Size = new System.Drawing.Size(940, 25);
-            this.fillByVendaFinalizadaToolStrip.TabIndex = 21;
-            this.fillByVendaFinalizadaToolStrip.Text = "fillByVendaFinalizadaToolStrip";
-            this.fillByVendaFinalizadaToolStrip.Visible = false;
-            // 
-            // fillByVendaFinalizadaToolStripButton
-            // 
-            this.fillByVendaFinalizadaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByVendaFinalizadaToolStripButton.Name = "fillByVendaFinalizadaToolStripButton";
-            this.fillByVendaFinalizadaToolStripButton.Size = new System.Drawing.Size(183, 22);
-            this.fillByVendaFinalizadaToolStripButton.Text = "Filtrar Apenas Vendas Finalizadas";
-            this.fillByVendaFinalizadaToolStripButton.Click += new System.EventHandler(this.fillByVendaFinalizadaToolStripButton_Click);
             // 
             // oBRATableAdapter
             // 
@@ -446,8 +424,26 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(940, 480);
-            this.panel5.TabIndex = 22;
+            this.panel5.TabIndex = 23;
             this.panel5.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateTimePicker3);
+            this.groupBox1.Location = new System.Drawing.Point(13, 394);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(147, 55);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Data Fim Obra:";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(13, 19);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(98, 20);
+            this.dateTimePicker3.TabIndex = 23;
             // 
             // groupBox3
             // 
@@ -582,7 +578,6 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "Limpar";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -592,7 +587,6 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Salvar";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -605,24 +599,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dateTimePicker3);
-            this.groupBox1.Location = new System.Drawing.Point(13, 394);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(147, 55);
-            this.groupBox1.TabIndex = 44;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Data Fim Obra:";
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(13, 19);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(98, 20);
-            this.dateTimePicker3.TabIndex = 23;
-            // 
             // Obras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -632,7 +608,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.fillByVendaFinalizadaToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Obras";
             this.Text = "Obras";
@@ -647,15 +622,12 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).EndInit();
-            this.fillByVendaFinalizadaToolStrip.ResumeLayout(false);
-            this.fillByVendaFinalizadaToolStrip.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -690,30 +662,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cODCUSTOVENDADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dESCRICAODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS_VENDA;
-        private System.Windows.Forms.ToolStrip fillByVendaFinalizadaToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByVendaFinalizadaToolStripButton;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
     }
 }
