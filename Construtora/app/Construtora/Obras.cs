@@ -13,7 +13,7 @@ namespace Construtora
 {
     public partial class Obras : Form
     {
-        string cod_obra;
+        string cod_obra_vist;
         string cod_venda;
         string venda_desc;
         public Obras()
@@ -35,8 +35,8 @@ namespace Construtora
             //Função para deixar Painels Não visiveis
             panel3.Visible = false;
             panel4.Visible = false;
-           // fillByVendaFinalizadaToolStrip.Visible = false;
             panel5.Visible = false;
+            panel6.Visible = false;
         }
 
         private void ClearForm()
@@ -58,7 +58,6 @@ namespace Construtora
                 button1.Text = "Cons";
                 button3.Text = "Sel.";
                 button5.Text = "Rel.";
-                button7.Text = "Fin.";
 
             }
             else
@@ -67,7 +66,7 @@ namespace Construtora
                 button1.Text = "Consultar Obra";
                 button3.Text = "Selecionar Venda";
                 button5.Text = "Relatório";
-                button7.Text = "Editar | Finalizar";
+                button7.Text = "Editar";
             }
         }
 
@@ -77,6 +76,7 @@ namespace Construtora
         {
             visiblepanel();
             panel3.Visible = true;
+            this.oBRATableAdapter.FillByNaoFinalizada(this.construtoraDataSet.OBRA);
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -111,19 +111,6 @@ namespace Construtora
                 MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
-
-        private void fillByVendaFinalizadaToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -223,6 +210,106 @@ namespace Construtora
                     ClearForm();
                     this.oBRATableAdapter.Fill(this.construtoraDataSet.OBRA);
                 }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            visiblepanel();
+            panel6.Visible = true;
+            this.oBRATableAdapter.FillByVistoriaObra(this.construtoraDataSet.OBRA);
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow SelectedRow = dataGridView2.Rows[index];
+
+            try
+            {
+                cod_obra_vist = SelectedRow.Cells[0].Value.ToString();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if ((MessageBox.Show("Deseja Realizar Vistoria ?", "Realizar Vistoria ?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes))
+            {
+
+
+
+                SqlConnection conn;
+                SqlCommand comm;
+
+                string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+                conn = new SqlConnection(connectionString);
+
+                comm = new SqlCommand(
+                  "UPDATE OBRA SET STATUS_VISTORIA = @STATUS_VISTORIA,DATA_VISTORIA = @DATA_VISTORIA,STATUS_OBRA =@STATUS_OBRA " +
+                  "WHERE CODOBRA = @CODOBRA", conn);
+                try
+                {
+                    comm.Parameters.Add("@CODOBRA", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODOBRA"].Value = Convert.ToInt32(cod_obra_vist);
+                }
+                catch
+                {
+                    MessageBox.Show("Codigo Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                comm.Parameters.Add("@STATUS_VISTORIA", System.Data.SqlDbType.Char);
+                comm.Parameters["@STATUS_VISTORIA"].Value = "F";
+
+                comm.Parameters.Add("@DATA_VISTORIA", System.Data.SqlDbType.Date);
+                comm.Parameters["@DATA_VISTORIA"].Value = dateTimePicker4.Value;
+
+                comm.Parameters.Add("@STATUS_OBRA", System.Data.SqlDbType.Char);
+                comm.Parameters["@STATUS_OBRA"].Value = "F";
+
+
+                try
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    try
+                    {
+                        comm.ExecuteNonQuery();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (Exception error) { }
+                finally
+                {
+                    conn.Close();
+
+                    MessageBox.Show("Registro Finalizado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.oBRATableAdapter.Fill(this.construtoraDataSet.OBRA);
+                    this.oBRATableAdapter.FillByVistoriaObra(this.construtoraDataSet.OBRA);
+                    this.oBRATableAdapter.FillByNaoFinalizada(this.construtoraDataSet.OBRA);
+                }
+            }
+            else { }
+        }
+
+        private void fillByNaoFinalizadaToolStripButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
