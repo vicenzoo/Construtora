@@ -64,5 +64,13 @@ namespace Construtora
 
             o1.Show();
         }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            Financeiro f1 = new Financeiro();
+            f1.MdiParent = this;
+
+            f1.Show();
+        }
     }
 }

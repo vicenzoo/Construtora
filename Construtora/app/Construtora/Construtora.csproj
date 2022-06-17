@@ -166,6 +166,9 @@
     <EmbeddedResource Include="Estoque.resx">
       <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro.resx">
+      <DependentUpon>Financeiro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRelEquip.resx">
       <DependentUpon>FRelEquip.cs</DependentUpon>
     </EmbeddedResource>

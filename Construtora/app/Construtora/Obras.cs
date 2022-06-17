@@ -13,6 +13,7 @@ namespace Construtora
 {
     public partial class Obras : Form
     {
+        string cod_obra;
         string cod_obra_vist;
         string cod_venda;
         string venda_desc;
@@ -37,6 +38,29 @@ namespace Construtora
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = false;
+            panel7.Visible = false;
+        }
+
+        private void denableitens()
+        {
+            //Função para Deshabilitar itens (editar)
+            this.maskedTextBox4.Enabled = false;
+            this.maskedTextBox5.Enabled = false;
+            this.maskedTextBox6.Enabled = false;
+            this.dateTimePicker5.Enabled = false;
+            this.dateTimePicker6.Enabled = false;
+            this.dateTimePicker7.Enabled = false;
+        }
+
+        private void enableitens()
+        {
+            //Função para Habilitar itens (editar)
+            this.maskedTextBox4.Enabled = true;
+            this.maskedTextBox5.Enabled = true;
+            this.maskedTextBox6.Enabled = true;
+            this.dateTimePicker5.Enabled = true;
+            this.dateTimePicker6.Enabled = true;
+            this.dateTimePicker7.Enabled = true;
         }
 
         private void ClearForm()
@@ -93,13 +117,6 @@ namespace Construtora
 
             int index = e.RowIndex;
             DataGridViewRow SelectedRow = dataGridView2.Rows[index];
-
-            if (SelectedRow.Cells[2].Value.ToString() == "O")
-            {
-                MessageBox.Show("Selecione Venda Finalizada!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
 
             try
             {
@@ -307,9 +324,115 @@ namespace Construtora
             else { }
         }
 
-        private void fillByNaoFinalizadaToolStripButton_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
+        {
+            visiblepanel();
+            panel7.Visible = true;
+        }
+
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow SelectedRow = dataGridView4.Rows[index];
+
+
+            if (SelectedRow.Cells[6].Value.ToString() == "F")
+            {
+                label13.Text = "Realizada";
+                dateTimePicker8.Text = SelectedRow.Cells[7].Value.ToString();
+                denableitens();
+            }
+            else
+            {
+                label13.Text = "Não Realizada";
+                dateTimePicker8.Value = DateTime.Today;
+                enableitens();
+            }
+
+
+
+            try
+            {
+                cod_obra = SelectedRow.Cells[0].Value.ToString();
+                maskedTextBox6.Text = SelectedRow.Cells[1].Value.ToString();
+                maskedTextBox5.Text = SelectedRow.Cells[2].Value.ToString();
+                maskedTextBox4.Text = SelectedRow.Cells[3].Value.ToString();
+                dateTimePicker7.Text = SelectedRow.Cells[4].Value.ToString();
+                dateTimePicker6.Text = SelectedRow.Cells[5].Value.ToString();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
         {
 
+
+
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(
+              "UPDATE OBRA SET CUSTO_ESTADIA = @CUSTO_ESTADIA,CUSTO_DESLOCAMENTO = @CUSTO_DESLOCAMENTO,CUSTO_MONTAG_EXTERNA = @CUSTO_MONTAG_EXTERNA,DATA_INICIO_MONTAG = @DATA_INICIO_MONTAG,DATA_FIM_MONTAG = @DATA_FIM_MONTAG,DATA_FIM_OBRA = @DATA_FIM_OBRA " +
+              "WHERE CODOBRA = @CODOBRA", conn);
+
+            comm.Parameters.Add("@CODOBRA", System.Data.SqlDbType.Int);
+            comm.Parameters["@CODOBRA"].Value = Convert.ToInt32(cod_obra);
+
+            comm.Parameters.Add("@CUSTO_ESTADIA", System.Data.SqlDbType.Money);
+            comm.Parameters["@CUSTO_ESTADIA"].Value = maskedTextBox6.Text;
+
+            comm.Parameters.Add("@CUSTO_DESLOCAMENTO", System.Data.SqlDbType.Money);
+            comm.Parameters["@CUSTO_DESLOCAMENTO"].Value = maskedTextBox5.Text;
+
+            comm.Parameters.Add("@CUSTO_MONTAG_EXTERNA", System.Data.SqlDbType.Money);
+            comm.Parameters["@CUSTO_MONTAG_EXTERNA"].Value = maskedTextBox4.Text;
+
+            comm.Parameters.Add("@DATA_INICIO_MONTAG", System.Data.SqlDbType.Date);
+            comm.Parameters["@DATA_INICIO_MONTAG"].Value = dateTimePicker7.Value;
+
+            comm.Parameters.Add("@DATA_FIM_MONTAG", System.Data.SqlDbType.Date);
+            comm.Parameters["@DATA_FIM_MONTAG"].Value = dateTimePicker6.Value;
+
+            comm.Parameters.Add("@DATA_FIM_OBRA", System.Data.SqlDbType.Date);
+            comm.Parameters["@DATA_FIM_OBRA"].Value = dateTimePicker5.Value;
+
+
+            try
+            {
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    comm.ExecuteNonQuery();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception error) { }
+            finally
+            {
+                conn.Close();
+
+                MessageBox.Show("Registro Editado!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.oBRATableAdapter.Fill(this.construtoraDataSet.OBRA);
+            }
         }
     }
 }
