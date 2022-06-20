@@ -36,8 +36,8 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.construtoraDataSet1 = new Construtora.ConstrutoraDataSet();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.construtoraDataSet1 = new Construtora.ConstrutoraDataSet();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet1)).BeginInit();
             this.SuspendLayout();
@@ -134,11 +134,6 @@
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
-            // construtoraDataSet1
-            // 
-            this.construtoraDataSet1.DataSetName = "ConstrutoraDataSet";
-            this.construtoraDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // toolStripButton7
             // 
             this.toolStripButton7.AutoSize = false;
@@ -150,6 +145,11 @@
             this.toolStripButton7.Text = "Financeiro";
             this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            // 
+            // construtoraDataSet1
+            // 
+            this.construtoraDataSet1.DataSetName = "ConstrutoraDataSet";
+            this.construtoraDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Principal
             // 

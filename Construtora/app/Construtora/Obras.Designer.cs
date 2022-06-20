@@ -96,6 +96,10 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -123,10 +127,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -146,12 +146,12 @@
             this.groupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oBRABindingSource1)).BeginInit();
-            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -819,6 +819,43 @@
             this.panel7.TabIndex = 47;
             this.panel7.Visible = false;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.dateTimePicker8);
+            this.groupBox9.Location = new System.Drawing.Point(13, 365);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(148, 55);
+            this.groupBox9.TabIndex = 55;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Data Vistoria:";
+            // 
+            // dateTimePicker8
+            // 
+            this.dateTimePicker8.Enabled = false;
+            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker8.Location = new System.Drawing.Point(14, 19);
+            this.dateTimePicker8.Name = "dateTimePicker8";
+            this.dateTimePicker8.Size = new System.Drawing.Size(98, 20);
+            this.dateTimePicker8.TabIndex = 22;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(58, 349);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "Realizada";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(11, 349);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 13);
+            this.label15.TabIndex = 57;
+            this.label15.Text = "Vistoria:";
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.dateTimePicker5);
@@ -1056,43 +1093,6 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Editar";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(58, 349);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 13);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "Realizada";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 349);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 13);
-            this.label15.TabIndex = 57;
-            this.label15.Text = "Vistoria:";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.dateTimePicker8);
-            this.groupBox9.Location = new System.Drawing.Point(13, 365);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(148, 55);
-            this.groupBox9.TabIndex = 55;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Data Vistoria:";
-            // 
-            // dateTimePicker8
-            // 
-            this.dateTimePicker8.Enabled = false;
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker8.Location = new System.Drawing.Point(14, 19);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(98, 20);
-            this.dateTimePicker8.TabIndex = 22;
-            // 
             // Obras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1130,12 +1130,12 @@
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oBRABindingSource1)).EndInit();
-            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
