@@ -50,7 +50,7 @@ namespace Construtora
             //Função para deixar Painels Não visiveis
               panel3.Visible = false;
               panel4.Visible = false;
-           // panel5.Visible = false;
+              panel5.Visible = false;
            // panel6.Visible = false;
            // panel7.Visible = false;
         }
@@ -91,8 +91,26 @@ namespace Construtora
             else
             {
                 visiblepanel();
-                //panel5.Visible = true;
-                //label4.Text = cod_obra;
+                panel5.Visible = true;
+                label4.Text = cod_obra;
+            }
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Salva CodObra Finalizada
+
+            int index = e.RowIndex;
+            DataGridViewRow SelectedRow = dataGridView3.Rows[index];
+
+            try
+            {
+                cod_obra = SelectedRow.Cells[0].Value.ToString();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
