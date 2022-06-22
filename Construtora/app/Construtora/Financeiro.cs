@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Construtora
 {
@@ -43,6 +45,14 @@ namespace Construtora
                 button3.Text = "Selecionar Obra";
                 button5.Text = "Relatório";
             }
+        }
+
+        private void clearform()
+        {
+            maskedTextBox1.Clear();
+            maskedTextBox2.Clear();
+            maskedTextBox3.Clear();
+            maskedTextBox4.Clear();
         }
 
         private void visiblepanel()
@@ -119,6 +129,96 @@ namespace Construtora
             visiblepanel();
             panel4.Visible = true;
             this.oBRATableAdapter.FillBy(this.construtoraDataSet.OBRA);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            clearform();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Botão Confirmar Cadastro
+
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(
+            "INSERT INTO FINANCEIRO (CODOBRA,VALOR_RECEBIDO,VALOR_TOTAL,DESPESA_ADICIONAL,LUCRO_TOTAL) " +
+            "VALUES (@CODOBRA,@VALOR_RECEBIDO,@VALOR_TOTAL,@DESPESA_ADICIONAL,@LUCRO_TOTAL)"
+             , conn);
+
+            try
+            {
+
+                comm.Parameters.Add("@CODOBRA", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODOBRA"].Value = label4.Text;
+
+                comm.Parameters.Add("@VALOR_RECEBIDO", System.Data.SqlDbType.Money);
+                comm.Parameters["@VALOR_RECEBIDO"].Value = maskedTextBox1.Text;
+
+                comm.Parameters.Add("@VALOR_TOTAL", System.Data.SqlDbType.Money);
+                comm.Parameters["@VALOR_TOTAL"].Value = maskedTextBox2.Text;
+
+                if (maskedTextBox3.Text == null)
+                {
+                    comm.Parameters.Add("@DESPESA_ADICIONAL", System.Data.SqlDbType.Money);
+                    comm.Parameters["@DESPESA_ADICIONAL"].Value = 0;
+                }
+                else
+                {
+                    comm.Parameters.Add("@DESPESA_ADICIONAL", System.Data.SqlDbType.Money);
+                    comm.Parameters["@DESPESA_ADICIONAL"].Value = maskedTextBox3.Text;
+                }
+
+                comm.Parameters.Add("@LUCRO_TOTAL", System.Data.SqlDbType.Money);
+                comm.Parameters["@LUCRO_TOTAL"].Value = maskedTextBox3.Text;
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Campo Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            try
+            {
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    comm.ExecuteNonQuery();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception error) { }
+            finally
+            {
+                conn.Close();
+                MessageBox.Show("Registro Cadastrado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearform();
+                this.fINANCEIROTableAdapter.Fill(this.construtoraDataSet.FINANCEIRO);
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Carros_Financeiro c1 = new Carros_Financeiro();
+            c1.Show();
         }
     }
 }

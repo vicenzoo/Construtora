@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Financeiro));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -53,14 +59,28 @@
             this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODVENDADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUSTOESTADIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAINICIOMONTAGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAFIMMONTAGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTATUSVISTORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAVISTORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTATUSOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAFIMOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oBRABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINANCEIROTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter();
             this.oBRATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.OBRATableAdapter();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -71,15 +91,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,6 +122,70 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(261, 490);
             this.panel1.TabIndex = 6;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Location = new System.Drawing.Point(0, 341);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(261, 23);
+            this.button5.TabIndex = 56;
+            this.button5.Text = "Relatório";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.Location = new System.Drawing.Point(0, 320);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(261, 21);
+            this.button7.TabIndex = 55;
+            this.button7.Text = "Editar";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.Location = new System.Drawing.Point(0, 297);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(261, 23);
+            this.button8.TabIndex = 54;
+            this.button8.Text = "Parcelas";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.Location = new System.Drawing.Point(0, 274);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(261, 23);
+            this.button9.TabIndex = 53;
+            this.button9.Text = "Adicionar Imposto";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.Location = new System.Drawing.Point(0, 253);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(261, 21);
+            this.button11.TabIndex = 52;
+            this.button11.Text = "Veículo";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.Location = new System.Drawing.Point(0, 232);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(261, 21);
+            this.button10.TabIndex = 51;
+            this.button10.Text = "Imóvel";
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -319,7 +394,18 @@
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.DATA_INICIO_MONTAG,
-            this.DATA_FIM_MONTAG});
+            this.DATA_FIM_MONTAG,
+            this.cODOBRADataGridViewTextBoxColumn,
+            this.cODVENDADataGridViewTextBoxColumn,
+            this.cUSTOESTADIADataGridViewTextBoxColumn,
+            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn,
+            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn,
+            this.dATAINICIOMONTAGDataGridViewTextBoxColumn,
+            this.dATAFIMMONTAGDataGridViewTextBoxColumn,
+            this.sTATUSVISTORIADataGridViewTextBoxColumn,
+            this.dATAVISTORIADataGridViewTextBoxColumn,
+            this.sTATUSOBRADataGridViewTextBoxColumn,
+            this.dATAFIMOBRADataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.oBRABindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
@@ -329,6 +415,104 @@
             this.dataGridView3.Size = new System.Drawing.Size(626, 490);
             this.dataGridView3.TabIndex = 21;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CODOBRA";
+            this.Column1.HeaderText = "Cod";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // DATA_INICIO_MONTAG
+            // 
+            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
+            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.ReadOnly = true;
+            // 
+            // DATA_FIM_MONTAG
+            // 
+            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
+            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.ReadOnly = true;
+            // 
+            // cODOBRADataGridViewTextBoxColumn
+            // 
+            this.cODOBRADataGridViewTextBoxColumn.DataPropertyName = "CODOBRA";
+            this.cODOBRADataGridViewTextBoxColumn.HeaderText = "CODOBRA";
+            this.cODOBRADataGridViewTextBoxColumn.Name = "cODOBRADataGridViewTextBoxColumn";
+            this.cODOBRADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cODVENDADataGridViewTextBoxColumn
+            // 
+            this.cODVENDADataGridViewTextBoxColumn.DataPropertyName = "CODVENDA";
+            this.cODVENDADataGridViewTextBoxColumn.HeaderText = "CODVENDA";
+            this.cODVENDADataGridViewTextBoxColumn.Name = "cODVENDADataGridViewTextBoxColumn";
+            this.cODVENDADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cUSTOESTADIADataGridViewTextBoxColumn
+            // 
+            this.cUSTOESTADIADataGridViewTextBoxColumn.DataPropertyName = "CUSTO_ESTADIA";
+            this.cUSTOESTADIADataGridViewTextBoxColumn.HeaderText = "CUSTO_ESTADIA";
+            this.cUSTOESTADIADataGridViewTextBoxColumn.Name = "cUSTOESTADIADataGridViewTextBoxColumn";
+            this.cUSTOESTADIADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cUSTODESLOCAMENTODataGridViewTextBoxColumn
+            // 
+            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.DataPropertyName = "CUSTO_DESLOCAMENTO";
+            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.HeaderText = "CUSTO_DESLOCAMENTO";
+            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.Name = "cUSTODESLOCAMENTODataGridViewTextBoxColumn";
+            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cUSTOMONTAGEXTERNADataGridViewTextBoxColumn
+            // 
+            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.DataPropertyName = "CUSTO_MONTAG_EXTERNA";
+            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.HeaderText = "CUSTO_MONTAG_EXTERNA";
+            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.Name = "cUSTOMONTAGEXTERNADataGridViewTextBoxColumn";
+            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATAINICIOMONTAGDataGridViewTextBoxColumn
+            // 
+            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.DataPropertyName = "DATA_INICIO_MONTAG";
+            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.HeaderText = "DATA_INICIO_MONTAG";
+            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.Name = "dATAINICIOMONTAGDataGridViewTextBoxColumn";
+            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATAFIMMONTAGDataGridViewTextBoxColumn
+            // 
+            this.dATAFIMMONTAGDataGridViewTextBoxColumn.DataPropertyName = "DATA_FIM_MONTAG";
+            this.dATAFIMMONTAGDataGridViewTextBoxColumn.HeaderText = "DATA_FIM_MONTAG";
+            this.dATAFIMMONTAGDataGridViewTextBoxColumn.Name = "dATAFIMMONTAGDataGridViewTextBoxColumn";
+            this.dATAFIMMONTAGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTATUSVISTORIADataGridViewTextBoxColumn
+            // 
+            this.sTATUSVISTORIADataGridViewTextBoxColumn.DataPropertyName = "STATUS_VISTORIA";
+            this.sTATUSVISTORIADataGridViewTextBoxColumn.HeaderText = "STATUS_VISTORIA";
+            this.sTATUSVISTORIADataGridViewTextBoxColumn.Name = "sTATUSVISTORIADataGridViewTextBoxColumn";
+            this.sTATUSVISTORIADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATAVISTORIADataGridViewTextBoxColumn
+            // 
+            this.dATAVISTORIADataGridViewTextBoxColumn.DataPropertyName = "DATA_VISTORIA";
+            this.dATAVISTORIADataGridViewTextBoxColumn.HeaderText = "DATA_VISTORIA";
+            this.dATAVISTORIADataGridViewTextBoxColumn.Name = "dATAVISTORIADataGridViewTextBoxColumn";
+            this.dATAVISTORIADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTATUSOBRADataGridViewTextBoxColumn
+            // 
+            this.sTATUSOBRADataGridViewTextBoxColumn.DataPropertyName = "STATUS_OBRA";
+            this.sTATUSOBRADataGridViewTextBoxColumn.HeaderText = "STATUS_OBRA";
+            this.sTATUSOBRADataGridViewTextBoxColumn.Name = "sTATUSOBRADataGridViewTextBoxColumn";
+            this.sTATUSOBRADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATAFIMOBRADataGridViewTextBoxColumn
+            // 
+            this.dATAFIMOBRADataGridViewTextBoxColumn.DataPropertyName = "DATA_FIM_OBRA";
+            this.dATAFIMOBRADataGridViewTextBoxColumn.HeaderText = "DATA_FIM_OBRA";
+            this.dATAFIMOBRADataGridViewTextBoxColumn.Name = "dATAFIMOBRADataGridViewTextBoxColumn";
+            this.dATAFIMOBRADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // oBRABindingSource
             // 
@@ -347,9 +531,9 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Window;
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.maskedTextBox5);
-            this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.maskedTextBox4);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.maskedTextBox3);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.maskedTextBox2);
             this.panel5.Controls.Add(this.label8);
@@ -377,13 +561,13 @@
             this.label6.TabIndex = 55;
             this.label6.Text = "Lucro Total";
             // 
-            // maskedTextBox5
+            // maskedTextBox4
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(102, 330);
-            this.maskedTextBox5.Mask = "$ 00000.00";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(82, 20);
-            this.maskedTextBox5.TabIndex = 54;
+            this.maskedTextBox4.Location = new System.Drawing.Point(102, 330);
+            this.maskedTextBox4.Mask = "$ 00000.00";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(82, 20);
+            this.maskedTextBox4.TabIndex = 54;
             // 
             // label11
             // 
@@ -394,13 +578,13 @@
             this.label11.TabIndex = 53;
             this.label11.Text = "Desp. Adicional";
             // 
-            // maskedTextBox4
+            // maskedTextBox3
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(102, 304);
-            this.maskedTextBox4.Mask = "$ 00000.00";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(82, 20);
-            this.maskedTextBox4.TabIndex = 52;
+            this.maskedTextBox3.Location = new System.Drawing.Point(102, 304);
+            this.maskedTextBox3.Mask = "$ 00000.00";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(82, 20);
+            this.maskedTextBox3.TabIndex = 52;
             // 
             // label10
             // 
@@ -473,6 +657,7 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "Limpar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -482,6 +667,7 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Salvar";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -493,90 +679,6 @@
             this.label1.Size = new System.Drawing.Size(123, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro";
-            // 
-            // button10
-            // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.Location = new System.Drawing.Point(0, 232);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(261, 21);
-            this.button10.TabIndex = 51;
-            this.button10.Text = "Imóvel";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.Location = new System.Drawing.Point(0, 253);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(261, 21);
-            this.button11.TabIndex = 52;
-            this.button11.Text = "Veículo";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 341);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(261, 23);
-            this.button5.TabIndex = 56;
-            this.button5.Text = "Relatório";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.Location = new System.Drawing.Point(0, 320);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(261, 21);
-            this.button7.TabIndex = 55;
-            this.button7.Text = "Editar";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.Location = new System.Drawing.Point(0, 297);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(261, 23);
-            this.button8.TabIndex = 54;
-            this.button8.Text = "Parcelas";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.Location = new System.Drawing.Point(0, 274);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(261, 23);
-            this.button9.TabIndex = 53;
-            this.button9.Text = "Adicionar Imposto";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CODOBRA";
-            this.Column1.HeaderText = "Cod";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // DATA_INICIO_MONTAG
-            // 
-            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
-            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.ReadOnly = true;
-            // 
-            // DATA_FIM_MONTAG
-            // 
-            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
-            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.ReadOnly = true;
             // 
             // Financeiro
             // 
@@ -636,9 +738,9 @@
         private ConstrutoraDataSetTableAdapters.OBRATableAdapter oBRATableAdapter;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label8;
@@ -658,5 +760,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_INICIO_MONTAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_FIM_MONTAG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODOBRADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODVENDADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOESTADIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTODESLOCAMENTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOMONTAGEXTERNADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAINICIOMONTAGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAFIMMONTAGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSVISTORIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAVISTORIADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSOBRADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAFIMOBRADataGridViewTextBoxColumn;
     }
 }
