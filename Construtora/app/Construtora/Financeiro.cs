@@ -163,10 +163,12 @@ namespace Construtora
                 comm.Parameters.Add("@VALOR_TOTAL", System.Data.SqlDbType.Money);
                 comm.Parameters["@VALOR_TOTAL"].Value = maskedTextBox2.Text;
 
-                if (maskedTextBox3.Text == null)
+                if (maskedTextBox3.MaskCompleted == false)
                 {
+                    maskedTextBox3.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                    maskedTextBox3.Text = "0";
                     comm.Parameters.Add("@DESPESA_ADICIONAL", System.Data.SqlDbType.Money);
-                    comm.Parameters["@DESPESA_ADICIONAL"].Value = 0;
+                    comm.Parameters["@DESPESA_ADICIONAL"].Value = maskedTextBox3.Text;
                 }
                 else
                 {
@@ -175,7 +177,7 @@ namespace Construtora
                 }
 
                 comm.Parameters.Add("@LUCRO_TOTAL", System.Data.SqlDbType.Money);
-                comm.Parameters["@LUCRO_TOTAL"].Value = maskedTextBox3.Text;
+                comm.Parameters["@LUCRO_TOTAL"].Value = maskedTextBox4.Text;
 
 
             }
@@ -219,6 +221,11 @@ namespace Construtora
         {
             Carros_Financeiro c1 = new Carros_Financeiro();
             c1.Show();
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Imovel_Financeiro i1 = new Imovel_Financeiro();
+            i1.Show();
         }
     }
 }

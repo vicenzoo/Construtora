@@ -59,9 +59,6 @@
             this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cODOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cODVENDADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cUSTOESTADIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +70,9 @@
             this.dATAVISTORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTATUSOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATAFIMOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oBRABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINANCEIROTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter();
             this.oBRATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.OBRATableAdapter();
@@ -186,6 +186,7 @@
             this.button10.TabIndex = 51;
             this.button10.Text = "Imóvel";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button2
             // 
@@ -392,9 +393,6 @@
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.DATA_INICIO_MONTAG,
-            this.DATA_FIM_MONTAG,
             this.cODOBRADataGridViewTextBoxColumn,
             this.cODVENDADataGridViewTextBoxColumn,
             this.cUSTOESTADIADataGridViewTextBoxColumn,
@@ -405,7 +403,10 @@
             this.sTATUSVISTORIADataGridViewTextBoxColumn,
             this.dATAVISTORIADataGridViewTextBoxColumn,
             this.sTATUSOBRADataGridViewTextBoxColumn,
-            this.dATAFIMOBRADataGridViewTextBoxColumn});
+            this.dATAFIMOBRADataGridViewTextBoxColumn,
+            this.Column1,
+            this.DATA_INICIO_MONTAG,
+            this.DATA_FIM_MONTAG});
             this.dataGridView3.DataSource = this.oBRABindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
@@ -415,27 +416,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(626, 490);
             this.dataGridView3.TabIndex = 21;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CODOBRA";
-            this.Column1.HeaderText = "Cod";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // DATA_INICIO_MONTAG
-            // 
-            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
-            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.ReadOnly = true;
-            // 
-            // DATA_FIM_MONTAG
-            // 
-            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
-            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.ReadOnly = true;
             // 
             // cODOBRADataGridViewTextBoxColumn
             // 
@@ -514,6 +494,27 @@
             this.dATAFIMOBRADataGridViewTextBoxColumn.Name = "dATAFIMOBRADataGridViewTextBoxColumn";
             this.dATAFIMOBRADataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CODOBRA";
+            this.Column1.HeaderText = "Cod";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // DATA_INICIO_MONTAG
+            // 
+            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
+            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.ReadOnly = true;
+            // 
+            // DATA_FIM_MONTAG
+            // 
+            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
+            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.ReadOnly = true;
+            // 
             // oBRABindingSource
             // 
             this.oBRABindingSource.DataMember = "OBRA";
@@ -549,7 +550,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(626, 490);
-            this.panel5.TabIndex = 25;
+            this.panel5.TabIndex = 26;
             this.panel5.Visible = false;
             // 
             // label6
@@ -581,7 +582,7 @@
             // maskedTextBox3
             // 
             this.maskedTextBox3.Location = new System.Drawing.Point(102, 304);
-            this.maskedTextBox3.Mask = "$ 00000.00";
+            this.maskedTextBox3.Mask = "$ 99990.00";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox3.TabIndex = 52;
@@ -736,6 +737,12 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource oBRABindingSource;
         private ConstrutoraDataSetTableAdapters.OBRATableAdapter oBRATableAdapter;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox maskedTextBox4;
@@ -751,15 +758,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_INICIO_MONTAG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_FIM_MONTAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn cODOBRADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cODVENDADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOESTADIADataGridViewTextBoxColumn;
@@ -771,5 +769,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dATAVISTORIADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSOBRADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATAFIMOBRADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_INICIO_MONTAG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_FIM_MONTAG;
     }
 }

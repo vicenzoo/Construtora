@@ -53,7 +53,6 @@
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -132,7 +131,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(546, 262);
             this.dataGridView1.TabIndex = 36;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cODFINANCDataGridViewTextBoxColumn
             // 
@@ -242,13 +241,10 @@
             // maskedTextBox2
             // 
             this.maskedTextBox2.Location = new System.Drawing.Point(107, 455);
-            this.maskedTextBox2.Mask = "$ 00000.00";
+            this.maskedTextBox2.Mask = "$ 99990.00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox2.TabIndex = 54;
-            this.maskedTextBox2.CursorChanged += new System.EventHandler(this.maskedTextBox2_CursorChanged);
-            this.maskedTextBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextBox2_KeyDown);
-            this.maskedTextBox2.Leave += new System.EventHandler(this.maskedTextBox2_Leave);
             // 
             // label8
             // 
@@ -262,27 +258,16 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(107, 432);
-            this.maskedTextBox1.Mask = "$ 00000.00";
+            this.maskedTextBox1.Mask = "$ 99990.00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(82, 20);
             this.maskedTextBox1.TabIndex = 52;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 458);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Valor Geral";
-            this.label2.Visible = false;
             // 
             // Carros_Financeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 498);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.label8);
@@ -330,6 +315,5 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label2;
     }
 }

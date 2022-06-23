@@ -144,6 +144,12 @@
     <Compile Include="FRelVenda.Designer.cs">
       <DependentUpon>FRelVenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Imovel_Financeiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imovel_Financeiro.Designer.cs">
+      <DependentUpon>Imovel_Financeiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imposto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRelVenda.resx">
       <DependentUpon>FRelVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imovel_Financeiro.resx">
+      <DependentUpon>Imovel_Financeiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Imposto.resx">
       <DependentUpon>Imposto.cs</DependentUpon>

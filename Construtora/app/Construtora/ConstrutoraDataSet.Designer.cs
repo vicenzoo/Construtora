@@ -9868,7 +9868,7 @@ SELECT CODOBRA, CODVENDA, CUSTO_ESTADIA, CUSTO_DESLOCAMENTO, CUSTO_MONTAG_EXTERN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CODOBRA, CODVENDA, CUSTO_ESTADIA, CUSTO_DESLOCAMENTO, CUSTO_MONTAG_EXTERNA" +
@@ -9891,11 +9891,18 @@ SELECT CODOBRA, CODVENDA, CUSTO_ESTADIA, CUSTO_DESLOCAMENTO, CUSTO_MONTAG_EXTERN
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        CODOBRA, CODVENDA, CUSTO_ESTADIA, CUSTO_DESLOCAMENTO, CUSTO_MONTAG_" +
+            this._commandCollection[3].CommandText = "SELECT        CODOBRA, DATA_INICIO_MONTAG, DATA_FIM_MONTAG, CODVENDA, CUSTO_ESTAD" +
+                "IA, CUSTO_DESLOCAMENTO, CUSTO_MONTAG_EXTERNA, STATUS_VISTORIA, DATA_VISTORIA, ST" +
+                "ATUS_OBRA, DATA_FIM_OBRA\r\nFROM            OBRA\r\nWHERE        (STATUS_OBRA = \'F\')" +
+                "";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT        CODOBRA, CODVENDA, CUSTO_ESTADIA, CUSTO_DESLOCAMENTO, CUSTO_MONTAG_" +
                 "EXTERNA, DATA_INICIO_MONTAG, DATA_FIM_MONTAG, STATUS_VISTORIA, DATA_VISTORIA, ST" +
                 "ATUS_OBRA, DATA_FIM_OBRA\r\nFROM            OBRA\r\nWHERE        (STATUS_VISTORIA = " +
                 "\'N\')";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9952,8 +9959,21 @@ SELECT CODOBRA, CODVENDA, CUSTO_ESTADIA, CUSTO_DESLOCAMENTO, CUSTO_MONTAG_EXTERN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByVistoriaObra(ConstrutoraDataSet.OBRADataTable dataTable) {
+        public virtual int FillByObraFinalizada(ConstrutoraDataSet.OBRADataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByVistoriaObra(ConstrutoraDataSet.OBRADataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }

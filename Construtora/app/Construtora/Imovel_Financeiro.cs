@@ -7,29 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
 using System.Data.SqlClient;
 
 namespace Construtora
 {
-    public partial class Carros_Financeiro : Form
+    public partial class Imovel_Financeiro : Form
     {
         string cod_Financ;
-        public Carros_Financeiro()
+        public Imovel_Financeiro()
         {
             InitializeComponent();
         }
 
-        private void CarrosFinanc_Enter(object sender, EventArgs e)
+        private void Imovel_Financeiro_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void Carros_Financeiro_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.FINANCEIRO'. Você pode movê-la ou removê-la conforme necessário.
             this.fINANCEIROTableAdapter.Fill(this.construtoraDataSet.FINANCEIRO);
-
         }
 
         private void ClearForm()
@@ -38,7 +30,7 @@ namespace Construtora
             maskedTextBox2.Clear();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Salva CodFinanc Finalizada
 
@@ -57,8 +49,6 @@ namespace Construtora
                 return;
             }
         }
-
-
         private void udpatefinanc()
         {
 
@@ -70,7 +60,7 @@ namespace Construtora
             conn = new SqlConnection(connectionString);
 
             comm = new SqlCommand(
-              "UPDATE FINANCEIRO SET RECEBE_VEICULO = @RECEBE_VEICULO  " +
+              "UPDATE FINANCEIRO SET RECEBE_IMOVEL = @RECEBE_IMOVEL  " +
               "WHERE CODFINANC = @CODFINANC", conn);
             try
             {
@@ -83,8 +73,8 @@ namespace Construtora
                 return;
             }
 
-            comm.Parameters.Add("@RECEBE_VEICULO", System.Data.SqlDbType.Char);
-            comm.Parameters["@RECEBE_VEICULO"].Value = "S";
+            comm.Parameters.Add("@RECEBE_IMOVEL", System.Data.SqlDbType.Char);
+            comm.Parameters["@RECEBE_IMOVEL"].Value = "S";
 
 
             try
@@ -114,8 +104,7 @@ namespace Construtora
                 conn.Close();
             }
         }
-
-        private void insertFinanc_Veiculo()
+        private void insertFinanc_Imovel()
         {
 
             //Botão Confirmar Cadastro
@@ -127,7 +116,7 @@ namespace Construtora
             conn = new SqlConnection(connectionString);
 
             comm = new SqlCommand(
-            "INSERT INTO VEICULO (CODFINANC,AVALIACAO,GASTOS) " +
+            "INSERT INTO IMOVEL (CODFINANC,AVALIACAO,GASTOS) " +
             "VALUES (@CODFINANC,@AVALIACAO,@GASTOS)"
              , conn);
 
@@ -185,7 +174,7 @@ namespace Construtora
         {
             try
             {
-                insertFinanc_Veiculo();
+                insertFinanc_Imovel();
                 udpatefinanc();
                 this.fINANCEIROTableAdapter.Fill(this.construtoraDataSet.FINANCEIRO);
             }
