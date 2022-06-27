@@ -43,40 +43,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cODFINANCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vALORRECEBIDODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEBEVEICULODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iNADIMPLENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rECEBEIMOVELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pOSSSUIPARCELASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nUMPARCELASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vALORTOTALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESPESAADICIONALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lUCROTOTALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fINANCEIROBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.cODOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cODVENDADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTOESTADIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTATUSVISTORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAVISTORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTATUSOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAFIMOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oBRABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -91,17 +61,47 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_VENC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VALOR_PARCELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COMPLEMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eNTRADAPARCELASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.DATA_VENC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VALOR_PARCELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COMPLEMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eNTRADAPARCELASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
+            this.fINANCEIROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cODPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODFINANCDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vALORPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAVENCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOMPLEMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTATUSPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oBRATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.OBRATableAdapter();
+            this.eNTRADA_PARCELASTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.ENTRADA_PARCELASTableAdapter();
+            this.fINANCEIROTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter();
+            this.cODFINANCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vALORRECEBIDODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEBEVEICULODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iNADIMPLENTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rECEBEIMOVELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nUMPARCELASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vALORTOTALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESPESAADICIONALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lUCROTOTALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTATUSPAGAMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,33 +113,27 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.fINANCEIROTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter();
-            this.oBRATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.OBRATableAdapter();
-            this.eNTRADA_PARCELASTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.ENTRADA_PARCELASTableAdapter();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oBRABindingSource)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eNTRADAPARCELASBindingSource)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNTRADAPARCELASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -179,8 +173,9 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(261, 21);
             this.button7.TabIndex = 55;
-            this.button7.Text = "Editar";
+            this.button7.Text = "Controle";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -294,126 +289,9 @@
             this.panel3.Location = new System.Drawing.Point(261, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(768, 558);
+            this.panel3.Size = new System.Drawing.Size(777, 558);
             this.panel3.TabIndex = 20;
             this.panel3.Visible = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cODFINANCDataGridViewTextBoxColumn,
-            this.vALORRECEBIDODataGridViewTextBoxColumn,
-            this.rECEBEVEICULODataGridViewTextBoxColumn,
-            this.iNADIMPLENTEDataGridViewTextBoxColumn,
-            this.rECEBEIMOVELDataGridViewTextBoxColumn,
-            this.pOSSSUIPARCELASDataGridViewTextBoxColumn,
-            this.nUMPARCELASDataGridViewTextBoxColumn,
-            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn,
-            this.vALORTOTALDataGridViewTextBoxColumn,
-            this.dESPESAADICIONALDataGridViewTextBoxColumn,
-            this.lUCROTOTALDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.fINANCEIROBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(768, 558);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // cODFINANCDataGridViewTextBoxColumn
-            // 
-            this.cODFINANCDataGridViewTextBoxColumn.DataPropertyName = "CODFINANC";
-            this.cODFINANCDataGridViewTextBoxColumn.HeaderText = "Cod";
-            this.cODFINANCDataGridViewTextBoxColumn.Name = "cODFINANCDataGridViewTextBoxColumn";
-            this.cODFINANCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vALORRECEBIDODataGridViewTextBoxColumn
-            // 
-            this.vALORRECEBIDODataGridViewTextBoxColumn.DataPropertyName = "VALOR_RECEBIDO";
-            this.vALORRECEBIDODataGridViewTextBoxColumn.HeaderText = "Valor Recebido";
-            this.vALORRECEBIDODataGridViewTextBoxColumn.Name = "vALORRECEBIDODataGridViewTextBoxColumn";
-            this.vALORRECEBIDODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rECEBEVEICULODataGridViewTextBoxColumn
-            // 
-            this.rECEBEVEICULODataGridViewTextBoxColumn.DataPropertyName = "RECEBE_VEICULO";
-            this.rECEBEVEICULODataGridViewTextBoxColumn.HeaderText = "Recebe Veículo";
-            this.rECEBEVEICULODataGridViewTextBoxColumn.Name = "rECEBEVEICULODataGridViewTextBoxColumn";
-            this.rECEBEVEICULODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iNADIMPLENTEDataGridViewTextBoxColumn
-            // 
-            this.iNADIMPLENTEDataGridViewTextBoxColumn.DataPropertyName = "INADIMPLENTE";
-            this.iNADIMPLENTEDataGridViewTextBoxColumn.HeaderText = "Inadimplente";
-            this.iNADIMPLENTEDataGridViewTextBoxColumn.Name = "iNADIMPLENTEDataGridViewTextBoxColumn";
-            this.iNADIMPLENTEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rECEBEIMOVELDataGridViewTextBoxColumn
-            // 
-            this.rECEBEIMOVELDataGridViewTextBoxColumn.DataPropertyName = "RECEBE_IMOVEL";
-            this.rECEBEIMOVELDataGridViewTextBoxColumn.HeaderText = "Recebe Imovel";
-            this.rECEBEIMOVELDataGridViewTextBoxColumn.Name = "rECEBEIMOVELDataGridViewTextBoxColumn";
-            this.rECEBEIMOVELDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pOSSSUIPARCELASDataGridViewTextBoxColumn
-            // 
-            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.DataPropertyName = "POSSSUI_PARCELAS";
-            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.HeaderText = "Possuí parcelas";
-            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.Name = "pOSSSUIPARCELASDataGridViewTextBoxColumn";
-            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nUMPARCELASDataGridViewTextBoxColumn
-            // 
-            this.nUMPARCELASDataGridViewTextBoxColumn.DataPropertyName = "NUM_PARCELAS";
-            this.nUMPARCELASDataGridViewTextBoxColumn.HeaderText = "Num Parcelas";
-            this.nUMPARCELASDataGridViewTextBoxColumn.Name = "nUMPARCELASDataGridViewTextBoxColumn";
-            this.nUMPARCELASDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pOSSSUIIMPOSTOSDataGridViewTextBoxColumn
-            // 
-            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.DataPropertyName = "POSSSUI_IMPOSTOS";
-            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.HeaderText = "Possuí Impostos";
-            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.Name = "pOSSSUIIMPOSTOSDataGridViewTextBoxColumn";
-            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vALORTOTALDataGridViewTextBoxColumn
-            // 
-            this.vALORTOTALDataGridViewTextBoxColumn.DataPropertyName = "VALOR_TOTAL";
-            this.vALORTOTALDataGridViewTextBoxColumn.HeaderText = "Valor Total";
-            this.vALORTOTALDataGridViewTextBoxColumn.Name = "vALORTOTALDataGridViewTextBoxColumn";
-            this.vALORTOTALDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dESPESAADICIONALDataGridViewTextBoxColumn
-            // 
-            this.dESPESAADICIONALDataGridViewTextBoxColumn.DataPropertyName = "DESPESA_ADICIONAL";
-            this.dESPESAADICIONALDataGridViewTextBoxColumn.HeaderText = "Despesa Adicional";
-            this.dESPESAADICIONALDataGridViewTextBoxColumn.Name = "dESPESAADICIONALDataGridViewTextBoxColumn";
-            this.dESPESAADICIONALDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lUCROTOTALDataGridViewTextBoxColumn
-            // 
-            this.lUCROTOTALDataGridViewTextBoxColumn.DataPropertyName = "LUCRO_TOTAL";
-            this.lUCROTOTALDataGridViewTextBoxColumn.HeaderText = "Lucro Total";
-            this.lUCROTOTALDataGridViewTextBoxColumn.Name = "lUCROTOTALDataGridViewTextBoxColumn";
-            this.lUCROTOTALDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fINANCEIROBindingSource
-            // 
-            this.fINANCEIROBindingSource.DataMember = "FINANCEIRO";
-            this.fINANCEIROBindingSource.DataSource = this.construtoraDataSet;
-            // 
-            // construtoraDataSet
-            // 
-            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
-            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -422,7 +300,7 @@
             this.panel4.Location = new System.Drawing.Point(261, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(768, 558);
+            this.panel4.Size = new System.Drawing.Size(777, 558);
             this.panel4.TabIndex = 21;
             this.panel4.Visible = false;
             // 
@@ -433,17 +311,6 @@
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cODOBRADataGridViewTextBoxColumn,
-            this.cODVENDADataGridViewTextBoxColumn,
-            this.cUSTOESTADIADataGridViewTextBoxColumn,
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn,
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn,
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn,
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn,
-            this.sTATUSVISTORIADataGridViewTextBoxColumn,
-            this.dATAVISTORIADataGridViewTextBoxColumn,
-            this.sTATUSOBRADataGridViewTextBoxColumn,
-            this.dATAFIMOBRADataGridViewTextBoxColumn,
             this.Column1,
             this.DATA_INICIO_MONTAG,
             this.DATA_FIM_MONTAG});
@@ -453,107 +320,9 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(768, 558);
+            this.dataGridView3.Size = new System.Drawing.Size(777, 558);
             this.dataGridView3.TabIndex = 21;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
-            // 
-            // cODOBRADataGridViewTextBoxColumn
-            // 
-            this.cODOBRADataGridViewTextBoxColumn.DataPropertyName = "CODOBRA";
-            this.cODOBRADataGridViewTextBoxColumn.HeaderText = "CODOBRA";
-            this.cODOBRADataGridViewTextBoxColumn.Name = "cODOBRADataGridViewTextBoxColumn";
-            this.cODOBRADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cODVENDADataGridViewTextBoxColumn
-            // 
-            this.cODVENDADataGridViewTextBoxColumn.DataPropertyName = "CODVENDA";
-            this.cODVENDADataGridViewTextBoxColumn.HeaderText = "CODVENDA";
-            this.cODVENDADataGridViewTextBoxColumn.Name = "cODVENDADataGridViewTextBoxColumn";
-            this.cODVENDADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cUSTOESTADIADataGridViewTextBoxColumn
-            // 
-            this.cUSTOESTADIADataGridViewTextBoxColumn.DataPropertyName = "CUSTO_ESTADIA";
-            this.cUSTOESTADIADataGridViewTextBoxColumn.HeaderText = "CUSTO_ESTADIA";
-            this.cUSTOESTADIADataGridViewTextBoxColumn.Name = "cUSTOESTADIADataGridViewTextBoxColumn";
-            this.cUSTOESTADIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cUSTODESLOCAMENTODataGridViewTextBoxColumn
-            // 
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.DataPropertyName = "CUSTO_DESLOCAMENTO";
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.HeaderText = "CUSTO_DESLOCAMENTO";
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.Name = "cUSTODESLOCAMENTODataGridViewTextBoxColumn";
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cUSTOMONTAGEXTERNADataGridViewTextBoxColumn
-            // 
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.DataPropertyName = "CUSTO_MONTAG_EXTERNA";
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.HeaderText = "CUSTO_MONTAG_EXTERNA";
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.Name = "cUSTOMONTAGEXTERNADataGridViewTextBoxColumn";
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAINICIOMONTAGDataGridViewTextBoxColumn
-            // 
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.DataPropertyName = "DATA_INICIO_MONTAG";
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.HeaderText = "DATA_INICIO_MONTAG";
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.Name = "dATAINICIOMONTAGDataGridViewTextBoxColumn";
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAFIMMONTAGDataGridViewTextBoxColumn
-            // 
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.DataPropertyName = "DATA_FIM_MONTAG";
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.HeaderText = "DATA_FIM_MONTAG";
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.Name = "dATAFIMMONTAGDataGridViewTextBoxColumn";
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sTATUSVISTORIADataGridViewTextBoxColumn
-            // 
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.DataPropertyName = "STATUS_VISTORIA";
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.HeaderText = "STATUS_VISTORIA";
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.Name = "sTATUSVISTORIADataGridViewTextBoxColumn";
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAVISTORIADataGridViewTextBoxColumn
-            // 
-            this.dATAVISTORIADataGridViewTextBoxColumn.DataPropertyName = "DATA_VISTORIA";
-            this.dATAVISTORIADataGridViewTextBoxColumn.HeaderText = "DATA_VISTORIA";
-            this.dATAVISTORIADataGridViewTextBoxColumn.Name = "dATAVISTORIADataGridViewTextBoxColumn";
-            this.dATAVISTORIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sTATUSOBRADataGridViewTextBoxColumn
-            // 
-            this.sTATUSOBRADataGridViewTextBoxColumn.DataPropertyName = "STATUS_OBRA";
-            this.sTATUSOBRADataGridViewTextBoxColumn.HeaderText = "STATUS_OBRA";
-            this.sTATUSOBRADataGridViewTextBoxColumn.Name = "sTATUSOBRADataGridViewTextBoxColumn";
-            this.sTATUSOBRADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAFIMOBRADataGridViewTextBoxColumn
-            // 
-            this.dATAFIMOBRADataGridViewTextBoxColumn.DataPropertyName = "DATA_FIM_OBRA";
-            this.dATAFIMOBRADataGridViewTextBoxColumn.HeaderText = "DATA_FIM_OBRA";
-            this.dATAFIMOBRADataGridViewTextBoxColumn.Name = "dATAFIMOBRADataGridViewTextBoxColumn";
-            this.dATAFIMOBRADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CODOBRA";
-            this.Column1.HeaderText = "Cod";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // DATA_INICIO_MONTAG
-            // 
-            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
-            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.ReadOnly = true;
-            // 
-            // DATA_FIM_MONTAG
-            // 
-            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
-            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.ReadOnly = true;
             // 
             // oBRABindingSource
             // 
@@ -563,8 +332,6 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Window;
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.maskedTextBox4);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.maskedTextBox3);
             this.panel5.Controls.Add(this.label10);
@@ -581,26 +348,9 @@
             this.panel5.Location = new System.Drawing.Point(261, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(768, 558);
+            this.panel5.Size = new System.Drawing.Size(777, 558);
             this.panel5.TabIndex = 26;
             this.panel5.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 333);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "Lucro Total";
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(102, 330);
-            this.maskedTextBox4.Mask = "$ 00000.00";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(82, 20);
-            this.maskedTextBox4.TabIndex = 54;
             // 
             // label11
             // 
@@ -733,7 +483,7 @@
             this.panel6.Location = new System.Drawing.Point(261, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(768, 558);
+            this.panel6.Size = new System.Drawing.Size(777, 558);
             this.panel6.TabIndex = 57;
             this.panel6.Visible = false;
             // 
@@ -745,10 +495,15 @@
             this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn12,
             this.DATA_VENC,
             this.VALOR_PARCELA,
-            this.COMPLEMENTO});
+            this.COMPLEMENTO,
+            this.cODPARCELADataGridViewTextBoxColumn,
+            this.cODFINANCDataGridViewTextBoxColumn1,
+            this.vALORPARCELADataGridViewTextBoxColumn,
+            this.dATAVENCDataGridViewTextBoxColumn,
+            this.cOMPLEMENTODataGridViewTextBoxColumn,
+            this.sTATUSPARCELADataGridViewTextBoxColumn});
             this.dataGridView4.DataSource = this.eNTRADAPARCELASBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(350, 288);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
@@ -757,41 +512,6 @@
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.Size = new System.Drawing.Size(407, 222);
             this.dataGridView4.TabIndex = 42;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "CODFINANC";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Cod";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 75;
-            // 
-            // DATA_VENC
-            // 
-            this.DATA_VENC.DataPropertyName = "DATA_VENC";
-            this.DATA_VENC.HeaderText = "Vencimento";
-            this.DATA_VENC.Name = "DATA_VENC";
-            this.DATA_VENC.ReadOnly = true;
-            this.DATA_VENC.Width = 75;
-            // 
-            // VALOR_PARCELA
-            // 
-            this.VALOR_PARCELA.DataPropertyName = "VALOR_PARCELA";
-            this.VALOR_PARCELA.HeaderText = "Valor Parcela";
-            this.VALOR_PARCELA.Name = "VALOR_PARCELA";
-            this.VALOR_PARCELA.ReadOnly = true;
-            // 
-            // COMPLEMENTO
-            // 
-            this.COMPLEMENTO.DataPropertyName = "COMPLEMENTO";
-            this.COMPLEMENTO.HeaderText = "Descrição";
-            this.COMPLEMENTO.Name = "COMPLEMENTO";
-            this.COMPLEMENTO.ReadOnly = true;
-            // 
-            // eNTRADAPARCELASBindingSource
-            // 
-            this.eNTRADAPARCELASBindingSource.DataMember = "ENTRADA_PARCELAS";
-            this.eNTRADAPARCELASBindingSource.DataSource = this.construtoraDataSet;
             // 
             // groupBox4
             // 
@@ -845,17 +565,18 @@
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
+            this.cODFINANCDataGridViewTextBoxColumn,
+            this.vALORRECEBIDODataGridViewTextBoxColumn,
+            this.rECEBEVEICULODataGridViewTextBoxColumn,
+            this.iNADIMPLENTEDataGridViewTextBoxColumn,
+            this.rECEBEIMOVELDataGridViewTextBoxColumn,
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn,
+            this.nUMPARCELASDataGridViewTextBoxColumn,
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn,
+            this.vALORTOTALDataGridViewTextBoxColumn,
+            this.dESPESAADICIONALDataGridViewTextBoxColumn,
+            this.lUCROTOTALDataGridViewTextBoxColumn,
+            this.sTATUSPAGAMENTODataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.fINANCEIROBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(16, 52);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
@@ -865,83 +586,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(741, 222);
             this.dataGridView2.TabIndex = 13;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODFINANC";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "VALOR_RECEBIDO";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Valor Recebido";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "RECEBE_VEICULO";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Recebe Veículo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "INADIMPLENTE";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Inadimplente";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "RECEBE_IMOVEL";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Recebe Imovel";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "POSSSUI_PARCELAS";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Possuí parcelas";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "NUM_PARCELAS";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Num Parcelas";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "POSSSUI_IMPOSTOS";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Possuí Impostos";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "VALOR_TOTAL";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Valor Total";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "DESPESA_ADICIONAL";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Despesa Adicional";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "LUCRO_TOTAL";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Lucro Total";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // numericUpDown1
             // 
@@ -1025,9 +669,84 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Parcelas";
             // 
-            // fINANCEIROTableAdapter
+            // DATA_VENC
             // 
-            this.fINANCEIROTableAdapter.ClearBeforeFill = true;
+            this.DATA_VENC.DataPropertyName = "DATA_VENC";
+            this.DATA_VENC.HeaderText = "Vencimento";
+            this.DATA_VENC.Name = "DATA_VENC";
+            this.DATA_VENC.ReadOnly = true;
+            this.DATA_VENC.Width = 75;
+            // 
+            // VALOR_PARCELA
+            // 
+            this.VALOR_PARCELA.DataPropertyName = "VALOR_PARCELA";
+            this.VALOR_PARCELA.HeaderText = "Valor Parcela";
+            this.VALOR_PARCELA.Name = "VALOR_PARCELA";
+            this.VALOR_PARCELA.ReadOnly = true;
+            // 
+            // COMPLEMENTO
+            // 
+            this.COMPLEMENTO.DataPropertyName = "COMPLEMENTO";
+            this.COMPLEMENTO.HeaderText = "Descrição";
+            this.COMPLEMENTO.Name = "COMPLEMENTO";
+            this.COMPLEMENTO.ReadOnly = true;
+            // 
+            // eNTRADAPARCELASBindingSource
+            // 
+            this.eNTRADAPARCELASBindingSource.DataMember = "ENTRADA_PARCELAS";
+            this.eNTRADAPARCELASBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // construtoraDataSet
+            // 
+            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
+            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fINANCEIROBindingSource
+            // 
+            this.fINANCEIROBindingSource.DataMember = "FINANCEIRO";
+            this.fINANCEIROBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // cODPARCELADataGridViewTextBoxColumn
+            // 
+            this.cODPARCELADataGridViewTextBoxColumn.DataPropertyName = "CODPARCELA";
+            this.cODPARCELADataGridViewTextBoxColumn.HeaderText = "CODPARCELA";
+            this.cODPARCELADataGridViewTextBoxColumn.Name = "cODPARCELADataGridViewTextBoxColumn";
+            this.cODPARCELADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cODFINANCDataGridViewTextBoxColumn1
+            // 
+            this.cODFINANCDataGridViewTextBoxColumn1.DataPropertyName = "CODFINANC";
+            this.cODFINANCDataGridViewTextBoxColumn1.HeaderText = "CODFINANC";
+            this.cODFINANCDataGridViewTextBoxColumn1.Name = "cODFINANCDataGridViewTextBoxColumn1";
+            this.cODFINANCDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // vALORPARCELADataGridViewTextBoxColumn
+            // 
+            this.vALORPARCELADataGridViewTextBoxColumn.DataPropertyName = "VALOR_PARCELA";
+            this.vALORPARCELADataGridViewTextBoxColumn.HeaderText = "VALOR_PARCELA";
+            this.vALORPARCELADataGridViewTextBoxColumn.Name = "vALORPARCELADataGridViewTextBoxColumn";
+            this.vALORPARCELADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATAVENCDataGridViewTextBoxColumn
+            // 
+            this.dATAVENCDataGridViewTextBoxColumn.DataPropertyName = "DATA_VENC";
+            this.dATAVENCDataGridViewTextBoxColumn.HeaderText = "DATA_VENC";
+            this.dATAVENCDataGridViewTextBoxColumn.Name = "dATAVENCDataGridViewTextBoxColumn";
+            this.dATAVENCDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cOMPLEMENTODataGridViewTextBoxColumn
+            // 
+            this.cOMPLEMENTODataGridViewTextBoxColumn.DataPropertyName = "COMPLEMENTO";
+            this.cOMPLEMENTODataGridViewTextBoxColumn.HeaderText = "COMPLEMENTO";
+            this.cOMPLEMENTODataGridViewTextBoxColumn.Name = "cOMPLEMENTODataGridViewTextBoxColumn";
+            this.cOMPLEMENTODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTATUSPARCELADataGridViewTextBoxColumn
+            // 
+            this.sTATUSPARCELADataGridViewTextBoxColumn.DataPropertyName = "STATUS_PARCELA";
+            this.sTATUSPARCELADataGridViewTextBoxColumn.HeaderText = "STATUS_PARCELA";
+            this.sTATUSPARCELADataGridViewTextBoxColumn.Name = "sTATUSPARCELADataGridViewTextBoxColumn";
+            this.sTATUSPARCELADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // oBRATableAdapter
             // 
@@ -1037,11 +756,252 @@
             // 
             this.eNTRADA_PARCELASTableAdapter.ClearBeforeFill = true;
             // 
+            // fINANCEIROTableAdapter
+            // 
+            this.fINANCEIROTableAdapter.ClearBeforeFill = true;
+            // 
+            // cODFINANCDataGridViewTextBoxColumn
+            // 
+            this.cODFINANCDataGridViewTextBoxColumn.DataPropertyName = "CODFINANC";
+            this.cODFINANCDataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.cODFINANCDataGridViewTextBoxColumn.Name = "cODFINANCDataGridViewTextBoxColumn";
+            this.cODFINANCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cODFINANCDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // vALORRECEBIDODataGridViewTextBoxColumn
+            // 
+            this.vALORRECEBIDODataGridViewTextBoxColumn.DataPropertyName = "VALOR_RECEBIDO";
+            this.vALORRECEBIDODataGridViewTextBoxColumn.HeaderText = "Valor Recebido";
+            this.vALORRECEBIDODataGridViewTextBoxColumn.Name = "vALORRECEBIDODataGridViewTextBoxColumn";
+            this.vALORRECEBIDODataGridViewTextBoxColumn.ReadOnly = true;
+            this.vALORRECEBIDODataGridViewTextBoxColumn.Width = 75;
+            // 
+            // rECEBEVEICULODataGridViewTextBoxColumn
+            // 
+            this.rECEBEVEICULODataGridViewTextBoxColumn.DataPropertyName = "RECEBE_VEICULO";
+            this.rECEBEVEICULODataGridViewTextBoxColumn.HeaderText = "Recebe Veículo";
+            this.rECEBEVEICULODataGridViewTextBoxColumn.Name = "rECEBEVEICULODataGridViewTextBoxColumn";
+            this.rECEBEVEICULODataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECEBEVEICULODataGridViewTextBoxColumn.Width = 60;
+            // 
+            // iNADIMPLENTEDataGridViewTextBoxColumn
+            // 
+            this.iNADIMPLENTEDataGridViewTextBoxColumn.DataPropertyName = "INADIMPLENTE";
+            this.iNADIMPLENTEDataGridViewTextBoxColumn.HeaderText = "Inadimplente";
+            this.iNADIMPLENTEDataGridViewTextBoxColumn.Name = "iNADIMPLENTEDataGridViewTextBoxColumn";
+            this.iNADIMPLENTEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iNADIMPLENTEDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // rECEBEIMOVELDataGridViewTextBoxColumn
+            // 
+            this.rECEBEIMOVELDataGridViewTextBoxColumn.DataPropertyName = "RECEBE_IMOVEL";
+            this.rECEBEIMOVELDataGridViewTextBoxColumn.HeaderText = "Recebe Imóvel";
+            this.rECEBEIMOVELDataGridViewTextBoxColumn.Name = "rECEBEIMOVELDataGridViewTextBoxColumn";
+            this.rECEBEIMOVELDataGridViewTextBoxColumn.ReadOnly = true;
+            this.rECEBEIMOVELDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // pOSSSUIPARCELASDataGridViewTextBoxColumn
+            // 
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.DataPropertyName = "POSSSUI_PARCELAS";
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.HeaderText = "Possuí Parcelas";
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.Name = "pOSSSUIPARCELASDataGridViewTextBoxColumn";
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // nUMPARCELASDataGridViewTextBoxColumn
+            // 
+            this.nUMPARCELASDataGridViewTextBoxColumn.DataPropertyName = "NUM_PARCELAS";
+            this.nUMPARCELASDataGridViewTextBoxColumn.HeaderText = "Num. Parcelas";
+            this.nUMPARCELASDataGridViewTextBoxColumn.Name = "nUMPARCELASDataGridViewTextBoxColumn";
+            this.nUMPARCELASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nUMPARCELASDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // pOSSSUIIMPOSTOSDataGridViewTextBoxColumn
+            // 
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.DataPropertyName = "POSSSUI_IMPOSTOS";
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.HeaderText = "Possuí Impostos";
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.Name = "pOSSSUIIMPOSTOSDataGridViewTextBoxColumn";
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // vALORTOTALDataGridViewTextBoxColumn
+            // 
+            this.vALORTOTALDataGridViewTextBoxColumn.DataPropertyName = "VALOR_TOTAL";
+            this.vALORTOTALDataGridViewTextBoxColumn.HeaderText = "Valor Total";
+            this.vALORTOTALDataGridViewTextBoxColumn.Name = "vALORTOTALDataGridViewTextBoxColumn";
+            this.vALORTOTALDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dESPESAADICIONALDataGridViewTextBoxColumn
+            // 
+            this.dESPESAADICIONALDataGridViewTextBoxColumn.DataPropertyName = "DESPESA_ADICIONAL";
+            this.dESPESAADICIONALDataGridViewTextBoxColumn.HeaderText = "Despesa Adicional";
+            this.dESPESAADICIONALDataGridViewTextBoxColumn.Name = "dESPESAADICIONALDataGridViewTextBoxColumn";
+            this.dESPESAADICIONALDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lUCROTOTALDataGridViewTextBoxColumn
+            // 
+            this.lUCROTOTALDataGridViewTextBoxColumn.DataPropertyName = "LUCRO_TOTAL";
+            this.lUCROTOTALDataGridViewTextBoxColumn.HeaderText = "Lucro Total";
+            this.lUCROTOTALDataGridViewTextBoxColumn.Name = "lUCROTOTALDataGridViewTextBoxColumn";
+            this.lUCROTOTALDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTATUSPAGAMENTODataGridViewTextBoxColumn
+            // 
+            this.sTATUSPAGAMENTODataGridViewTextBoxColumn.DataPropertyName = "STATUS_PAGAMENTO";
+            this.sTATUSPAGAMENTODataGridViewTextBoxColumn.HeaderText = "Status";
+            this.sTATUSPAGAMENTODataGridViewTextBoxColumn.Name = "sTATUSPAGAMENTODataGridViewTextBoxColumn";
+            this.sTATUSPAGAMENTODataGridViewTextBoxColumn.ReadOnly = true;
+            this.sTATUSPAGAMENTODataGridViewTextBoxColumn.Width = 60;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.dataGridView1.DataSource = this.fINANCEIROBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(777, 558);
+            this.dataGridView1.TabIndex = 58;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CODFINANC";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cod";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "VALOR_RECEBIDO";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Valor Recebido";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "RECEBE_VEICULO";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Recebe Veículo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "INADIMPLENTE";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Inadimplente";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "RECEBE_IMOVEL";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Recebe Imóvel";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "POSSSUI_PARCELAS";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Possuí Parcelas";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "NUM_PARCELAS";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Num. Parcelas";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "POSSSUI_IMPOSTOS";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Possuí Impostos";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "VALOR_TOTAL";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Valor Total";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "DESPESA_ADICIONAL";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Despesa Adicional";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "LUCRO_TOTAL";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Lucro Total";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "STATUS_PAGAMENTO";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Status";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CODOBRA";
+            this.Column1.HeaderText = "Cod";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // DATA_INICIO_MONTAG
+            // 
+            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
+            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.ReadOnly = true;
+            // 
+            // DATA_FIM_MONTAG
+            // 
+            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
+            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.ReadOnly = true;
+            // 
             // Financeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 558);
+            this.ClientSize = new System.Drawing.Size(1038, 558);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -1054,9 +1014,6 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oBRABindingSource)).EndInit();
@@ -1065,10 +1022,13 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eNTRADAPARCELASBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNTRADAPARCELASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1081,21 +1041,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private ConstrutoraDataSet construtoraDataSet;
-        private System.Windows.Forms.BindingSource fINANCEIROBindingSource;
-        private ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter fINANCEIROTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODFINANCDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vALORRECEBIDODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rECEBEVEICULODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iNADIMPLENTEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rECEBEIMOVELDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pOSSSUIPARCELASDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nUMPARCELASDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pOSSSUIIMPOSTOSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vALORTOTALDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dESPESAADICIONALDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lUCROTOTALDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -1108,8 +1053,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label10;
@@ -1122,34 +1065,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODOBRADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODVENDADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOESTADIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTODESLOCAMENTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOMONTAGEXTERNADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAINICIOMONTAGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAFIMMONTAGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSVISTORIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAVISTORIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSOBRADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAFIMOBRADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_INICIO_MONTAG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_FIM_MONTAG;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label13;
@@ -1162,11 +1080,47 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.BindingSource eNTRADAPARCELASBindingSource;
         private ConstrutoraDataSetTableAdapters.ENTRADA_PARCELASTableAdapter eNTRADA_PARCELASTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private ConstrutoraDataSet construtoraDataSet;
+        private ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter fINANCEIROTableAdapter;
+        private System.Windows.Forms.BindingSource fINANCEIROBindingSource;
+        private System.Windows.Forms.BindingSource eNTRADAPARCELASBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_VENC;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR_PARCELA;
         private System.Windows.Forms.DataGridViewTextBoxColumn COMPLEMENTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODPARCELADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODFINANCDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vALORPARCELADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAVENCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cOMPLEMENTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSPARCELADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODFINANCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vALORRECEBIDODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rECEBEVEICULODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iNADIMPLENTEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rECEBEIMOVELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pOSSSUIPARCELASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nUMPARCELASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pOSSSUIIMPOSTOSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vALORTOTALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dESPESAADICIONALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lUCROTOTALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSPAGAMENTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_INICIO_MONTAG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_FIM_MONTAG;
     }
 }

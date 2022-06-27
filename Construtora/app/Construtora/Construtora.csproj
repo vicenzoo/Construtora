@@ -94,6 +94,12 @@
     <Compile Include="Carros_Financeiro.Designer.cs">
       <DependentUpon>Carros_Financeiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Central_Financeira.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Central_Financeira.Designer.cs">
+      <DependentUpon>Central_Financeira.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConstrutoraDataSet.cs">
       <DependentUpon>ConstrutoraDataSet.xsd</DependentUpon>
     </Compile>
@@ -156,6 +162,12 @@
     <Compile Include="Imposto.Designer.cs">
       <DependentUpon>Imposto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Imposto_Financeiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imposto_Financeiro.Designer.cs">
+      <DependentUpon>Imposto_Financeiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imposto_Venda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +204,9 @@
     <EmbeddedResource Include="Carros_Financeiro.resx">
       <DependentUpon>Carros_Financeiro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Central_Financeira.resx">
+      <DependentUpon>Central_Financeira.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Equipamento.resx">
       <DependentUpon>Equipamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +234,9 @@
     <EmbeddedResource Include="Imposto.resx">
       <DependentUpon>Imposto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Imposto_Financeiro.resx">
+      <DependentUpon>Imposto_Financeiro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Imposto_Venda.resx">
       <DependentUpon>Imposto_Venda.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +257,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Rel\RelEstoque.rdlc" />
     <EmbeddedResource Include="Rel\RelEquip.rdlc" />
@@ -273,6 +292,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\US Dollar_50px.png" />
+    <None Include="Resources\US Dollar_35px2.png" />
+    <None Include="Resources\Delete_35px.png" />
+    <None Include="Resources\Edit_35px.png" />
+    <None Include="Resources\Edit_26px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

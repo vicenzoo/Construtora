@@ -25,6 +25,7 @@ namespace Construtora
         }
         private void Financeiro_Load(object sender, EventArgs e)
         {
+            this.fINANCEIROTableAdapter.FillByEmitidas(this.construtoraDataSet.FINANCEIRO);
             // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.ENTRADA_PARCELAS'. Você pode movê-la ou removê-la conforme necessário.
             this.eNTRADA_PARCELASTableAdapter.Fill(this.construtoraDataSet.ENTRADA_PARCELAS);
             // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.OBRA'. Você pode movê-la ou removê-la conforme necessário.
@@ -58,7 +59,6 @@ namespace Construtora
             maskedTextBox1.Clear();
             maskedTextBox2.Clear();
             maskedTextBox3.Clear();
-            maskedTextBox4.Clear();
         }
 
         private void visiblepanel()
@@ -153,8 +153,8 @@ namespace Construtora
             conn = new SqlConnection(connectionString);
 
             comm = new SqlCommand(
-            "INSERT INTO FINANCEIRO (CODOBRA,VALOR_RECEBIDO,VALOR_TOTAL,DESPESA_ADICIONAL,LUCRO_TOTAL) " +
-            "VALUES (@CODOBRA,@VALOR_RECEBIDO,@VALOR_TOTAL,@DESPESA_ADICIONAL,@LUCRO_TOTAL)"
+            "INSERT INTO FINANCEIRO (CODOBRA,VALOR_RECEBIDO,VALOR_TOTAL,DESPESA_ADICIONAL) " +
+            "VALUES (@CODOBRA,@VALOR_RECEBIDO,@VALOR_TOTAL,@DESPESA_ADICIONAL)"
              , conn);
 
             try
@@ -181,9 +181,6 @@ namespace Construtora
                     comm.Parameters.Add("@DESPESA_ADICIONAL", System.Data.SqlDbType.Money);
                     comm.Parameters["@DESPESA_ADICIONAL"].Value = maskedTextBox3.Text;
                 }
-
-                comm.Parameters.Add("@LUCRO_TOTAL", System.Data.SqlDbType.Money);
-                comm.Parameters["@LUCRO_TOTAL"].Value = maskedTextBox4.Text;
 
 
             }
@@ -243,7 +240,7 @@ namespace Construtora
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow SelectedRow = dataGridView1.Rows[index];
+            DataGridViewRow SelectedRow = dataGridView2.Rows[index];
             try
             {
                 cod_fin = SelectedRow.Cells[0].Value.ToString();
@@ -424,7 +421,7 @@ namespace Construtora
             {
                 insertFinanc_Parcela();
                 udpatefinanc();
-                this.fINANCEIROTableAdapter.Fill(this.construtoraDataSet.FINANCEIRO);
+                this.fINANCEIROTableAdapter.FillByEmitidas(this.construtoraDataSet.FINANCEIRO);
             }
             catch (Exception error)
             {
@@ -432,10 +429,10 @@ namespace Construtora
                 return;
             }
         }
-
-        private void fillByParcelasFeitasToolStripButton_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-
+            Central_Financeira c1 = new Central_Financeira();
+            c1.Show();
         }
     }
 }

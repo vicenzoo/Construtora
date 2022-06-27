@@ -30,8 +30,6 @@ namespace Construtora {
         
         private EQUIPAMENTODataTable tableEQUIPAMENTO;
         
-        private FINANCEIRODataTable tableFINANCEIRO;
-        
         private FINANCEIRO_IMPOSTODataTable tableFINANCEIRO_IMPOSTO;
         
         private IMOVELDataTable tableIMOVEL;
@@ -48,19 +46,11 @@ namespace Construtora {
         
         private ESTOQUEDataTable tableESTOQUE;
         
-        private global::System.Data.DataRelation relationFK_FINANC_PARCELA;
-        
-        private global::System.Data.DataRelation relationFK_FINANCOBRA;
-        
-        private global::System.Data.DataRelation relationFK_FINANC_IMPOSTO;
+        private FINANCEIRODataTable tableFINANCEIRO;
         
         private global::System.Data.DataRelation relationFK_IMPOSTO_FINANC;
         
-        private global::System.Data.DataRelation relationFK_FINANC_IMOVEL;
-        
         private global::System.Data.DataRelation relationFK_VENDAOBRA;
-        
-        private global::System.Data.DataRelation relationFK_FINANC_VEICULO;
         
         private global::System.Data.DataRelation relationFK_IMPOSTO;
         
@@ -71,6 +61,16 @@ namespace Construtora {
         private global::System.Data.DataRelation relationFK_EQUIPESTOQ;
         
         private global::System.Data.DataRelation relationFK_VENDAESTOQUE;
+        
+        private global::System.Data.DataRelation relationFK_FINANC_PARCELA;
+        
+        private global::System.Data.DataRelation relationFK_FINANC_IMPOSTO;
+        
+        private global::System.Data.DataRelation relationFK_FINANC_IMOVEL;
+        
+        private global::System.Data.DataRelation relationFK_FINANC_VEICULO;
+        
+        private global::System.Data.DataRelation relationFK_FINANCOBRA;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -109,9 +109,6 @@ namespace Construtora {
                 if ((ds.Tables["EQUIPAMENTO"] != null)) {
                     base.Tables.Add(new EQUIPAMENTODataTable(ds.Tables["EQUIPAMENTO"]));
                 }
-                if ((ds.Tables["FINANCEIRO"] != null)) {
-                    base.Tables.Add(new FINANCEIRODataTable(ds.Tables["FINANCEIRO"]));
-                }
                 if ((ds.Tables["FINANCEIRO_IMPOSTO"] != null)) {
                     base.Tables.Add(new FINANCEIRO_IMPOSTODataTable(ds.Tables["FINANCEIRO_IMPOSTO"]));
                 }
@@ -135,6 +132,9 @@ namespace Construtora {
                 }
                 if ((ds.Tables["ESTOQUE"] != null)) {
                     base.Tables.Add(new ESTOQUEDataTable(ds.Tables["ESTOQUE"]));
+                }
+                if ((ds.Tables["FINANCEIRO"] != null)) {
+                    base.Tables.Add(new FINANCEIRODataTable(ds.Tables["FINANCEIRO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -181,16 +181,6 @@ namespace Construtora {
         public EQUIPAMENTODataTable EQUIPAMENTO {
             get {
                 return this.tableEQUIPAMENTO;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FINANCEIRODataTable FINANCEIRO {
-            get {
-                return this.tableFINANCEIRO;
             }
         }
         
@@ -276,6 +266,16 @@ namespace Construtora {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public FINANCEIRODataTable FINANCEIRO {
+            get {
+                return this.tableFINANCEIRO;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -350,9 +350,6 @@ namespace Construtora {
                 if ((ds.Tables["EQUIPAMENTO"] != null)) {
                     base.Tables.Add(new EQUIPAMENTODataTable(ds.Tables["EQUIPAMENTO"]));
                 }
-                if ((ds.Tables["FINANCEIRO"] != null)) {
-                    base.Tables.Add(new FINANCEIRODataTable(ds.Tables["FINANCEIRO"]));
-                }
                 if ((ds.Tables["FINANCEIRO_IMPOSTO"] != null)) {
                     base.Tables.Add(new FINANCEIRO_IMPOSTODataTable(ds.Tables["FINANCEIRO_IMPOSTO"]));
                 }
@@ -376,6 +373,9 @@ namespace Construtora {
                 }
                 if ((ds.Tables["ESTOQUE"] != null)) {
                     base.Tables.Add(new ESTOQUEDataTable(ds.Tables["ESTOQUE"]));
+                }
+                if ((ds.Tables["FINANCEIRO"] != null)) {
+                    base.Tables.Add(new FINANCEIRODataTable(ds.Tables["FINANCEIRO"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -428,12 +428,6 @@ namespace Construtora {
                     this.tableEQUIPAMENTO.InitVars();
                 }
             }
-            this.tableFINANCEIRO = ((FINANCEIRODataTable)(base.Tables["FINANCEIRO"]));
-            if ((initTable == true)) {
-                if ((this.tableFINANCEIRO != null)) {
-                    this.tableFINANCEIRO.InitVars();
-                }
-            }
             this.tableFINANCEIRO_IMPOSTO = ((FINANCEIRO_IMPOSTODataTable)(base.Tables["FINANCEIRO_IMPOSTO"]));
             if ((initTable == true)) {
                 if ((this.tableFINANCEIRO_IMPOSTO != null)) {
@@ -482,18 +476,24 @@ namespace Construtora {
                     this.tableESTOQUE.InitVars();
                 }
             }
-            this.relationFK_FINANC_PARCELA = this.Relations["FK_FINANC_PARCELA"];
-            this.relationFK_FINANCOBRA = this.Relations["FK_FINANCOBRA"];
-            this.relationFK_FINANC_IMPOSTO = this.Relations["FK_FINANC_IMPOSTO"];
+            this.tableFINANCEIRO = ((FINANCEIRODataTable)(base.Tables["FINANCEIRO"]));
+            if ((initTable == true)) {
+                if ((this.tableFINANCEIRO != null)) {
+                    this.tableFINANCEIRO.InitVars();
+                }
+            }
             this.relationFK_IMPOSTO_FINANC = this.Relations["FK_IMPOSTO_FINANC"];
-            this.relationFK_FINANC_IMOVEL = this.Relations["FK_FINANC_IMOVEL"];
             this.relationFK_VENDAOBRA = this.Relations["FK_VENDAOBRA"];
-            this.relationFK_FINANC_VEICULO = this.Relations["FK_FINANC_VEICULO"];
             this.relationFK_IMPOSTO = this.Relations["FK_IMPOSTO"];
             this.relationFK_VENDA = this.Relations["FK_VENDA"];
             this.relationFK_EQUIPEPECA = this.Relations["FK_EQUIPEPECA"];
             this.relationFK_EQUIPESTOQ = this.Relations["FK_EQUIPESTOQ"];
             this.relationFK_VENDAESTOQUE = this.Relations["FK_VENDAESTOQUE"];
+            this.relationFK_FINANC_PARCELA = this.Relations["FK_FINANC_PARCELA"];
+            this.relationFK_FINANC_IMPOSTO = this.Relations["FK_FINANC_IMPOSTO"];
+            this.relationFK_FINANC_IMOVEL = this.Relations["FK_FINANC_IMOVEL"];
+            this.relationFK_FINANC_VEICULO = this.Relations["FK_FINANC_VEICULO"];
+            this.relationFK_FINANCOBRA = this.Relations["FK_FINANCOBRA"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -510,8 +510,6 @@ namespace Construtora {
             base.Tables.Add(this.tableENTRADA_PARCELAS);
             this.tableEQUIPAMENTO = new EQUIPAMENTODataTable();
             base.Tables.Add(this.tableEQUIPAMENTO);
-            this.tableFINANCEIRO = new FINANCEIRODataTable();
-            base.Tables.Add(this.tableFINANCEIRO);
             this.tableFINANCEIRO_IMPOSTO = new FINANCEIRO_IMPOSTODataTable();
             base.Tables.Add(this.tableFINANCEIRO_IMPOSTO);
             this.tableIMOVEL = new IMOVELDataTable();
@@ -528,34 +526,16 @@ namespace Construtora {
             base.Tables.Add(this.tableVENDA_IMPOSTO);
             this.tableESTOQUE = new ESTOQUEDataTable();
             base.Tables.Add(this.tableESTOQUE);
-            this.relationFK_FINANC_PARCELA = new global::System.Data.DataRelation("FK_FINANC_PARCELA", new global::System.Data.DataColumn[] {
-                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
-                        this.tableENTRADA_PARCELAS.CODFINANCColumn}, false);
-            this.Relations.Add(this.relationFK_FINANC_PARCELA);
-            this.relationFK_FINANCOBRA = new global::System.Data.DataRelation("FK_FINANCOBRA", new global::System.Data.DataColumn[] {
-                        this.tableOBRA.CODOBRAColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFINANCEIRO.CODOBRAColumn}, false);
-            this.Relations.Add(this.relationFK_FINANCOBRA);
-            this.relationFK_FINANC_IMPOSTO = new global::System.Data.DataRelation("FK_FINANC_IMPOSTO", new global::System.Data.DataColumn[] {
-                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFINANCEIRO_IMPOSTO.CODFINANCColumn}, false);
-            this.Relations.Add(this.relationFK_FINANC_IMPOSTO);
+            this.tableFINANCEIRO = new FINANCEIRODataTable();
+            base.Tables.Add(this.tableFINANCEIRO);
             this.relationFK_IMPOSTO_FINANC = new global::System.Data.DataRelation("FK_IMPOSTO_FINANC", new global::System.Data.DataColumn[] {
                         this.tableIMPOSTO.CODIMPColumn}, new global::System.Data.DataColumn[] {
                         this.tableFINANCEIRO_IMPOSTO.CODIMPColumn}, false);
             this.Relations.Add(this.relationFK_IMPOSTO_FINANC);
-            this.relationFK_FINANC_IMOVEL = new global::System.Data.DataRelation("FK_FINANC_IMOVEL", new global::System.Data.DataColumn[] {
-                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
-                        this.tableIMOVEL.CODFINANCColumn}, false);
-            this.Relations.Add(this.relationFK_FINANC_IMOVEL);
             this.relationFK_VENDAOBRA = new global::System.Data.DataRelation("FK_VENDAOBRA", new global::System.Data.DataColumn[] {
                         this.tableCUSTO_VENDA.CODCUSTOVENDAColumn}, new global::System.Data.DataColumn[] {
                         this.tableOBRA.CODVENDAColumn}, false);
             this.Relations.Add(this.relationFK_VENDAOBRA);
-            this.relationFK_FINANC_VEICULO = new global::System.Data.DataRelation("FK_FINANC_VEICULO", new global::System.Data.DataColumn[] {
-                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
-                        this.tableVEICULO.CODFINANCColumn}, false);
-            this.Relations.Add(this.relationFK_FINANC_VEICULO);
             this.relationFK_IMPOSTO = new global::System.Data.DataRelation("FK_IMPOSTO", new global::System.Data.DataColumn[] {
                         this.tableIMPOSTO.CODIMPColumn}, new global::System.Data.DataColumn[] {
                         this.tableVENDA_IMPOSTO.CODIMPColumn}, false);
@@ -576,6 +556,26 @@ namespace Construtora {
                         this.tableCUSTO_VENDA.CODCUSTOVENDAColumn}, new global::System.Data.DataColumn[] {
                         this.tableESTOQUE.CODVENDAColumn}, false);
             this.Relations.Add(this.relationFK_VENDAESTOQUE);
+            this.relationFK_FINANC_PARCELA = new global::System.Data.DataRelation("FK_FINANC_PARCELA", new global::System.Data.DataColumn[] {
+                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
+                        this.tableENTRADA_PARCELAS.CODFINANCColumn}, false);
+            this.Relations.Add(this.relationFK_FINANC_PARCELA);
+            this.relationFK_FINANC_IMPOSTO = new global::System.Data.DataRelation("FK_FINANC_IMPOSTO", new global::System.Data.DataColumn[] {
+                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFINANCEIRO_IMPOSTO.CODFINANCColumn}, false);
+            this.Relations.Add(this.relationFK_FINANC_IMPOSTO);
+            this.relationFK_FINANC_IMOVEL = new global::System.Data.DataRelation("FK_FINANC_IMOVEL", new global::System.Data.DataColumn[] {
+                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
+                        this.tableIMOVEL.CODFINANCColumn}, false);
+            this.Relations.Add(this.relationFK_FINANC_IMOVEL);
+            this.relationFK_FINANC_VEICULO = new global::System.Data.DataRelation("FK_FINANC_VEICULO", new global::System.Data.DataColumn[] {
+                        this.tableFINANCEIRO.CODFINANCColumn}, new global::System.Data.DataColumn[] {
+                        this.tableVEICULO.CODFINANCColumn}, false);
+            this.Relations.Add(this.relationFK_FINANC_VEICULO);
+            this.relationFK_FINANCOBRA = new global::System.Data.DataRelation("FK_FINANCOBRA", new global::System.Data.DataColumn[] {
+                        this.tableOBRA.CODOBRAColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFINANCEIRO.CODOBRAColumn}, false);
+            this.Relations.Add(this.relationFK_FINANCOBRA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -593,12 +593,6 @@ namespace Construtora {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeEQUIPAMENTO() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeFINANCEIRO() {
             return false;
         }
         
@@ -647,6 +641,12 @@ namespace Construtora {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeESTOQUE() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeFINANCEIRO() {
             return false;
         }
         
@@ -715,9 +715,6 @@ namespace Construtora {
         public delegate void EQUIPAMENTORowChangeEventHandler(object sender, EQUIPAMENTORowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void FINANCEIRORowChangeEventHandler(object sender, FINANCEIRORowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void FINANCEIRO_IMPOSTORowChangeEventHandler(object sender, FINANCEIRO_IMPOSTORowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -740,6 +737,9 @@ namespace Construtora {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void ESTOQUERowChangeEventHandler(object sender, ESTOQUERowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void FINANCEIRORowChangeEventHandler(object sender, FINANCEIRORowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1110,6 +1110,8 @@ namespace Construtora {
             
             private global::System.Data.DataColumn columnCOMPLEMENTO;
             
+            private global::System.Data.DataColumn columnSTATUS_PARCELA;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ENTRADA_PARCELASDataTable() {
@@ -1185,6 +1187,14 @@ namespace Construtora {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STATUS_PARCELAColumn {
+                get {
+                    return this.columnSTATUS_PARCELA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1220,14 +1230,15 @@ namespace Construtora {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ENTRADA_PARCELASRow AddENTRADA_PARCELASRow(FINANCEIRORow parentFINANCEIRORowByFK_FINANC_PARCELA, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO) {
+            public ENTRADA_PARCELASRow AddENTRADA_PARCELASRow(FINANCEIRORow parentFINANCEIRORowByFK_FINANC_PARCELA, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO, string STATUS_PARCELA) {
                 ENTRADA_PARCELASRow rowENTRADA_PARCELASRow = ((ENTRADA_PARCELASRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         VALOR_PARCELA,
                         DATA_VENC,
-                        COMPLEMENTO};
+                        COMPLEMENTO,
+                        STATUS_PARCELA};
                 if ((parentFINANCEIRORowByFK_FINANC_PARCELA != null)) {
                     columnValuesArray[1] = parentFINANCEIRORowByFK_FINANC_PARCELA[0];
                 }
@@ -1265,6 +1276,7 @@ namespace Construtora {
                 this.columnVALOR_PARCELA = base.Columns["VALOR_PARCELA"];
                 this.columnDATA_VENC = base.Columns["DATA_VENC"];
                 this.columnCOMPLEMENTO = base.Columns["COMPLEMENTO"];
+                this.columnSTATUS_PARCELA = base.Columns["STATUS_PARCELA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1280,6 +1292,8 @@ namespace Construtora {
                 base.Columns.Add(this.columnDATA_VENC);
                 this.columnCOMPLEMENTO = new global::System.Data.DataColumn("COMPLEMENTO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCOMPLEMENTO);
+                this.columnSTATUS_PARCELA = new global::System.Data.DataColumn("STATUS_PARCELA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTATUS_PARCELA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCODPARCELA}, true));
                 this.columnCODPARCELA.AutoIncrement = true;
@@ -1293,6 +1307,8 @@ namespace Construtora {
                 this.columnDATA_VENC.AllowDBNull = false;
                 this.columnCOMPLEMENTO.AllowDBNull = false;
                 this.columnCOMPLEMENTO.MaxLength = 50;
+                this.columnSTATUS_PARCELA.AllowDBNull = false;
+                this.columnSTATUS_PARCELA.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1714,441 +1730,6 @@ namespace Construtora {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "EQUIPAMENTODataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FINANCEIRODataTable : global::System.Data.TypedTableBase<FINANCEIRORow> {
-            
-            private global::System.Data.DataColumn columnCODFINANC;
-            
-            private global::System.Data.DataColumn columnCODOBRA;
-            
-            private global::System.Data.DataColumn columnVALOR_RECEBIDO;
-            
-            private global::System.Data.DataColumn columnRECEBE_VEICULO;
-            
-            private global::System.Data.DataColumn columnINADIMPLENTE;
-            
-            private global::System.Data.DataColumn columnRECEBE_IMOVEL;
-            
-            private global::System.Data.DataColumn columnPOSSSUI_PARCELAS;
-            
-            private global::System.Data.DataColumn columnNUM_PARCELAS;
-            
-            private global::System.Data.DataColumn columnPOSSSUI_IMPOSTOS;
-            
-            private global::System.Data.DataColumn columnVALOR_TOTAL;
-            
-            private global::System.Data.DataColumn columnDESPESA_ADICIONAL;
-            
-            private global::System.Data.DataColumn columnLUCRO_TOTAL;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRODataTable() {
-                this.TableName = "FINANCEIRO";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal FINANCEIRODataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected FINANCEIRODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CODFINANCColumn {
-                get {
-                    return this.columnCODFINANC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CODOBRAColumn {
-                get {
-                    return this.columnCODOBRA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn VALOR_RECEBIDOColumn {
-                get {
-                    return this.columnVALOR_RECEBIDO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RECEBE_VEICULOColumn {
-                get {
-                    return this.columnRECEBE_VEICULO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn INADIMPLENTEColumn {
-                get {
-                    return this.columnINADIMPLENTE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RECEBE_IMOVELColumn {
-                get {
-                    return this.columnRECEBE_IMOVEL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn POSSSUI_PARCELASColumn {
-                get {
-                    return this.columnPOSSSUI_PARCELAS;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NUM_PARCELASColumn {
-                get {
-                    return this.columnNUM_PARCELAS;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn POSSSUI_IMPOSTOSColumn {
-                get {
-                    return this.columnPOSSSUI_IMPOSTOS;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn VALOR_TOTALColumn {
-                get {
-                    return this.columnVALOR_TOTAL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DESPESA_ADICIONALColumn {
-                get {
-                    return this.columnDESPESA_ADICIONAL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LUCRO_TOTALColumn {
-                get {
-                    return this.columnLUCRO_TOTAL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRORow this[int index] {
-                get {
-                    return ((FINANCEIRORow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FINANCEIRORowChangeEventHandler FINANCEIRORowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FINANCEIRORowChangeEventHandler FINANCEIRORowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FINANCEIRORowChangeEventHandler FINANCEIRORowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FINANCEIRORowChangeEventHandler FINANCEIRORowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddFINANCEIRORow(FINANCEIRORow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRORow AddFINANCEIRORow(OBRARow parentOBRARowByFK_FINANCOBRA, decimal VALOR_RECEBIDO, string RECEBE_VEICULO, string INADIMPLENTE, string RECEBE_IMOVEL, string POSSSUI_PARCELAS, short NUM_PARCELAS, string POSSSUI_IMPOSTOS, decimal VALOR_TOTAL, decimal DESPESA_ADICIONAL, decimal LUCRO_TOTAL) {
-                FINANCEIRORow rowFINANCEIRORow = ((FINANCEIRORow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null,
-                        VALOR_RECEBIDO,
-                        RECEBE_VEICULO,
-                        INADIMPLENTE,
-                        RECEBE_IMOVEL,
-                        POSSSUI_PARCELAS,
-                        NUM_PARCELAS,
-                        POSSSUI_IMPOSTOS,
-                        VALOR_TOTAL,
-                        DESPESA_ADICIONAL,
-                        LUCRO_TOTAL};
-                if ((parentOBRARowByFK_FINANCOBRA != null)) {
-                    columnValuesArray[1] = parentOBRARowByFK_FINANCOBRA[0];
-                }
-                rowFINANCEIRORow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFINANCEIRORow);
-                return rowFINANCEIRORow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRORow FindByCODFINANC(int CODFINANC) {
-                return ((FINANCEIRORow)(this.Rows.Find(new object[] {
-                            CODFINANC})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                FINANCEIRODataTable cln = ((FINANCEIRODataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new FINANCEIRODataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnCODFINANC = base.Columns["CODFINANC"];
-                this.columnCODOBRA = base.Columns["CODOBRA"];
-                this.columnVALOR_RECEBIDO = base.Columns["VALOR_RECEBIDO"];
-                this.columnRECEBE_VEICULO = base.Columns["RECEBE_VEICULO"];
-                this.columnINADIMPLENTE = base.Columns["INADIMPLENTE"];
-                this.columnRECEBE_IMOVEL = base.Columns["RECEBE_IMOVEL"];
-                this.columnPOSSSUI_PARCELAS = base.Columns["POSSSUI_PARCELAS"];
-                this.columnNUM_PARCELAS = base.Columns["NUM_PARCELAS"];
-                this.columnPOSSSUI_IMPOSTOS = base.Columns["POSSSUI_IMPOSTOS"];
-                this.columnVALOR_TOTAL = base.Columns["VALOR_TOTAL"];
-                this.columnDESPESA_ADICIONAL = base.Columns["DESPESA_ADICIONAL"];
-                this.columnLUCRO_TOTAL = base.Columns["LUCRO_TOTAL"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnCODFINANC = new global::System.Data.DataColumn("CODFINANC", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCODFINANC);
-                this.columnCODOBRA = new global::System.Data.DataColumn("CODOBRA", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCODOBRA);
-                this.columnVALOR_RECEBIDO = new global::System.Data.DataColumn("VALOR_RECEBIDO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVALOR_RECEBIDO);
-                this.columnRECEBE_VEICULO = new global::System.Data.DataColumn("RECEBE_VEICULO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRECEBE_VEICULO);
-                this.columnINADIMPLENTE = new global::System.Data.DataColumn("INADIMPLENTE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnINADIMPLENTE);
-                this.columnRECEBE_IMOVEL = new global::System.Data.DataColumn("RECEBE_IMOVEL", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRECEBE_IMOVEL);
-                this.columnPOSSSUI_PARCELAS = new global::System.Data.DataColumn("POSSSUI_PARCELAS", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPOSSSUI_PARCELAS);
-                this.columnNUM_PARCELAS = new global::System.Data.DataColumn("NUM_PARCELAS", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNUM_PARCELAS);
-                this.columnPOSSSUI_IMPOSTOS = new global::System.Data.DataColumn("POSSSUI_IMPOSTOS", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPOSSSUI_IMPOSTOS);
-                this.columnVALOR_TOTAL = new global::System.Data.DataColumn("VALOR_TOTAL", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVALOR_TOTAL);
-                this.columnDESPESA_ADICIONAL = new global::System.Data.DataColumn("DESPESA_ADICIONAL", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDESPESA_ADICIONAL);
-                this.columnLUCRO_TOTAL = new global::System.Data.DataColumn("LUCRO_TOTAL", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLUCRO_TOTAL);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCODFINANC}, true));
-                this.columnCODFINANC.AutoIncrement = true;
-                this.columnCODFINANC.AutoIncrementSeed = -1;
-                this.columnCODFINANC.AutoIncrementStep = -1;
-                this.columnCODFINANC.AllowDBNull = false;
-                this.columnCODFINANC.ReadOnly = true;
-                this.columnCODFINANC.Unique = true;
-                this.columnCODOBRA.AllowDBNull = false;
-                this.columnVALOR_RECEBIDO.AllowDBNull = false;
-                this.columnRECEBE_VEICULO.AllowDBNull = false;
-                this.columnRECEBE_VEICULO.MaxLength = 1;
-                this.columnINADIMPLENTE.AllowDBNull = false;
-                this.columnINADIMPLENTE.MaxLength = 1;
-                this.columnRECEBE_IMOVEL.AllowDBNull = false;
-                this.columnRECEBE_IMOVEL.MaxLength = 1;
-                this.columnPOSSSUI_PARCELAS.AllowDBNull = false;
-                this.columnPOSSSUI_PARCELAS.MaxLength = 1;
-                this.columnNUM_PARCELAS.AllowDBNull = false;
-                this.columnPOSSSUI_IMPOSTOS.AllowDBNull = false;
-                this.columnPOSSSUI_IMPOSTOS.MaxLength = 1;
-                this.columnVALOR_TOTAL.AllowDBNull = false;
-                this.columnDESPESA_ADICIONAL.AllowDBNull = false;
-                this.columnLUCRO_TOTAL.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRORow NewFINANCEIRORow() {
-                return ((FINANCEIRORow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FINANCEIRORow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(FINANCEIRORow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.FINANCEIRORowChanged != null)) {
-                    this.FINANCEIRORowChanged(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.FINANCEIRORowChanging != null)) {
-                    this.FINANCEIRORowChanging(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.FINANCEIRORowDeleted != null)) {
-                    this.FINANCEIRORowDeleted(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.FINANCEIRORowDeleting != null)) {
-                    this.FINANCEIRORowDeleting(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveFINANCEIRORow(FINANCEIRORow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ConstrutoraDataSet ds = new ConstrutoraDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FINANCEIRODataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4874,6 +4455,456 @@ namespace Construtora {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FINANCEIRODataTable : global::System.Data.TypedTableBase<FINANCEIRORow> {
+            
+            private global::System.Data.DataColumn columnCODFINANC;
+            
+            private global::System.Data.DataColumn columnCODOBRA;
+            
+            private global::System.Data.DataColumn columnVALOR_RECEBIDO;
+            
+            private global::System.Data.DataColumn columnRECEBE_VEICULO;
+            
+            private global::System.Data.DataColumn columnINADIMPLENTE;
+            
+            private global::System.Data.DataColumn columnRECEBE_IMOVEL;
+            
+            private global::System.Data.DataColumn columnPOSSSUI_PARCELAS;
+            
+            private global::System.Data.DataColumn columnNUM_PARCELAS;
+            
+            private global::System.Data.DataColumn columnPOSSSUI_IMPOSTOS;
+            
+            private global::System.Data.DataColumn columnVALOR_TOTAL;
+            
+            private global::System.Data.DataColumn columnDESPESA_ADICIONAL;
+            
+            private global::System.Data.DataColumn columnLUCRO_TOTAL;
+            
+            private global::System.Data.DataColumn columnSTATUS_PAGAMENTO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRODataTable() {
+                this.TableName = "FINANCEIRO";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal FINANCEIRODataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected FINANCEIRODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CODFINANCColumn {
+                get {
+                    return this.columnCODFINANC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CODOBRAColumn {
+                get {
+                    return this.columnCODOBRA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn VALOR_RECEBIDOColumn {
+                get {
+                    return this.columnVALOR_RECEBIDO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RECEBE_VEICULOColumn {
+                get {
+                    return this.columnRECEBE_VEICULO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn INADIMPLENTEColumn {
+                get {
+                    return this.columnINADIMPLENTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RECEBE_IMOVELColumn {
+                get {
+                    return this.columnRECEBE_IMOVEL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn POSSSUI_PARCELASColumn {
+                get {
+                    return this.columnPOSSSUI_PARCELAS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NUM_PARCELASColumn {
+                get {
+                    return this.columnNUM_PARCELAS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn POSSSUI_IMPOSTOSColumn {
+                get {
+                    return this.columnPOSSSUI_IMPOSTOS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn VALOR_TOTALColumn {
+                get {
+                    return this.columnVALOR_TOTAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DESPESA_ADICIONALColumn {
+                get {
+                    return this.columnDESPESA_ADICIONAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LUCRO_TOTALColumn {
+                get {
+                    return this.columnLUCRO_TOTAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STATUS_PAGAMENTOColumn {
+                get {
+                    return this.columnSTATUS_PAGAMENTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRORow this[int index] {
+                get {
+                    return ((FINANCEIRORow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event FINANCEIRORowChangeEventHandler FINANCEIRORowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event FINANCEIRORowChangeEventHandler FINANCEIRORowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event FINANCEIRORowChangeEventHandler FINANCEIRORowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event FINANCEIRORowChangeEventHandler FINANCEIRORowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddFINANCEIRORow(FINANCEIRORow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRORow AddFINANCEIRORow(OBRARow parentOBRARowByFK_FINANCOBRA, decimal VALOR_RECEBIDO, string RECEBE_VEICULO, string INADIMPLENTE, string RECEBE_IMOVEL, string POSSSUI_PARCELAS, short NUM_PARCELAS, string POSSSUI_IMPOSTOS, decimal VALOR_TOTAL, decimal DESPESA_ADICIONAL, decimal LUCRO_TOTAL, string STATUS_PAGAMENTO) {
+                FINANCEIRORow rowFINANCEIRORow = ((FINANCEIRORow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        VALOR_RECEBIDO,
+                        RECEBE_VEICULO,
+                        INADIMPLENTE,
+                        RECEBE_IMOVEL,
+                        POSSSUI_PARCELAS,
+                        NUM_PARCELAS,
+                        POSSSUI_IMPOSTOS,
+                        VALOR_TOTAL,
+                        DESPESA_ADICIONAL,
+                        LUCRO_TOTAL,
+                        STATUS_PAGAMENTO};
+                if ((parentOBRARowByFK_FINANCOBRA != null)) {
+                    columnValuesArray[1] = parentOBRARowByFK_FINANCOBRA[0];
+                }
+                rowFINANCEIRORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFINANCEIRORow);
+                return rowFINANCEIRORow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRORow FindByCODFINANC(int CODFINANC) {
+                return ((FINANCEIRORow)(this.Rows.Find(new object[] {
+                            CODFINANC})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                FINANCEIRODataTable cln = ((FINANCEIRODataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FINANCEIRODataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnCODFINANC = base.Columns["CODFINANC"];
+                this.columnCODOBRA = base.Columns["CODOBRA"];
+                this.columnVALOR_RECEBIDO = base.Columns["VALOR_RECEBIDO"];
+                this.columnRECEBE_VEICULO = base.Columns["RECEBE_VEICULO"];
+                this.columnINADIMPLENTE = base.Columns["INADIMPLENTE"];
+                this.columnRECEBE_IMOVEL = base.Columns["RECEBE_IMOVEL"];
+                this.columnPOSSSUI_PARCELAS = base.Columns["POSSSUI_PARCELAS"];
+                this.columnNUM_PARCELAS = base.Columns["NUM_PARCELAS"];
+                this.columnPOSSSUI_IMPOSTOS = base.Columns["POSSSUI_IMPOSTOS"];
+                this.columnVALOR_TOTAL = base.Columns["VALOR_TOTAL"];
+                this.columnDESPESA_ADICIONAL = base.Columns["DESPESA_ADICIONAL"];
+                this.columnLUCRO_TOTAL = base.Columns["LUCRO_TOTAL"];
+                this.columnSTATUS_PAGAMENTO = base.Columns["STATUS_PAGAMENTO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnCODFINANC = new global::System.Data.DataColumn("CODFINANC", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCODFINANC);
+                this.columnCODOBRA = new global::System.Data.DataColumn("CODOBRA", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCODOBRA);
+                this.columnVALOR_RECEBIDO = new global::System.Data.DataColumn("VALOR_RECEBIDO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVALOR_RECEBIDO);
+                this.columnRECEBE_VEICULO = new global::System.Data.DataColumn("RECEBE_VEICULO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEBE_VEICULO);
+                this.columnINADIMPLENTE = new global::System.Data.DataColumn("INADIMPLENTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINADIMPLENTE);
+                this.columnRECEBE_IMOVEL = new global::System.Data.DataColumn("RECEBE_IMOVEL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRECEBE_IMOVEL);
+                this.columnPOSSSUI_PARCELAS = new global::System.Data.DataColumn("POSSSUI_PARCELAS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOSSSUI_PARCELAS);
+                this.columnNUM_PARCELAS = new global::System.Data.DataColumn("NUM_PARCELAS", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNUM_PARCELAS);
+                this.columnPOSSSUI_IMPOSTOS = new global::System.Data.DataColumn("POSSSUI_IMPOSTOS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOSSSUI_IMPOSTOS);
+                this.columnVALOR_TOTAL = new global::System.Data.DataColumn("VALOR_TOTAL", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVALOR_TOTAL);
+                this.columnDESPESA_ADICIONAL = new global::System.Data.DataColumn("DESPESA_ADICIONAL", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESPESA_ADICIONAL);
+                this.columnLUCRO_TOTAL = new global::System.Data.DataColumn("LUCRO_TOTAL", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLUCRO_TOTAL);
+                this.columnSTATUS_PAGAMENTO = new global::System.Data.DataColumn("STATUS_PAGAMENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTATUS_PAGAMENTO);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnCODFINANC}, true));
+                this.columnCODFINANC.AutoIncrement = true;
+                this.columnCODFINANC.AutoIncrementSeed = -1;
+                this.columnCODFINANC.AutoIncrementStep = -1;
+                this.columnCODFINANC.AllowDBNull = false;
+                this.columnCODFINANC.ReadOnly = true;
+                this.columnCODFINANC.Unique = true;
+                this.columnCODOBRA.AllowDBNull = false;
+                this.columnVALOR_RECEBIDO.AllowDBNull = false;
+                this.columnRECEBE_VEICULO.AllowDBNull = false;
+                this.columnRECEBE_VEICULO.MaxLength = 1;
+                this.columnINADIMPLENTE.AllowDBNull = false;
+                this.columnINADIMPLENTE.MaxLength = 1;
+                this.columnRECEBE_IMOVEL.AllowDBNull = false;
+                this.columnRECEBE_IMOVEL.MaxLength = 1;
+                this.columnPOSSSUI_PARCELAS.AllowDBNull = false;
+                this.columnPOSSSUI_PARCELAS.MaxLength = 1;
+                this.columnNUM_PARCELAS.AllowDBNull = false;
+                this.columnPOSSSUI_IMPOSTOS.AllowDBNull = false;
+                this.columnPOSSSUI_IMPOSTOS.MaxLength = 1;
+                this.columnVALOR_TOTAL.AllowDBNull = false;
+                this.columnDESPESA_ADICIONAL.AllowDBNull = false;
+                this.columnSTATUS_PAGAMENTO.AllowDBNull = false;
+                this.columnSTATUS_PAGAMENTO.MaxLength = 1;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRORow NewFINANCEIRORow() {
+                return ((FINANCEIRORow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FINANCEIRORow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(FINANCEIRORow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FINANCEIRORowChanged != null)) {
+                    this.FINANCEIRORowChanged(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FINANCEIRORowChanging != null)) {
+                    this.FINANCEIRORowChanging(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FINANCEIRORowDeleted != null)) {
+                    this.FINANCEIRORowDeleted(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FINANCEIRORowDeleting != null)) {
+                    this.FINANCEIRORowDeleting(this, new FINANCEIRORowChangeEvent(((FINANCEIRORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveFINANCEIRORow(FINANCEIRORow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ConstrutoraDataSet ds = new ConstrutoraDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FINANCEIRODataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class CUSTO_VENDARow : global::System.Data.DataRow {
@@ -5103,6 +5134,17 @@ namespace Construtora {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string STATUS_PARCELA {
+                get {
+                    return ((string)(this[this.tableENTRADA_PARCELAS.STATUS_PARCELAColumn]));
+                }
+                set {
+                    this[this.tableENTRADA_PARCELAS.STATUS_PARCELAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public FINANCEIRORow FINANCEIRORow {
                 get {
                     return ((FINANCEIRORow)(this.GetParentRow(this.Table.ParentRelations["FK_FINANC_PARCELA"])));
@@ -5259,208 +5301,6 @@ namespace Construtora {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FINANCEIRORow : global::System.Data.DataRow {
-            
-            private FINANCEIRODataTable tableFINANCEIRO;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal FINANCEIRORow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableFINANCEIRO = ((FINANCEIRODataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int CODFINANC {
-                get {
-                    return ((int)(this[this.tableFINANCEIRO.CODFINANCColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.CODFINANCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int CODOBRA {
-                get {
-                    return ((int)(this[this.tableFINANCEIRO.CODOBRAColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.CODOBRAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal VALOR_RECEBIDO {
-                get {
-                    return ((decimal)(this[this.tableFINANCEIRO.VALOR_RECEBIDOColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.VALOR_RECEBIDOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string RECEBE_VEICULO {
-                get {
-                    return ((string)(this[this.tableFINANCEIRO.RECEBE_VEICULOColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.RECEBE_VEICULOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string INADIMPLENTE {
-                get {
-                    return ((string)(this[this.tableFINANCEIRO.INADIMPLENTEColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.INADIMPLENTEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string RECEBE_IMOVEL {
-                get {
-                    return ((string)(this[this.tableFINANCEIRO.RECEBE_IMOVELColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.RECEBE_IMOVELColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string POSSSUI_PARCELAS {
-                get {
-                    return ((string)(this[this.tableFINANCEIRO.POSSSUI_PARCELASColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.POSSSUI_PARCELASColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public short NUM_PARCELAS {
-                get {
-                    return ((short)(this[this.tableFINANCEIRO.NUM_PARCELASColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.NUM_PARCELASColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string POSSSUI_IMPOSTOS {
-                get {
-                    return ((string)(this[this.tableFINANCEIRO.POSSSUI_IMPOSTOSColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.POSSSUI_IMPOSTOSColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal VALOR_TOTAL {
-                get {
-                    return ((decimal)(this[this.tableFINANCEIRO.VALOR_TOTALColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.VALOR_TOTALColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal DESPESA_ADICIONAL {
-                get {
-                    return ((decimal)(this[this.tableFINANCEIRO.DESPESA_ADICIONALColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.DESPESA_ADICIONALColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal LUCRO_TOTAL {
-                get {
-                    return ((decimal)(this[this.tableFINANCEIRO.LUCRO_TOTALColumn]));
-                }
-                set {
-                    this[this.tableFINANCEIRO.LUCRO_TOTALColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OBRARow OBRARow {
-                get {
-                    return ((OBRARow)(this.GetParentRow(this.Table.ParentRelations["FK_FINANCOBRA"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_FINANCOBRA"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ENTRADA_PARCELASRow[] GetENTRADA_PARCELASRows() {
-                if ((this.Table.ChildRelations["FK_FINANC_PARCELA"] == null)) {
-                    return new ENTRADA_PARCELASRow[0];
-                }
-                else {
-                    return ((ENTRADA_PARCELASRow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_PARCELA"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRO_IMPOSTORow[] GetFINANCEIRO_IMPOSTORows() {
-                if ((this.Table.ChildRelations["FK_FINANC_IMPOSTO"] == null)) {
-                    return new FINANCEIRO_IMPOSTORow[0];
-                }
-                else {
-                    return ((FINANCEIRO_IMPOSTORow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_IMPOSTO"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IMOVELRow[] GetIMOVELRows() {
-                if ((this.Table.ChildRelations["FK_FINANC_IMOVEL"] == null)) {
-                    return new IMOVELRow[0];
-                }
-                else {
-                    return ((IMOVELRow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_IMOVEL"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public VEICULORow[] GetVEICULORows() {
-                if ((this.Table.ChildRelations["FK_FINANC_VEICULO"] == null)) {
-                    return new VEICULORow[0];
-                }
-                else {
-                    return ((VEICULORow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_VEICULO"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class FINANCEIRO_IMPOSTORow : global::System.Data.DataRow {
             
             private FINANCEIRO_IMPOSTODataTable tableFINANCEIRO_IMPOSTO;
@@ -5518,23 +5358,23 @@ namespace Construtora {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRORow FINANCEIRORow {
-                get {
-                    return ((FINANCEIRORow)(this.GetParentRow(this.Table.ParentRelations["FK_FINANC_IMPOSTO"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_FINANC_IMPOSTO"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public IMPOSTORow IMPOSTORow {
                 get {
                     return ((IMPOSTORow)(this.GetParentRow(this.Table.ParentRelations["FK_IMPOSTO_FINANC"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_IMPOSTO_FINANC"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRORow FINANCEIRORow {
+                get {
+                    return ((FINANCEIRORow)(this.GetParentRow(this.Table.ParentRelations["FK_FINANC_IMPOSTO"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_FINANC_IMPOSTO"]);
                 }
             }
         }
@@ -6528,6 +6368,236 @@ namespace Construtora {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class FINANCEIRORow : global::System.Data.DataRow {
+            
+            private FINANCEIRODataTable tableFINANCEIRO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal FINANCEIRORow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFINANCEIRO = ((FINANCEIRODataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int CODFINANC {
+                get {
+                    return ((int)(this[this.tableFINANCEIRO.CODFINANCColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.CODFINANCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int CODOBRA {
+                get {
+                    return ((int)(this[this.tableFINANCEIRO.CODOBRAColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.CODOBRAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal VALOR_RECEBIDO {
+                get {
+                    return ((decimal)(this[this.tableFINANCEIRO.VALOR_RECEBIDOColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.VALOR_RECEBIDOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string RECEBE_VEICULO {
+                get {
+                    return ((string)(this[this.tableFINANCEIRO.RECEBE_VEICULOColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.RECEBE_VEICULOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string INADIMPLENTE {
+                get {
+                    return ((string)(this[this.tableFINANCEIRO.INADIMPLENTEColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.INADIMPLENTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string RECEBE_IMOVEL {
+                get {
+                    return ((string)(this[this.tableFINANCEIRO.RECEBE_IMOVELColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.RECEBE_IMOVELColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string POSSSUI_PARCELAS {
+                get {
+                    return ((string)(this[this.tableFINANCEIRO.POSSSUI_PARCELASColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.POSSSUI_PARCELASColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short NUM_PARCELAS {
+                get {
+                    return ((short)(this[this.tableFINANCEIRO.NUM_PARCELASColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.NUM_PARCELASColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string POSSSUI_IMPOSTOS {
+                get {
+                    return ((string)(this[this.tableFINANCEIRO.POSSSUI_IMPOSTOSColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.POSSSUI_IMPOSTOSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal VALOR_TOTAL {
+                get {
+                    return ((decimal)(this[this.tableFINANCEIRO.VALOR_TOTALColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.VALOR_TOTALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal DESPESA_ADICIONAL {
+                get {
+                    return ((decimal)(this[this.tableFINANCEIRO.DESPESA_ADICIONALColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.DESPESA_ADICIONALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal LUCRO_TOTAL {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFINANCEIRO.LUCRO_TOTALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'LUCRO_TOTAL\' na tabela \'FINANCEIRO\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFINANCEIRO.LUCRO_TOTALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string STATUS_PAGAMENTO {
+                get {
+                    return ((string)(this[this.tableFINANCEIRO.STATUS_PAGAMENTOColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO.STATUS_PAGAMENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public OBRARow OBRARow {
+                get {
+                    return ((OBRARow)(this.GetParentRow(this.Table.ParentRelations["FK_FINANCOBRA"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_FINANCOBRA"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLUCRO_TOTALNull() {
+                return this.IsNull(this.tableFINANCEIRO.LUCRO_TOTALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLUCRO_TOTALNull() {
+                this[this.tableFINANCEIRO.LUCRO_TOTALColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ENTRADA_PARCELASRow[] GetENTRADA_PARCELASRows() {
+                if ((this.Table.ChildRelations["FK_FINANC_PARCELA"] == null)) {
+                    return new ENTRADA_PARCELASRow[0];
+                }
+                else {
+                    return ((ENTRADA_PARCELASRow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_PARCELA"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRO_IMPOSTORow[] GetFINANCEIRO_IMPOSTORows() {
+                if ((this.Table.ChildRelations["FK_FINANC_IMPOSTO"] == null)) {
+                    return new FINANCEIRO_IMPOSTORow[0];
+                }
+                else {
+                    return ((FINANCEIRO_IMPOSTORow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_IMPOSTO"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public IMOVELRow[] GetIMOVELRows() {
+                if ((this.Table.ChildRelations["FK_FINANC_IMOVEL"] == null)) {
+                    return new IMOVELRow[0];
+                }
+                else {
+                    return ((IMOVELRow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_IMOVEL"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VEICULORow[] GetVEICULORows() {
+                if ((this.Table.ChildRelations["FK_FINANC_VEICULO"] == null)) {
+                    return new VEICULORow[0];
+                }
+                else {
+                    return ((VEICULORow[])(base.GetChildRows(this.Table.ChildRelations["FK_FINANC_VEICULO"])));
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -6615,40 +6685,6 @@ namespace Construtora {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public EQUIPAMENTORow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class FINANCEIRORowChangeEvent : global::System.EventArgs {
-            
-            private FINANCEIRORow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRORowChangeEvent(FINANCEIRORow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRORow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6921,6 +6957,40 @@ namespace Construtora {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ESTOQUERow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class FINANCEIRORowChangeEvent : global::System.EventArgs {
+            
+            private FINANCEIRORow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRORowChangeEvent(FINANCEIRORow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public FINANCEIRORow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7497,42 +7567,46 @@ SELECT CODCUSTOVENDA, ORCAMENTO, CUSTO_ENG, OPER_ESCRITORIO, STATUS_VENDA, PROJ_
             tableMapping.ColumnMappings.Add("VALOR_PARCELA", "VALOR_PARCELA");
             tableMapping.ColumnMappings.Add("DATA_VENC", "DATA_VENC");
             tableMapping.ColumnMappings.Add("COMPLEMENTO", "COMPLEMENTO");
+            tableMapping.ColumnMappings.Add("STATUS_PARCELA", "STATUS_PARCELA");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[ENTRADA_PARCELAS] WHERE (([CODPARCELA] = @Original_CODPARCELA)" +
-                " AND ([CODFINANC] = @Original_CODFINANC) AND ([VALOR_PARCELA] = @Original_VALOR_" +
-                "PARCELA) AND ([DATA_VENC] = @Original_DATA_VENC) AND ([COMPLEMENTO] = @Original_" +
-                "COMPLEMENTO))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [ENTRADA_PARCELAS] WHERE (([CODPARCELA] = @Original_CODPARCELA) AND ([CODFINANC] = @Original_CODFINANC) AND ([VALOR_PARCELA] = @Original_VALOR_PARCELA) AND ([DATA_VENC] = @Original_DATA_VENC) AND ((@IsNull_COMPLEMENTO = 1 AND [COMPLEMENTO] IS NULL) OR ([COMPLEMENTO] = @Original_COMPLEMENTO)) AND ([STATUS_PARCELA] = @Original_STATUS_PARCELA))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODPARCELA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODPARCELA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_PARCELA", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PARCELA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA_VENC", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_VENC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_COMPLEMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COMPLEMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COMPLEMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COMPLEMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_STATUS_PARCELA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PARCELA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ENTRADA_PARCELAS] ([CODFINANC], [VALOR_PARCELA], [DATA_VENC], [COMPLEMENTO]) VALUES (@CODFINANC, @VALOR_PARCELA, @DATA_VENC, @COMPLEMENTO);
-SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA_PARCELAS WHERE (CODPARCELA = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [ENTRADA_PARCELAS] ([CODFINANC], [VALOR_PARCELA], [DATA_VENC], [COMPLEMENTO], [STATUS_PARCELA]) VALUES (@CODFINANC, @VALOR_PARCELA, @DATA_VENC, @COMPLEMENTO, @STATUS_PARCELA);
+SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARCELA FROM ENTRADA_PARCELAS WHERE (CODPARCELA = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_PARCELA", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PARCELA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_VENC", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_VENC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COMPLEMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COMPLEMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATUS_PARCELA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PARCELA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ENTRADA_PARCELAS] SET [CODFINANC] = @CODFINANC, [VALOR_PARCELA] = @VALOR_PARCELA, [DATA_VENC] = @DATA_VENC, [COMPLEMENTO] = @COMPLEMENTO WHERE (([CODPARCELA] = @Original_CODPARCELA) AND ([CODFINANC] = @Original_CODFINANC) AND ([VALOR_PARCELA] = @Original_VALOR_PARCELA) AND ([DATA_VENC] = @Original_DATA_VENC) AND ([COMPLEMENTO] = @Original_COMPLEMENTO));
-SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA_PARCELAS WHERE (CODPARCELA = @CODPARCELA)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [ENTRADA_PARCELAS] SET [CODFINANC] = @CODFINANC, [VALOR_PARCELA] = @VALOR_PARCELA, [DATA_VENC] = @DATA_VENC, [COMPLEMENTO] = @COMPLEMENTO, [STATUS_PARCELA] = @STATUS_PARCELA WHERE (([CODPARCELA] = @Original_CODPARCELA) AND ([CODFINANC] = @Original_CODFINANC) AND ([VALOR_PARCELA] = @Original_VALOR_PARCELA) AND ([DATA_VENC] = @Original_DATA_VENC) AND ((@IsNull_COMPLEMENTO = 1 AND [COMPLEMENTO] IS NULL) OR ([COMPLEMENTO] = @Original_COMPLEMENTO)) AND ([STATUS_PARCELA] = @Original_STATUS_PARCELA));
+SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARCELA FROM ENTRADA_PARCELAS WHERE (CODPARCELA = @CODPARCELA)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_PARCELA", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PARCELA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_VENC", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_VENC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COMPLEMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COMPLEMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATUS_PARCELA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PARCELA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODPARCELA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODPARCELA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_PARCELA", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PARCELA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA_VENC", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_VENC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_COMPLEMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COMPLEMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COMPLEMENTO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COMPLEMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_STATUS_PARCELA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PARCELA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODPARCELA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODPARCELA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -7546,18 +7620,25 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM dbo.ENTR" +
-                "ADA_PARCELAS";
+            this._commandCollection[0].CommandText = "SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARCE" +
+                "LA FROM ENTRADA_PARCELAS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO\r\nFROM " +
-                "           ENTRADA_PARCELAS\r\nWHERE        (CODFINANC = @CODFINANC)";
+            this._commandCollection[1].CommandText = "SELECT        CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATU" +
+                "S_PARCELA\r\nFROM            ENTRADA_PARCELAS\r\nWHERE        (CODFINANC = @CODFINAN" +
+                "C) AND (STATUS_PARCELA = \'E\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARCE" +
+                "LA FROM ENTRADA_PARCELAS WHERE (CODFINANC = @CODFINANC)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7588,8 +7669,22 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByParcelasFeitas(ConstrutoraDataSet.ENTRADA_PARCELASDataTable dataTable, int CODFINANC) {
+        public virtual int FillByFillByParcelasFeitas(ConstrutoraDataSet.ENTRADA_PARCELASDataTable dataTable, int CODFINANC) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CODFINANC));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByParcelasFeitas(ConstrutoraDataSet.ENTRADA_PARCELASDataTable dataTable, int CODFINANC) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CODFINANC));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7631,16 +7726,24 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CODPARCELA, int Original_CODFINANC, decimal Original_VALOR_PARCELA, System.DateTime Original_DATA_VENC, string Original_COMPLEMENTO) {
+        public virtual int Delete(int Original_CODPARCELA, int Original_CODFINANC, decimal Original_VALOR_PARCELA, System.DateTime Original_DATA_VENC, string Original_COMPLEMENTO, string Original_STATUS_PARCELA) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CODPARCELA));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_CODFINANC));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_VALOR_PARCELA));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_DATA_VENC));
             if ((Original_COMPLEMENTO == null)) {
-                throw new global::System.ArgumentNullException("Original_COMPLEMENTO");
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_COMPLEMENTO));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_COMPLEMENTO));
+            }
+            if ((Original_STATUS_PARCELA == null)) {
+                throw new global::System.ArgumentNullException("Original_STATUS_PARCELA");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_STATUS_PARCELA));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7662,15 +7765,21 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int CODFINANC, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO) {
+        public virtual int Insert(int CODFINANC, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO, string STATUS_PARCELA) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(CODFINANC));
             this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(VALOR_PARCELA));
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DATA_VENC));
             if ((COMPLEMENTO == null)) {
-                throw new global::System.ArgumentNullException("COMPLEMENTO");
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(COMPLEMENTO));
+            }
+            if ((STATUS_PARCELA == null)) {
+                throw new global::System.ArgumentNullException("STATUS_PARCELA");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(STATUS_PARCELA));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7692,27 +7801,41 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int CODFINANC, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO, int Original_CODPARCELA, int Original_CODFINANC, decimal Original_VALOR_PARCELA, System.DateTime Original_DATA_VENC, string Original_COMPLEMENTO, int CODPARCELA) {
+        public virtual int Update(int CODFINANC, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO, string STATUS_PARCELA, int Original_CODPARCELA, int Original_CODFINANC, decimal Original_VALOR_PARCELA, System.DateTime Original_DATA_VENC, string Original_COMPLEMENTO, string Original_STATUS_PARCELA, int CODPARCELA) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(CODFINANC));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(VALOR_PARCELA));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DATA_VENC));
             if ((COMPLEMENTO == null)) {
-                throw new global::System.ArgumentNullException("COMPLEMENTO");
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(COMPLEMENTO));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_CODPARCELA));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_CODFINANC));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_VALOR_PARCELA));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_DATA_VENC));
-            if ((Original_COMPLEMENTO == null)) {
-                throw new global::System.ArgumentNullException("Original_COMPLEMENTO");
+            if ((STATUS_PARCELA == null)) {
+                throw new global::System.ArgumentNullException("STATUS_PARCELA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_COMPLEMENTO));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(STATUS_PARCELA));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(CODPARCELA));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_CODPARCELA));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_CODFINANC));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_VALOR_PARCELA));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_DATA_VENC));
+            if ((Original_COMPLEMENTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_COMPLEMENTO));
+            }
+            if ((Original_STATUS_PARCELA == null)) {
+                throw new global::System.ArgumentNullException("Original_STATUS_PARCELA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_STATUS_PARCELA));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(CODPARCELA));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7733,8 +7856,8 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO FROM ENTRADA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int CODFINANC, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO, int Original_CODPARCELA, int Original_CODFINANC, decimal Original_VALOR_PARCELA, System.DateTime Original_DATA_VENC, string Original_COMPLEMENTO) {
-            return this.Update(CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, Original_CODPARCELA, Original_CODFINANC, Original_VALOR_PARCELA, Original_DATA_VENC, Original_COMPLEMENTO, Original_CODPARCELA);
+        public virtual int Update(int CODFINANC, decimal VALOR_PARCELA, System.DateTime DATA_VENC, string COMPLEMENTO, string STATUS_PARCELA, int Original_CODPARCELA, int Original_CODFINANC, decimal Original_VALOR_PARCELA, System.DateTime Original_DATA_VENC, string Original_COMPLEMENTO, string Original_STATUS_PARCELA) {
+            return this.Update(CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARCELA, Original_CODPARCELA, Original_CODFINANC, Original_VALOR_PARCELA, Original_DATA_VENC, Original_COMPLEMENTO, Original_STATUS_PARCELA, Original_CODPARCELA);
         }
     }
     
@@ -8166,541 +8289,6 @@ SELECT CODEQUIP, DESCRICAO_EQUIP, QUANTIDADE, PROJ_CUSTO_MUCH, PROJ_CUSTO_FRETE,
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string DESCRICAO_EQUIP, int QUANTIDADE, global::System.Nullable<decimal> PROJ_CUSTO_MUCH, global::System.Nullable<decimal> PROJ_CUSTO_FRETE, global::System.Nullable<decimal> CUSTO_MAQUINAS, int Original_CODEQUIP, string Original_DESCRICAO_EQUIP, int Original_QUANTIDADE, global::System.Nullable<decimal> Original_PROJ_CUSTO_MUCH, global::System.Nullable<decimal> Original_PROJ_CUSTO_FRETE, global::System.Nullable<decimal> Original_CUSTO_MAQUINAS) {
             return this.Update(DESCRICAO_EQUIP, QUANTIDADE, PROJ_CUSTO_MUCH, PROJ_CUSTO_FRETE, CUSTO_MAQUINAS, Original_CODEQUIP, Original_DESCRICAO_EQUIP, Original_QUANTIDADE, Original_PROJ_CUSTO_MUCH, Original_PROJ_CUSTO_FRETE, Original_CUSTO_MAQUINAS, Original_CODEQUIP);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FINANCEIROTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public FINANCEIROTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FINANCEIRO";
-            tableMapping.ColumnMappings.Add("CODFINANC", "CODFINANC");
-            tableMapping.ColumnMappings.Add("CODOBRA", "CODOBRA");
-            tableMapping.ColumnMappings.Add("VALOR_RECEBIDO", "VALOR_RECEBIDO");
-            tableMapping.ColumnMappings.Add("RECEBE_VEICULO", "RECEBE_VEICULO");
-            tableMapping.ColumnMappings.Add("INADIMPLENTE", "INADIMPLENTE");
-            tableMapping.ColumnMappings.Add("RECEBE_IMOVEL", "RECEBE_IMOVEL");
-            tableMapping.ColumnMappings.Add("POSSSUI_PARCELAS", "POSSSUI_PARCELAS");
-            tableMapping.ColumnMappings.Add("NUM_PARCELAS", "NUM_PARCELAS");
-            tableMapping.ColumnMappings.Add("POSSSUI_IMPOSTOS", "POSSSUI_IMPOSTOS");
-            tableMapping.ColumnMappings.Add("VALOR_TOTAL", "VALOR_TOTAL");
-            tableMapping.ColumnMappings.Add("DESPESA_ADICIONAL", "DESPESA_ADICIONAL");
-            tableMapping.ColumnMappings.Add("LUCRO_TOTAL", "LUCRO_TOTAL");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[FINANCEIRO] WHERE (([CODFINANC] = @Original_CODFINANC) AND ([CODOBRA] = @Original_CODOBRA) AND ([VALOR_RECEBIDO] = @Original_VALOR_RECEBIDO) AND ([RECEBE_VEICULO] = @Original_RECEBE_VEICULO) AND ([INADIMPLENTE] = @Original_INADIMPLENTE) AND ([RECEBE_IMOVEL] = @Original_RECEBE_IMOVEL) AND ([POSSSUI_PARCELAS] = @Original_POSSSUI_PARCELAS) AND ([NUM_PARCELAS] = @Original_NUM_PARCELAS) AND ([POSSSUI_IMPOSTOS] = @Original_POSSSUI_IMPOSTOS) AND ([VALOR_TOTAL] = @Original_VALOR_TOTAL) AND ([DESPESA_ADICIONAL] = @Original_DESPESA_ADICIONAL) AND ([LUCRO_TOTAL] = @Original_LUCRO_TOTAL))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[FINANCEIRO] ([CODOBRA], [VALOR_RECEBIDO], [RECEBE_VEICULO], [INADIMPLENTE], [RECEBE_IMOVEL], [POSSSUI_PARCELAS], [NUM_PARCELAS], [POSSSUI_IMPOSTOS], [VALOR_TOTAL], [DESPESA_ADICIONAL], [LUCRO_TOTAL]) VALUES (@CODOBRA, @VALOR_RECEBIDO, @RECEBE_VEICULO, @INADIMPLENTE, @RECEBE_IMOVEL, @POSSSUI_PARCELAS, @NUM_PARCELAS, @POSSSUI_IMPOSTOS, @VALOR_TOTAL, @DESPESA_ADICIONAL, @LUCRO_TOTAL);
-SELECT CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL FROM FINANCEIRO WHERE (CODFINANC = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[FINANCEIRO] SET [CODOBRA] = @CODOBRA, [VALOR_RECEBIDO] = @VALOR_RECEBIDO, [RECEBE_VEICULO] = @RECEBE_VEICULO, [INADIMPLENTE] = @INADIMPLENTE, [RECEBE_IMOVEL] = @RECEBE_IMOVEL, [POSSSUI_PARCELAS] = @POSSSUI_PARCELAS, [NUM_PARCELAS] = @NUM_PARCELAS, [POSSSUI_IMPOSTOS] = @POSSSUI_IMPOSTOS, [VALOR_TOTAL] = @VALOR_TOTAL, [DESPESA_ADICIONAL] = @DESPESA_ADICIONAL, [LUCRO_TOTAL] = @LUCRO_TOTAL WHERE (([CODFINANC] = @Original_CODFINANC) AND ([CODOBRA] = @Original_CODOBRA) AND ([VALOR_RECEBIDO] = @Original_VALOR_RECEBIDO) AND ([RECEBE_VEICULO] = @Original_RECEBE_VEICULO) AND ([INADIMPLENTE] = @Original_INADIMPLENTE) AND ([RECEBE_IMOVEL] = @Original_RECEBE_IMOVEL) AND ([POSSSUI_PARCELAS] = @Original_POSSSUI_PARCELAS) AND ([NUM_PARCELAS] = @Original_NUM_PARCELAS) AND ([POSSSUI_IMPOSTOS] = @Original_POSSSUI_IMPOSTOS) AND ([VALOR_TOTAL] = @Original_VALOR_TOTAL) AND ([DESPESA_ADICIONAL] = @Original_DESPESA_ADICIONAL) AND ([LUCRO_TOTAL] = @Original_LUCRO_TOTAL));
-SELECT CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL FROM FINANCEIRO WHERE (CODFINANC = @CODFINANC)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Construtora.Properties.Settings.Default.ConstrutoraConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_I" +
-                "MOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_AD" +
-                "ICIONAL, LUCRO_TOTAL FROM dbo.FINANCEIRO";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ConstrutoraDataSet.FINANCEIRODataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ConstrutoraDataSet.FINANCEIRODataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            ConstrutoraDataSet.FINANCEIRODataTable dataTable = new ConstrutoraDataSet.FINANCEIRODataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ConstrutoraDataSet.FINANCEIRODataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ConstrutoraDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "FINANCEIRO");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CODFINANC, int Original_CODOBRA, decimal Original_VALOR_RECEBIDO, string Original_RECEBE_VEICULO, string Original_INADIMPLENTE, string Original_RECEBE_IMOVEL, string Original_POSSSUI_PARCELAS, short Original_NUM_PARCELAS, string Original_POSSSUI_IMPOSTOS, decimal Original_VALOR_TOTAL, decimal Original_DESPESA_ADICIONAL, decimal Original_LUCRO_TOTAL) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CODFINANC));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_CODOBRA));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_VALOR_RECEBIDO));
-            if ((Original_RECEBE_VEICULO == null)) {
-                throw new global::System.ArgumentNullException("Original_RECEBE_VEICULO");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_RECEBE_VEICULO));
-            }
-            if ((Original_INADIMPLENTE == null)) {
-                throw new global::System.ArgumentNullException("Original_INADIMPLENTE");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_INADIMPLENTE));
-            }
-            if ((Original_RECEBE_IMOVEL == null)) {
-                throw new global::System.ArgumentNullException("Original_RECEBE_IMOVEL");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_RECEBE_IMOVEL));
-            }
-            if ((Original_POSSSUI_PARCELAS == null)) {
-                throw new global::System.ArgumentNullException("Original_POSSSUI_PARCELAS");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_POSSSUI_PARCELAS));
-            }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((short)(Original_NUM_PARCELAS));
-            if ((Original_POSSSUI_IMPOSTOS == null)) {
-                throw new global::System.ArgumentNullException("Original_POSSSUI_IMPOSTOS");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_POSSSUI_IMPOSTOS));
-            }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_VALOR_TOTAL));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_DESPESA_ADICIONAL));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_LUCRO_TOTAL));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int CODOBRA, decimal VALOR_RECEBIDO, string RECEBE_VEICULO, string INADIMPLENTE, string RECEBE_IMOVEL, string POSSSUI_PARCELAS, short NUM_PARCELAS, string POSSSUI_IMPOSTOS, decimal VALOR_TOTAL, decimal DESPESA_ADICIONAL, decimal LUCRO_TOTAL) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(CODOBRA));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(VALOR_RECEBIDO));
-            if ((RECEBE_VEICULO == null)) {
-                throw new global::System.ArgumentNullException("RECEBE_VEICULO");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(RECEBE_VEICULO));
-            }
-            if ((INADIMPLENTE == null)) {
-                throw new global::System.ArgumentNullException("INADIMPLENTE");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(INADIMPLENTE));
-            }
-            if ((RECEBE_IMOVEL == null)) {
-                throw new global::System.ArgumentNullException("RECEBE_IMOVEL");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(RECEBE_IMOVEL));
-            }
-            if ((POSSSUI_PARCELAS == null)) {
-                throw new global::System.ArgumentNullException("POSSSUI_PARCELAS");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(POSSSUI_PARCELAS));
-            }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((short)(NUM_PARCELAS));
-            if ((POSSSUI_IMPOSTOS == null)) {
-                throw new global::System.ArgumentNullException("POSSSUI_IMPOSTOS");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(POSSSUI_IMPOSTOS));
-            }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(VALOR_TOTAL));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(DESPESA_ADICIONAL));
-            this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(LUCRO_TOTAL));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int CODOBRA, 
-                    decimal VALOR_RECEBIDO, 
-                    string RECEBE_VEICULO, 
-                    string INADIMPLENTE, 
-                    string RECEBE_IMOVEL, 
-                    string POSSSUI_PARCELAS, 
-                    short NUM_PARCELAS, 
-                    string POSSSUI_IMPOSTOS, 
-                    decimal VALOR_TOTAL, 
-                    decimal DESPESA_ADICIONAL, 
-                    decimal LUCRO_TOTAL, 
-                    int Original_CODFINANC, 
-                    int Original_CODOBRA, 
-                    decimal Original_VALOR_RECEBIDO, 
-                    string Original_RECEBE_VEICULO, 
-                    string Original_INADIMPLENTE, 
-                    string Original_RECEBE_IMOVEL, 
-                    string Original_POSSSUI_PARCELAS, 
-                    short Original_NUM_PARCELAS, 
-                    string Original_POSSSUI_IMPOSTOS, 
-                    decimal Original_VALOR_TOTAL, 
-                    decimal Original_DESPESA_ADICIONAL, 
-                    decimal Original_LUCRO_TOTAL, 
-                    int CODFINANC) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(CODOBRA));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(VALOR_RECEBIDO));
-            if ((RECEBE_VEICULO == null)) {
-                throw new global::System.ArgumentNullException("RECEBE_VEICULO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(RECEBE_VEICULO));
-            }
-            if ((INADIMPLENTE == null)) {
-                throw new global::System.ArgumentNullException("INADIMPLENTE");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(INADIMPLENTE));
-            }
-            if ((RECEBE_IMOVEL == null)) {
-                throw new global::System.ArgumentNullException("RECEBE_IMOVEL");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(RECEBE_IMOVEL));
-            }
-            if ((POSSSUI_PARCELAS == null)) {
-                throw new global::System.ArgumentNullException("POSSSUI_PARCELAS");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(POSSSUI_PARCELAS));
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((short)(NUM_PARCELAS));
-            if ((POSSSUI_IMPOSTOS == null)) {
-                throw new global::System.ArgumentNullException("POSSSUI_IMPOSTOS");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(POSSSUI_IMPOSTOS));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(VALOR_TOTAL));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(DESPESA_ADICIONAL));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(LUCRO_TOTAL));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_CODFINANC));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_CODOBRA));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(Original_VALOR_RECEBIDO));
-            if ((Original_RECEBE_VEICULO == null)) {
-                throw new global::System.ArgumentNullException("Original_RECEBE_VEICULO");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_RECEBE_VEICULO));
-            }
-            if ((Original_INADIMPLENTE == null)) {
-                throw new global::System.ArgumentNullException("Original_INADIMPLENTE");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_INADIMPLENTE));
-            }
-            if ((Original_RECEBE_IMOVEL == null)) {
-                throw new global::System.ArgumentNullException("Original_RECEBE_IMOVEL");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_RECEBE_IMOVEL));
-            }
-            if ((Original_POSSSUI_PARCELAS == null)) {
-                throw new global::System.ArgumentNullException("Original_POSSSUI_PARCELAS");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_POSSSUI_PARCELAS));
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((short)(Original_NUM_PARCELAS));
-            if ((Original_POSSSUI_IMPOSTOS == null)) {
-                throw new global::System.ArgumentNullException("Original_POSSSUI_IMPOSTOS");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_POSSSUI_IMPOSTOS));
-            }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_VALOR_TOTAL));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(Original_DESPESA_ADICIONAL));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_LUCRO_TOTAL));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(CODFINANC));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int CODOBRA, 
-                    decimal VALOR_RECEBIDO, 
-                    string RECEBE_VEICULO, 
-                    string INADIMPLENTE, 
-                    string RECEBE_IMOVEL, 
-                    string POSSSUI_PARCELAS, 
-                    short NUM_PARCELAS, 
-                    string POSSSUI_IMPOSTOS, 
-                    decimal VALOR_TOTAL, 
-                    decimal DESPESA_ADICIONAL, 
-                    decimal LUCRO_TOTAL, 
-                    int Original_CODFINANC, 
-                    int Original_CODOBRA, 
-                    decimal Original_VALOR_RECEBIDO, 
-                    string Original_RECEBE_VEICULO, 
-                    string Original_INADIMPLENTE, 
-                    string Original_RECEBE_IMOVEL, 
-                    string Original_POSSSUI_PARCELAS, 
-                    short Original_NUM_PARCELAS, 
-                    string Original_POSSSUI_IMPOSTOS, 
-                    decimal Original_VALOR_TOTAL, 
-                    decimal Original_DESPESA_ADICIONAL, 
-                    decimal Original_LUCRO_TOTAL) {
-            return this.Update(CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL, Original_CODFINANC, Original_CODOBRA, Original_VALOR_RECEBIDO, Original_RECEBE_VEICULO, Original_INADIMPLENTE, Original_RECEBE_IMOVEL, Original_POSSSUI_PARCELAS, Original_NUM_PARCELAS, Original_POSSSUI_IMPOSTOS, Original_VALOR_TOTAL, Original_DESPESA_ADICIONAL, Original_LUCRO_TOTAL, Original_CODFINANC);
         }
     }
     
@@ -12087,6 +11675,647 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class FINANCEIROTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public FINANCEIROTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "FINANCEIRO";
+            tableMapping.ColumnMappings.Add("CODFINANC", "CODFINANC");
+            tableMapping.ColumnMappings.Add("CODOBRA", "CODOBRA");
+            tableMapping.ColumnMappings.Add("VALOR_RECEBIDO", "VALOR_RECEBIDO");
+            tableMapping.ColumnMappings.Add("RECEBE_VEICULO", "RECEBE_VEICULO");
+            tableMapping.ColumnMappings.Add("INADIMPLENTE", "INADIMPLENTE");
+            tableMapping.ColumnMappings.Add("RECEBE_IMOVEL", "RECEBE_IMOVEL");
+            tableMapping.ColumnMappings.Add("POSSSUI_PARCELAS", "POSSSUI_PARCELAS");
+            tableMapping.ColumnMappings.Add("NUM_PARCELAS", "NUM_PARCELAS");
+            tableMapping.ColumnMappings.Add("POSSSUI_IMPOSTOS", "POSSSUI_IMPOSTOS");
+            tableMapping.ColumnMappings.Add("VALOR_TOTAL", "VALOR_TOTAL");
+            tableMapping.ColumnMappings.Add("DESPESA_ADICIONAL", "DESPESA_ADICIONAL");
+            tableMapping.ColumnMappings.Add("LUCRO_TOTAL", "LUCRO_TOTAL");
+            tableMapping.ColumnMappings.Add("STATUS_PAGAMENTO", "STATUS_PAGAMENTO");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[FINANCEIRO] WHERE (([CODFINANC] = @Original_CODFINANC) AND ([CODOBRA] = @Original_CODOBRA) AND ([VALOR_RECEBIDO] = @Original_VALOR_RECEBIDO) AND ([RECEBE_VEICULO] = @Original_RECEBE_VEICULO) AND ([INADIMPLENTE] = @Original_INADIMPLENTE) AND ([RECEBE_IMOVEL] = @Original_RECEBE_IMOVEL) AND ([POSSSUI_PARCELAS] = @Original_POSSSUI_PARCELAS) AND ([NUM_PARCELAS] = @Original_NUM_PARCELAS) AND ([POSSSUI_IMPOSTOS] = @Original_POSSSUI_IMPOSTOS) AND ([VALOR_TOTAL] = @Original_VALOR_TOTAL) AND ([DESPESA_ADICIONAL] = @Original_DESPESA_ADICIONAL) AND ((@IsNull_LUCRO_TOTAL = 1 AND [LUCRO_TOTAL] IS NULL) OR ([LUCRO_TOTAL] = @Original_LUCRO_TOTAL)) AND ([STATUS_PAGAMENTO] = @Original_STATUS_PAGAMENTO))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LUCRO_TOTAL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_STATUS_PAGAMENTO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PAGAMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[FINANCEIRO] ([CODOBRA], [VALOR_RECEBIDO], [RECEBE_VEICULO], [INADIMPLENTE], [RECEBE_IMOVEL], [POSSSUI_PARCELAS], [NUM_PARCELAS], [POSSSUI_IMPOSTOS], [VALOR_TOTAL], [DESPESA_ADICIONAL], [LUCRO_TOTAL], [STATUS_PAGAMENTO]) VALUES (@CODOBRA, @VALOR_RECEBIDO, @RECEBE_VEICULO, @INADIMPLENTE, @RECEBE_IMOVEL, @POSSSUI_PARCELAS, @NUM_PARCELAS, @POSSSUI_IMPOSTOS, @VALOR_TOTAL, @DESPESA_ADICIONAL, @LUCRO_TOTAL, @STATUS_PAGAMENTO);
+SELECT CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL, STATUS_PAGAMENTO FROM FINANCEIRO WHERE (CODFINANC = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATUS_PAGAMENTO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PAGAMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[FINANCEIRO] SET [CODOBRA] = @CODOBRA, [VALOR_RECEBIDO] = @VALOR_RECEBIDO, [RECEBE_VEICULO] = @RECEBE_VEICULO, [INADIMPLENTE] = @INADIMPLENTE, [RECEBE_IMOVEL] = @RECEBE_IMOVEL, [POSSSUI_PARCELAS] = @POSSSUI_PARCELAS, [NUM_PARCELAS] = @NUM_PARCELAS, [POSSSUI_IMPOSTOS] = @POSSSUI_IMPOSTOS, [VALOR_TOTAL] = @VALOR_TOTAL, [DESPESA_ADICIONAL] = @DESPESA_ADICIONAL, [LUCRO_TOTAL] = @LUCRO_TOTAL, [STATUS_PAGAMENTO] = @STATUS_PAGAMENTO WHERE (([CODFINANC] = @Original_CODFINANC) AND ([CODOBRA] = @Original_CODOBRA) AND ([VALOR_RECEBIDO] = @Original_VALOR_RECEBIDO) AND ([RECEBE_VEICULO] = @Original_RECEBE_VEICULO) AND ([INADIMPLENTE] = @Original_INADIMPLENTE) AND ([RECEBE_IMOVEL] = @Original_RECEBE_IMOVEL) AND ([POSSSUI_PARCELAS] = @Original_POSSSUI_PARCELAS) AND ([NUM_PARCELAS] = @Original_NUM_PARCELAS) AND ([POSSSUI_IMPOSTOS] = @Original_POSSSUI_IMPOSTOS) AND ([VALOR_TOTAL] = @Original_VALOR_TOTAL) AND ([DESPESA_ADICIONAL] = @Original_DESPESA_ADICIONAL) AND ((@IsNull_LUCRO_TOTAL = 1 AND [LUCRO_TOTAL] IS NULL) OR ([LUCRO_TOTAL] = @Original_LUCRO_TOTAL)) AND ([STATUS_PAGAMENTO] = @Original_STATUS_PAGAMENTO));
+SELECT CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL, STATUS_PAGAMENTO FROM FINANCEIRO WHERE (CODFINANC = @CODFINANC)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATUS_PAGAMENTO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PAGAMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODOBRA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODOBRA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_RECEBIDO", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_RECEBIDO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_VEICULO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_VEICULO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_INADIMPLENTE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "INADIMPLENTE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RECEBE_IMOVEL", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RECEBE_IMOVEL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_PARCELAS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_PARCELAS", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_PARCELAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POSSSUI_IMPOSTOS", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POSSSUI_IMPOSTOS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESPESA_ADICIONAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESPESA_ADICIONAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LUCRO_TOTAL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LUCRO_TOTAL", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LUCRO_TOTAL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_STATUS_PAGAMENTO", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PAGAMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Construtora.Properties.Settings.Default.ConstrutoraConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_I" +
+                "MOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_AD" +
+                "ICIONAL, LUCRO_TOTAL, STATUS_PAGAMENTO FROM dbo.FINANCEIRO";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL, 
+                         STATUS_PAGAMENTO
+FROM            FINANCEIRO
+WHERE        (STATUS_PAGAMENTO = 'E')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        CODFINANC, CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL, 
+                         STATUS_PAGAMENTO
+FROM            FINANCEIRO
+WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATUS_PAGAMENTO", global::System.Data.SqlDbType.Char, 1, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS_PAGAMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ConstrutoraDataSet.FINANCEIRODataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ConstrutoraDataSet.FINANCEIRODataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ConstrutoraDataSet.FINANCEIRODataTable dataTable = new ConstrutoraDataSet.FINANCEIRODataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByEmitidas(ConstrutoraDataSet.FINANCEIRODataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByFiltroFinanceiro(ConstrutoraDataSet.FINANCEIRODataTable dataTable, string STATUS_PAGAMENTO) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((STATUS_PAGAMENTO == null)) {
+                throw new global::System.ArgumentNullException("STATUS_PAGAMENTO");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(STATUS_PAGAMENTO));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ConstrutoraDataSet.FINANCEIRODataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ConstrutoraDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "FINANCEIRO");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_CODFINANC, int Original_CODOBRA, decimal Original_VALOR_RECEBIDO, string Original_RECEBE_VEICULO, string Original_INADIMPLENTE, string Original_RECEBE_IMOVEL, string Original_POSSSUI_PARCELAS, short Original_NUM_PARCELAS, string Original_POSSSUI_IMPOSTOS, decimal Original_VALOR_TOTAL, decimal Original_DESPESA_ADICIONAL, global::System.Nullable<decimal> Original_LUCRO_TOTAL, string Original_STATUS_PAGAMENTO) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CODFINANC));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_CODOBRA));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_VALOR_RECEBIDO));
+            if ((Original_RECEBE_VEICULO == null)) {
+                throw new global::System.ArgumentNullException("Original_RECEBE_VEICULO");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_RECEBE_VEICULO));
+            }
+            if ((Original_INADIMPLENTE == null)) {
+                throw new global::System.ArgumentNullException("Original_INADIMPLENTE");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_INADIMPLENTE));
+            }
+            if ((Original_RECEBE_IMOVEL == null)) {
+                throw new global::System.ArgumentNullException("Original_RECEBE_IMOVEL");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_RECEBE_IMOVEL));
+            }
+            if ((Original_POSSSUI_PARCELAS == null)) {
+                throw new global::System.ArgumentNullException("Original_POSSSUI_PARCELAS");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_POSSSUI_PARCELAS));
+            }
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((short)(Original_NUM_PARCELAS));
+            if ((Original_POSSSUI_IMPOSTOS == null)) {
+                throw new global::System.ArgumentNullException("Original_POSSSUI_IMPOSTOS");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_POSSSUI_IMPOSTOS));
+            }
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_VALOR_TOTAL));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_DESPESA_ADICIONAL));
+            if ((Original_LUCRO_TOTAL.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_LUCRO_TOTAL.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_STATUS_PAGAMENTO == null)) {
+                throw new global::System.ArgumentNullException("Original_STATUS_PAGAMENTO");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_STATUS_PAGAMENTO));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int CODOBRA, decimal VALOR_RECEBIDO, string RECEBE_VEICULO, string INADIMPLENTE, string RECEBE_IMOVEL, string POSSSUI_PARCELAS, short NUM_PARCELAS, string POSSSUI_IMPOSTOS, decimal VALOR_TOTAL, decimal DESPESA_ADICIONAL, global::System.Nullable<decimal> LUCRO_TOTAL, string STATUS_PAGAMENTO) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(CODOBRA));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(VALOR_RECEBIDO));
+            if ((RECEBE_VEICULO == null)) {
+                throw new global::System.ArgumentNullException("RECEBE_VEICULO");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(RECEBE_VEICULO));
+            }
+            if ((INADIMPLENTE == null)) {
+                throw new global::System.ArgumentNullException("INADIMPLENTE");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(INADIMPLENTE));
+            }
+            if ((RECEBE_IMOVEL == null)) {
+                throw new global::System.ArgumentNullException("RECEBE_IMOVEL");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(RECEBE_IMOVEL));
+            }
+            if ((POSSSUI_PARCELAS == null)) {
+                throw new global::System.ArgumentNullException("POSSSUI_PARCELAS");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(POSSSUI_PARCELAS));
+            }
+            this.Adapter.InsertCommand.Parameters[6].Value = ((short)(NUM_PARCELAS));
+            if ((POSSSUI_IMPOSTOS == null)) {
+                throw new global::System.ArgumentNullException("POSSSUI_IMPOSTOS");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(POSSSUI_IMPOSTOS));
+            }
+            this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(VALOR_TOTAL));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(DESPESA_ADICIONAL));
+            if ((LUCRO_TOTAL.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(LUCRO_TOTAL.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((STATUS_PAGAMENTO == null)) {
+                throw new global::System.ArgumentNullException("STATUS_PAGAMENTO");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(STATUS_PAGAMENTO));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    int CODOBRA, 
+                    decimal VALOR_RECEBIDO, 
+                    string RECEBE_VEICULO, 
+                    string INADIMPLENTE, 
+                    string RECEBE_IMOVEL, 
+                    string POSSSUI_PARCELAS, 
+                    short NUM_PARCELAS, 
+                    string POSSSUI_IMPOSTOS, 
+                    decimal VALOR_TOTAL, 
+                    decimal DESPESA_ADICIONAL, 
+                    global::System.Nullable<decimal> LUCRO_TOTAL, 
+                    string STATUS_PAGAMENTO, 
+                    int Original_CODFINANC, 
+                    int Original_CODOBRA, 
+                    decimal Original_VALOR_RECEBIDO, 
+                    string Original_RECEBE_VEICULO, 
+                    string Original_INADIMPLENTE, 
+                    string Original_RECEBE_IMOVEL, 
+                    string Original_POSSSUI_PARCELAS, 
+                    short Original_NUM_PARCELAS, 
+                    string Original_POSSSUI_IMPOSTOS, 
+                    decimal Original_VALOR_TOTAL, 
+                    decimal Original_DESPESA_ADICIONAL, 
+                    global::System.Nullable<decimal> Original_LUCRO_TOTAL, 
+                    string Original_STATUS_PAGAMENTO, 
+                    int CODFINANC) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(CODOBRA));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(VALOR_RECEBIDO));
+            if ((RECEBE_VEICULO == null)) {
+                throw new global::System.ArgumentNullException("RECEBE_VEICULO");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(RECEBE_VEICULO));
+            }
+            if ((INADIMPLENTE == null)) {
+                throw new global::System.ArgumentNullException("INADIMPLENTE");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(INADIMPLENTE));
+            }
+            if ((RECEBE_IMOVEL == null)) {
+                throw new global::System.ArgumentNullException("RECEBE_IMOVEL");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(RECEBE_IMOVEL));
+            }
+            if ((POSSSUI_PARCELAS == null)) {
+                throw new global::System.ArgumentNullException("POSSSUI_PARCELAS");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(POSSSUI_PARCELAS));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((short)(NUM_PARCELAS));
+            if ((POSSSUI_IMPOSTOS == null)) {
+                throw new global::System.ArgumentNullException("POSSSUI_IMPOSTOS");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(POSSSUI_IMPOSTOS));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(VALOR_TOTAL));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(DESPESA_ADICIONAL));
+            if ((LUCRO_TOTAL.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(LUCRO_TOTAL.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((STATUS_PAGAMENTO == null)) {
+                throw new global::System.ArgumentNullException("STATUS_PAGAMENTO");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(STATUS_PAGAMENTO));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_CODFINANC));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_CODOBRA));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_VALOR_RECEBIDO));
+            if ((Original_RECEBE_VEICULO == null)) {
+                throw new global::System.ArgumentNullException("Original_RECEBE_VEICULO");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_RECEBE_VEICULO));
+            }
+            if ((Original_INADIMPLENTE == null)) {
+                throw new global::System.ArgumentNullException("Original_INADIMPLENTE");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_INADIMPLENTE));
+            }
+            if ((Original_RECEBE_IMOVEL == null)) {
+                throw new global::System.ArgumentNullException("Original_RECEBE_IMOVEL");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_RECEBE_IMOVEL));
+            }
+            if ((Original_POSSSUI_PARCELAS == null)) {
+                throw new global::System.ArgumentNullException("Original_POSSSUI_PARCELAS");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_POSSSUI_PARCELAS));
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((short)(Original_NUM_PARCELAS));
+            if ((Original_POSSSUI_IMPOSTOS == null)) {
+                throw new global::System.ArgumentNullException("Original_POSSSUI_IMPOSTOS");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_POSSSUI_IMPOSTOS));
+            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(Original_VALOR_TOTAL));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_DESPESA_ADICIONAL));
+            if ((Original_LUCRO_TOTAL.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Original_LUCRO_TOTAL.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_STATUS_PAGAMENTO == null)) {
+                throw new global::System.ArgumentNullException("Original_STATUS_PAGAMENTO");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_STATUS_PAGAMENTO));
+            }
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(CODFINANC));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    int CODOBRA, 
+                    decimal VALOR_RECEBIDO, 
+                    string RECEBE_VEICULO, 
+                    string INADIMPLENTE, 
+                    string RECEBE_IMOVEL, 
+                    string POSSSUI_PARCELAS, 
+                    short NUM_PARCELAS, 
+                    string POSSSUI_IMPOSTOS, 
+                    decimal VALOR_TOTAL, 
+                    decimal DESPESA_ADICIONAL, 
+                    global::System.Nullable<decimal> LUCRO_TOTAL, 
+                    string STATUS_PAGAMENTO, 
+                    int Original_CODFINANC, 
+                    int Original_CODOBRA, 
+                    decimal Original_VALOR_RECEBIDO, 
+                    string Original_RECEBE_VEICULO, 
+                    string Original_INADIMPLENTE, 
+                    string Original_RECEBE_IMOVEL, 
+                    string Original_POSSSUI_PARCELAS, 
+                    short Original_NUM_PARCELAS, 
+                    string Original_POSSSUI_IMPOSTOS, 
+                    decimal Original_VALOR_TOTAL, 
+                    decimal Original_DESPESA_ADICIONAL, 
+                    global::System.Nullable<decimal> Original_LUCRO_TOTAL, 
+                    string Original_STATUS_PAGAMENTO) {
+            return this.Update(CODOBRA, VALOR_RECEBIDO, RECEBE_VEICULO, INADIMPLENTE, RECEBE_IMOVEL, POSSSUI_PARCELAS, NUM_PARCELAS, POSSSUI_IMPOSTOS, VALOR_TOTAL, DESPESA_ADICIONAL, LUCRO_TOTAL, STATUS_PAGAMENTO, Original_CODFINANC, Original_CODOBRA, Original_VALOR_RECEBIDO, Original_RECEBE_VEICULO, Original_INADIMPLENTE, Original_RECEBE_IMOVEL, Original_POSSSUI_PARCELAS, Original_NUM_PARCELAS, Original_POSSSUI_IMPOSTOS, Original_VALOR_TOTAL, Original_DESPESA_ADICIONAL, Original_LUCRO_TOTAL, Original_STATUS_PAGAMENTO, Original_CODFINANC);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -12104,8 +12333,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
         
         private EQUIPAMENTOTableAdapter _eQUIPAMENTOTableAdapter;
         
-        private FINANCEIROTableAdapter _fINANCEIROTableAdapter;
-        
         private FINANCEIRO_IMPOSTOTableAdapter _fINANCEIRO_IMPOSTOTableAdapter;
         
         private IMOVELTableAdapter _iMOVELTableAdapter;
@@ -12121,6 +12348,8 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
         private VENDA_IMPOSTOTableAdapter _vENDA_IMPOSTOTableAdapter;
         
         private ESTOQUETableAdapter _eSTOQUETableAdapter;
+        
+        private FINANCEIROTableAdapter _fINANCEIROTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -12176,20 +12405,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
             }
             set {
                 this._eQUIPAMENTOTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public FINANCEIROTableAdapter FINANCEIROTableAdapter {
-            get {
-                return this._fINANCEIROTableAdapter;
-            }
-            set {
-                this._fINANCEIROTableAdapter = value;
             }
         }
         
@@ -12307,6 +12522,20 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public FINANCEIROTableAdapter FINANCEIROTableAdapter {
+            get {
+                return this._fINANCEIROTableAdapter;
+            }
+            set {
+                this._fINANCEIROTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -12335,10 +12564,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                 if (((this._eQUIPAMENTOTableAdapter != null) 
                             && (this._eQUIPAMENTOTableAdapter.Connection != null))) {
                     return this._eQUIPAMENTOTableAdapter.Connection;
-                }
-                if (((this._fINANCEIROTableAdapter != null) 
-                            && (this._fINANCEIROTableAdapter.Connection != null))) {
-                    return this._fINANCEIROTableAdapter.Connection;
                 }
                 if (((this._fINANCEIRO_IMPOSTOTableAdapter != null) 
                             && (this._fINANCEIRO_IMPOSTOTableAdapter.Connection != null))) {
@@ -12372,6 +12597,10 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                             && (this._eSTOQUETableAdapter.Connection != null))) {
                     return this._eSTOQUETableAdapter.Connection;
                 }
+                if (((this._fINANCEIROTableAdapter != null) 
+                            && (this._fINANCEIROTableAdapter.Connection != null))) {
+                    return this._fINANCEIROTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -12392,9 +12621,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                     count = (count + 1);
                 }
                 if ((this._eQUIPAMENTOTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._fINANCEIROTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
@@ -12419,6 +12645,9 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                     count = (count + 1);
                 }
                 if ((this._eSTOQUETableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._fINANCEIROTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -12459,15 +12688,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._fINANCEIROTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.FINANCEIRO.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._fINANCEIROTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._iMPOSTOTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.IMPOSTO.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12483,6 +12703,15 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._pECATableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._fINANCEIROTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FINANCEIRO.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._fINANCEIROTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12574,14 +12803,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._fINANCEIROTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.FINANCEIRO.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._fINANCEIROTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._iMPOSTOTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.IMPOSTO.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12595,6 +12816,14 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._pECATableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._fINANCEIROTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FINANCEIRO.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._fINANCEIROTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12704,6 +12933,14 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._fINANCEIROTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FINANCEIRO.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._fINANCEIROTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._pECATableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.PECA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12717,14 +12954,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._iMPOSTOTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._fINANCEIROTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.FINANCEIRO.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._fINANCEIROTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -12806,11 +13035,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
-            if (((this._fINANCEIROTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._fINANCEIROTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
-                        "cadeia de conexão.");
-            }
             if (((this._fINANCEIRO_IMPOSTOTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._fINANCEIRO_IMPOSTOTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
@@ -12848,6 +13072,11 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
             }
             if (((this._eSTOQUETableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._eSTOQUETableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
+                        "cadeia de conexão.");
+            }
+            if (((this._fINANCEIROTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._fINANCEIROTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
@@ -12908,15 +13137,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                     if (this._eQUIPAMENTOTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._eQUIPAMENTOTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._eQUIPAMENTOTableAdapter.Adapter);
-                    }
-                }
-                if ((this._fINANCEIROTableAdapter != null)) {
-                    revertConnections.Add(this._fINANCEIROTableAdapter, this._fINANCEIROTableAdapter.Connection);
-                    this._fINANCEIROTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._fINANCEIROTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._fINANCEIROTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._fINANCEIROTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._fINANCEIROTableAdapter.Adapter);
                     }
                 }
                 if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
@@ -12991,6 +13211,15 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                         adaptersWithAcceptChangesDuringUpdate.Add(this._eSTOQUETableAdapter.Adapter);
                     }
                 }
+                if ((this._fINANCEIROTableAdapter != null)) {
+                    revertConnections.Add(this._fINANCEIROTableAdapter, this._fINANCEIROTableAdapter.Connection);
+                    this._fINANCEIROTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._fINANCEIROTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._fINANCEIROTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._fINANCEIROTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._fINANCEIROTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -13061,10 +13290,6 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                     this._eQUIPAMENTOTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eQUIPAMENTOTableAdapter]));
                     this._eQUIPAMENTOTableAdapter.Transaction = null;
                 }
-                if ((this._fINANCEIROTableAdapter != null)) {
-                    this._fINANCEIROTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fINANCEIROTableAdapter]));
-                    this._fINANCEIROTableAdapter.Transaction = null;
-                }
                 if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
                     this._fINANCEIRO_IMPOSTOTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fINANCEIRO_IMPOSTOTableAdapter]));
                     this._fINANCEIRO_IMPOSTOTableAdapter.Transaction = null;
@@ -13096,6 +13321,10 @@ SELECT CODESTOQUE, DATA_REGISTRO, DATA_ENTRADA, QNT_ENTRADA, DATA_SAIDA, QNT_SAI
                 if ((this._eSTOQUETableAdapter != null)) {
                     this._eSTOQUETableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eSTOQUETableAdapter]));
                     this._eSTOQUETableAdapter.Transaction = null;
+                }
+                if ((this._fINANCEIROTableAdapter != null)) {
+                    this._fINANCEIROTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fINANCEIROTableAdapter]));
+                    this._fINANCEIROTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
