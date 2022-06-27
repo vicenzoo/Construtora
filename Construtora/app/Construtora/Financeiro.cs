@@ -15,12 +15,18 @@ namespace Construtora
     public partial class Financeiro : Form
     {
         string cod_obra;
+        string cod_fin;
+        string parc;
+        decimal valortotal;
+        decimal calc;
         public Financeiro()
         {
             InitializeComponent();
         }
         private void Financeiro_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.ENTRADA_PARCELAS'. Você pode movê-la ou removê-la conforme necessário.
+            this.eNTRADA_PARCELASTableAdapter.Fill(this.construtoraDataSet.ENTRADA_PARCELAS);
             // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.OBRA'. Você pode movê-la ou removê-la conforme necessário.
             this.oBRATableAdapter.Fill(this.construtoraDataSet.OBRA);
             // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.FINANCEIRO'. Você pode movê-la ou removê-la conforme necessário.
@@ -61,7 +67,7 @@ namespace Construtora
               panel3.Visible = false;
               panel4.Visible = false;
               panel5.Visible = false;
-           // panel6.Visible = false;
+              panel6.Visible = false;
            // panel7.Visible = false;
         }
 
@@ -226,6 +232,210 @@ namespace Construtora
         {
             Imovel_Financeiro i1 = new Imovel_Financeiro();
             i1.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Imposto_Financeiro if1 = new Imposto_Financeiro();
+            if1.Show();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow SelectedRow = dataGridView1.Rows[index];
+            try
+            {
+                cod_fin = SelectedRow.Cells[0].Value.ToString();
+                label13.Text =  cod_fin;
+                this.eNTRADA_PARCELASTableAdapter.FillByParcelasFeitas(this.construtoraDataSet.ENTRADA_PARCELAS, Convert.ToInt32(cod_fin));
+                
+                parc = SelectedRow.Cells[5].Value.ToString();
+
+                numericUpDown1.Value = Convert.ToInt32(SelectedRow.Cells[6].Value);
+                valortotal = (decimal)SelectedRow.Cells[8].Value;
+                calc = valortotal / numericUpDown1.Value;
+
+                label7.Text = calc.ToString();
+
+                if (parc == "S")
+                {
+                    button13.Enabled = false;
+                }
+                else
+                {
+                    button13.Enabled = true;
+                }
+
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir ao Buscar no Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            visiblepanel();
+            panel6.Visible = true;
+        }
+        private void numericUpDown1_Click(object sender, EventArgs e)
+        {
+            calc = valortotal / numericUpDown1.Value;
+            label7.Text = calc.ToString();
+        }
+
+
+        private void insertFinanc_Parcela()
+        {
+            for (int i = 0; i < numericUpDown1.Value; i++)
+            {
+                //Botão Confirmar Cadastro
+
+                SqlConnection conn;
+                SqlCommand comm;
+
+                string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+                conn = new SqlConnection(connectionString);
+
+                comm = new SqlCommand(
+                "INSERT INTO ENTRADA_PARCELAS (CODFINANC,VALOR_PARCELA,DATA_VENC,COMPLEMENTO) " +
+                "VALUES (@CODFINANC,@VALOR_PARCELA,@DATA_VENC,@COMPLEMENTO)"
+                 , conn);
+
+                try
+                {
+
+                    comm.Parameters.Add("@CODFINANC", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODFINANC"].Value = Convert.ToInt32(label13.Text);
+
+                    comm.Parameters.Add("@VALOR_PARCELA", System.Data.SqlDbType.Money);
+                    comm.Parameters["@VALOR_PARCELA"].Value = label7.Text;
+
+                    dateTimePicker4.Value = dateTimePicker4.Value.AddMonths(i);
+                    comm.Parameters.Add("@DATA_VENC", System.Data.SqlDbType.Date);
+                    comm.Parameters["@DATA_VENC"].Value = dateTimePicker4.Value;
+
+                    comm.Parameters.Add("@COMPLEMENTO", System.Data.SqlDbType.NVarChar);
+                    comm.Parameters["@COMPLEMENTO"].Value = richTextBox1.Text;
+
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Campo Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    try
+                    {
+                        comm.ExecuteNonQuery();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (Exception error) { }
+                finally
+                {
+                    conn.Close();
+                    this.fINANCEIROTableAdapter.Fill(this.construtoraDataSet.FINANCEIRO);
+                }
+            }
+
+        }
+
+        private void udpatefinanc()
+        {
+
+
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(
+              "UPDATE FINANCEIRO SET POSSSUI_PARCELAS = @POSSSUI_PARCELAS, NUM_PARCELAS = @NUM_PARCELAS  " +
+              "WHERE CODFINANC = @CODFINANC", conn);
+            try
+            {
+                comm.Parameters.Add("@CODFINANC", System.Data.SqlDbType.Int);
+                comm.Parameters["@CODFINANC"].Value = Convert.ToInt32(cod_fin);
+            }
+            catch
+            {
+                MessageBox.Show("Codigo Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            comm.Parameters.Add("@POSSSUI_PARCELAS", System.Data.SqlDbType.Char);
+            comm.Parameters["@POSSSUI_PARCELAS"].Value = "S";
+
+            comm.Parameters.Add("@NUM_PARCELAS", System.Data.SqlDbType.SmallInt);
+            comm.Parameters["@NUM_PARCELAS"].Value = numericUpDown1.Value;
+
+
+            try
+            {
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    comm.ExecuteNonQuery();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception error) { }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                insertFinanc_Parcela();
+                udpatefinanc();
+                this.fINANCEIROTableAdapter.Fill(this.construtoraDataSet.FINANCEIRO);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void fillByParcelasFeitasToolStripButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
