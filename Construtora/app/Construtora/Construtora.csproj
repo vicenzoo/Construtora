@@ -297,6 +297,7 @@
     <None Include="Resources\Delete_35px.png" />
     <None Include="Resources\Edit_35px.png" />
     <None Include="Resources\Edit_26px.png" />
+    <None Include="Resources\Undo_26px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

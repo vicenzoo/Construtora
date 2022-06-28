@@ -42,7 +42,6 @@ namespace Construtora
                 panel1.Width = 50;
                 button1.Text = "Cons";
                 button3.Text = "Sel.";
-                button5.Text = "Rel.";
 
             }
             else
@@ -50,7 +49,6 @@ namespace Construtora
                 panel1.Width = 261;
                 button1.Text = "Consultar";
                 button3.Text = "Selecionar Obra";
-                button5.Text = "Relatório";
             }
         }
 
@@ -417,16 +415,23 @@ namespace Construtora
 
         private void button13_Click(object sender, EventArgs e)
         {
-            try
+            if (numericUpDown1.Value != 1)
             {
-                insertFinanc_Parcela();
-                udpatefinanc();
-                this.fINANCEIROTableAdapter.FillByEmitidas(this.construtoraDataSet.FINANCEIRO);
+                try
+                {
+                    insertFinanc_Parcela();
+                    udpatefinanc();
+                    this.fINANCEIROTableAdapter.FillByEmitidas(this.construtoraDataSet.FINANCEIRO);
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Numero de Parcelas Inválido! ", "Erro ao Executar!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void button7_Click(object sender, EventArgs e)

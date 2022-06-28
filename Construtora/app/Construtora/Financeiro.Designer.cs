@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Financeiro));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -60,9 +59,6 @@
             this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oBRABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -79,15 +75,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.DATA_VENC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VALOR_PARCELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.COMPLEMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cODPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cODFINANCDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vALORPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAVENCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cOMPLEMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTATUSPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eNTRADAPARCELASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
@@ -117,17 +104,13 @@
             this.oBRATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.OBRATableAdapter();
             this.eNTRADA_PARCELASTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.ENTRADA_PARCELASTableAdapter();
             this.fINANCEIROTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter();
-            this.cODOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cODVENDADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTOESTADIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTATUSVISTORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAVISTORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTATUSOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAFIMOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_VENC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VALOR_PARCELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COMPLEMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_INICIO_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_FIM_MONTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_VISTORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -149,7 +132,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button9);
@@ -165,16 +147,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(261, 558);
             this.panel1.TabIndex = 6;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Location = new System.Drawing.Point(0, 341);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(261, 23);
-            this.button5.TabIndex = 56;
-            this.button5.Text = "Relatório";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -459,17 +431,7 @@
             this.Column1,
             this.DATA_INICIO_MONTAG,
             this.DATA_FIM_MONTAG,
-            this.cODOBRADataGridViewTextBoxColumn,
-            this.cODVENDADataGridViewTextBoxColumn,
-            this.cUSTOESTADIADataGridViewTextBoxColumn,
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn,
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn,
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn,
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn,
-            this.sTATUSVISTORIADataGridViewTextBoxColumn,
-            this.dATAVISTORIADataGridViewTextBoxColumn,
-            this.sTATUSOBRADataGridViewTextBoxColumn,
-            this.dATAFIMOBRADataGridViewTextBoxColumn});
+            this.DATA_VISTORIA});
             this.dataGridView3.DataSource = this.oBRABindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
@@ -479,27 +441,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(777, 558);
             this.dataGridView3.TabIndex = 21;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CODOBRA";
-            this.Column1.HeaderText = "Cod";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // DATA_INICIO_MONTAG
-            // 
-            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
-            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
-            this.DATA_INICIO_MONTAG.ReadOnly = true;
-            // 
-            // DATA_FIM_MONTAG
-            // 
-            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
-            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
-            this.DATA_FIM_MONTAG.ReadOnly = true;
             // 
             // oBRABindingSource
             // 
@@ -674,13 +615,7 @@
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DATA_VENC,
             this.VALOR_PARCELA,
-            this.COMPLEMENTO,
-            this.cODPARCELADataGridViewTextBoxColumn,
-            this.cODFINANCDataGridViewTextBoxColumn1,
-            this.vALORPARCELADataGridViewTextBoxColumn,
-            this.dATAVENCDataGridViewTextBoxColumn,
-            this.cOMPLEMENTODataGridViewTextBoxColumn,
-            this.sTATUSPARCELADataGridViewTextBoxColumn});
+            this.COMPLEMENTO});
             this.dataGridView4.DataSource = this.eNTRADAPARCELASBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(350, 288);
             this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
@@ -689,70 +624,6 @@
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.Size = new System.Drawing.Size(407, 222);
             this.dataGridView4.TabIndex = 42;
-            // 
-            // DATA_VENC
-            // 
-            this.DATA_VENC.DataPropertyName = "DATA_VENC";
-            this.DATA_VENC.HeaderText = "Vencimento";
-            this.DATA_VENC.Name = "DATA_VENC";
-            this.DATA_VENC.ReadOnly = true;
-            this.DATA_VENC.Width = 75;
-            // 
-            // VALOR_PARCELA
-            // 
-            this.VALOR_PARCELA.DataPropertyName = "VALOR_PARCELA";
-            this.VALOR_PARCELA.HeaderText = "Valor Parcela";
-            this.VALOR_PARCELA.Name = "VALOR_PARCELA";
-            this.VALOR_PARCELA.ReadOnly = true;
-            // 
-            // COMPLEMENTO
-            // 
-            this.COMPLEMENTO.DataPropertyName = "COMPLEMENTO";
-            this.COMPLEMENTO.HeaderText = "Descrição";
-            this.COMPLEMENTO.Name = "COMPLEMENTO";
-            this.COMPLEMENTO.ReadOnly = true;
-            // 
-            // cODPARCELADataGridViewTextBoxColumn
-            // 
-            this.cODPARCELADataGridViewTextBoxColumn.DataPropertyName = "CODPARCELA";
-            this.cODPARCELADataGridViewTextBoxColumn.HeaderText = "CODPARCELA";
-            this.cODPARCELADataGridViewTextBoxColumn.Name = "cODPARCELADataGridViewTextBoxColumn";
-            this.cODPARCELADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cODFINANCDataGridViewTextBoxColumn1
-            // 
-            this.cODFINANCDataGridViewTextBoxColumn1.DataPropertyName = "CODFINANC";
-            this.cODFINANCDataGridViewTextBoxColumn1.HeaderText = "CODFINANC";
-            this.cODFINANCDataGridViewTextBoxColumn1.Name = "cODFINANCDataGridViewTextBoxColumn1";
-            this.cODFINANCDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // vALORPARCELADataGridViewTextBoxColumn
-            // 
-            this.vALORPARCELADataGridViewTextBoxColumn.DataPropertyName = "VALOR_PARCELA";
-            this.vALORPARCELADataGridViewTextBoxColumn.HeaderText = "VALOR_PARCELA";
-            this.vALORPARCELADataGridViewTextBoxColumn.Name = "vALORPARCELADataGridViewTextBoxColumn";
-            this.vALORPARCELADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAVENCDataGridViewTextBoxColumn
-            // 
-            this.dATAVENCDataGridViewTextBoxColumn.DataPropertyName = "DATA_VENC";
-            this.dATAVENCDataGridViewTextBoxColumn.HeaderText = "DATA_VENC";
-            this.dATAVENCDataGridViewTextBoxColumn.Name = "dATAVENCDataGridViewTextBoxColumn";
-            this.dATAVENCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cOMPLEMENTODataGridViewTextBoxColumn
-            // 
-            this.cOMPLEMENTODataGridViewTextBoxColumn.DataPropertyName = "COMPLEMENTO";
-            this.cOMPLEMENTODataGridViewTextBoxColumn.HeaderText = "COMPLEMENTO";
-            this.cOMPLEMENTODataGridViewTextBoxColumn.Name = "cOMPLEMENTODataGridViewTextBoxColumn";
-            this.cOMPLEMENTODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sTATUSPARCELADataGridViewTextBoxColumn
-            // 
-            this.sTATUSPARCELADataGridViewTextBoxColumn.DataPropertyName = "STATUS_PARCELA";
-            this.sTATUSPARCELADataGridViewTextBoxColumn.HeaderText = "STATUS_PARCELA";
-            this.sTATUSPARCELADataGridViewTextBoxColumn.Name = "sTATUSPARCELADataGridViewTextBoxColumn";
-            this.sTATUSPARCELADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // eNTRADAPARCELASBindingSource
             // 
@@ -1020,82 +891,55 @@
             // 
             this.fINANCEIROTableAdapter.ClearBeforeFill = true;
             // 
-            // cODOBRADataGridViewTextBoxColumn
+            // DATA_VENC
             // 
-            this.cODOBRADataGridViewTextBoxColumn.DataPropertyName = "CODOBRA";
-            this.cODOBRADataGridViewTextBoxColumn.HeaderText = "CODOBRA";
-            this.cODOBRADataGridViewTextBoxColumn.Name = "cODOBRADataGridViewTextBoxColumn";
-            this.cODOBRADataGridViewTextBoxColumn.ReadOnly = true;
+            this.DATA_VENC.DataPropertyName = "DATA_VENC";
+            this.DATA_VENC.HeaderText = "Vencimento";
+            this.DATA_VENC.Name = "DATA_VENC";
+            this.DATA_VENC.ReadOnly = true;
+            this.DATA_VENC.Width = 75;
             // 
-            // cODVENDADataGridViewTextBoxColumn
+            // VALOR_PARCELA
             // 
-            this.cODVENDADataGridViewTextBoxColumn.DataPropertyName = "CODVENDA";
-            this.cODVENDADataGridViewTextBoxColumn.HeaderText = "CODVENDA";
-            this.cODVENDADataGridViewTextBoxColumn.Name = "cODVENDADataGridViewTextBoxColumn";
-            this.cODVENDADataGridViewTextBoxColumn.ReadOnly = true;
+            this.VALOR_PARCELA.DataPropertyName = "VALOR_PARCELA";
+            this.VALOR_PARCELA.HeaderText = "Valor Parcela";
+            this.VALOR_PARCELA.Name = "VALOR_PARCELA";
+            this.VALOR_PARCELA.ReadOnly = true;
             // 
-            // cUSTOESTADIADataGridViewTextBoxColumn
+            // COMPLEMENTO
             // 
-            this.cUSTOESTADIADataGridViewTextBoxColumn.DataPropertyName = "CUSTO_ESTADIA";
-            this.cUSTOESTADIADataGridViewTextBoxColumn.HeaderText = "CUSTO_ESTADIA";
-            this.cUSTOESTADIADataGridViewTextBoxColumn.Name = "cUSTOESTADIADataGridViewTextBoxColumn";
-            this.cUSTOESTADIADataGridViewTextBoxColumn.ReadOnly = true;
+            this.COMPLEMENTO.DataPropertyName = "COMPLEMENTO";
+            this.COMPLEMENTO.HeaderText = "Descrição";
+            this.COMPLEMENTO.Name = "COMPLEMENTO";
+            this.COMPLEMENTO.ReadOnly = true;
             // 
-            // cUSTODESLOCAMENTODataGridViewTextBoxColumn
+            // Column1
             // 
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.DataPropertyName = "CUSTO_DESLOCAMENTO";
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.HeaderText = "CUSTO_DESLOCAMENTO";
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.Name = "cUSTODESLOCAMENTODataGridViewTextBoxColumn";
-            this.cUSTODESLOCAMENTODataGridViewTextBoxColumn.ReadOnly = true;
+            this.Column1.DataPropertyName = "CODOBRA";
+            this.Column1.HeaderText = "Cod";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // cUSTOMONTAGEXTERNADataGridViewTextBoxColumn
+            // DATA_INICIO_MONTAG
             // 
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.DataPropertyName = "CUSTO_MONTAG_EXTERNA";
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.HeaderText = "CUSTO_MONTAG_EXTERNA";
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.Name = "cUSTOMONTAGEXTERNADataGridViewTextBoxColumn";
-            this.cUSTOMONTAGEXTERNADataGridViewTextBoxColumn.ReadOnly = true;
+            this.DATA_INICIO_MONTAG.DataPropertyName = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.HeaderText = "Data Inicio Montagem";
+            this.DATA_INICIO_MONTAG.Name = "DATA_INICIO_MONTAG";
+            this.DATA_INICIO_MONTAG.ReadOnly = true;
             // 
-            // dATAINICIOMONTAGDataGridViewTextBoxColumn
+            // DATA_FIM_MONTAG
             // 
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.DataPropertyName = "DATA_INICIO_MONTAG";
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.HeaderText = "DATA_INICIO_MONTAG";
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.Name = "dATAINICIOMONTAGDataGridViewTextBoxColumn";
-            this.dATAINICIOMONTAGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.DATA_FIM_MONTAG.DataPropertyName = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.HeaderText = "Data Fim Montagem";
+            this.DATA_FIM_MONTAG.Name = "DATA_FIM_MONTAG";
+            this.DATA_FIM_MONTAG.ReadOnly = true;
             // 
-            // dATAFIMMONTAGDataGridViewTextBoxColumn
+            // DATA_VISTORIA
             // 
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.DataPropertyName = "DATA_FIM_MONTAG";
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.HeaderText = "DATA_FIM_MONTAG";
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.Name = "dATAFIMMONTAGDataGridViewTextBoxColumn";
-            this.dATAFIMMONTAGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sTATUSVISTORIADataGridViewTextBoxColumn
-            // 
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.DataPropertyName = "STATUS_VISTORIA";
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.HeaderText = "STATUS_VISTORIA";
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.Name = "sTATUSVISTORIADataGridViewTextBoxColumn";
-            this.sTATUSVISTORIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAVISTORIADataGridViewTextBoxColumn
-            // 
-            this.dATAVISTORIADataGridViewTextBoxColumn.DataPropertyName = "DATA_VISTORIA";
-            this.dATAVISTORIADataGridViewTextBoxColumn.HeaderText = "DATA_VISTORIA";
-            this.dATAVISTORIADataGridViewTextBoxColumn.Name = "dATAVISTORIADataGridViewTextBoxColumn";
-            this.dATAVISTORIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sTATUSOBRADataGridViewTextBoxColumn
-            // 
-            this.sTATUSOBRADataGridViewTextBoxColumn.DataPropertyName = "STATUS_OBRA";
-            this.sTATUSOBRADataGridViewTextBoxColumn.HeaderText = "STATUS_OBRA";
-            this.sTATUSOBRADataGridViewTextBoxColumn.Name = "sTATUSOBRADataGridViewTextBoxColumn";
-            this.sTATUSOBRADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAFIMOBRADataGridViewTextBoxColumn
-            // 
-            this.dATAFIMOBRADataGridViewTextBoxColumn.DataPropertyName = "DATA_FIM_OBRA";
-            this.dATAFIMOBRADataGridViewTextBoxColumn.HeaderText = "DATA_FIM_OBRA";
-            this.dATAFIMOBRADataGridViewTextBoxColumn.Name = "dATAFIMOBRADataGridViewTextBoxColumn";
-            this.dATAFIMOBRADataGridViewTextBoxColumn.ReadOnly = true;
+            this.DATA_VISTORIA.DataPropertyName = "DATA_VISTORIA";
+            this.DATA_VISTORIA.HeaderText = "Data Vistoria";
+            this.DATA_VISTORIA.Name = "DATA_VISTORIA";
+            this.DATA_VISTORIA.ReadOnly = true;
             // 
             // Financeiro
             // 
@@ -1146,7 +990,6 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.BindingSource oBRABindingSource;
         private ConstrutoraDataSetTableAdapters.OBRATableAdapter oBRATableAdapter;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
@@ -1185,15 +1028,6 @@
         private ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter fINANCEIROTableAdapter;
         private System.Windows.Forms.BindingSource fINANCEIROBindingSource;
         private System.Windows.Forms.BindingSource eNTRADAPARCELASBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_VENC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VALOR_PARCELA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn COMPLEMENTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODPARCELADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODFINANCDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vALORPARCELADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAVENCDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cOMPLEMENTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSPARCELADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cODFINANCDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vALORRECEBIDODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rECEBEVEICULODataGridViewTextBoxColumn;
@@ -1219,19 +1053,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_VENC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VALOR_PARCELA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COMPLEMENTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_INICIO_MONTAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_FIM_MONTAG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODOBRADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cODVENDADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOESTADIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTODESLOCAMENTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOMONTAGEXTERNADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAINICIOMONTAGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAFIMMONTAGDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSVISTORIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAVISTORIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSOBRADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATAFIMOBRADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_VISTORIA;
     }
 }
