@@ -14,6 +14,7 @@ namespace Construtora
 {
     public partial class Pecas : Form
     {
+        string last;
         bool newcad = false; //Variavel para Controlar Novo Cadastro (Sair Sem Salvar)
         string cod;
         public Pecas()
@@ -23,6 +24,8 @@ namespace Construtora
 
         private void Pecas_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.CUSTO_VENDA'. Você pode movê-la ou removê-la conforme necessário.
+            this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
             this.pECATableAdapter.Fill(this.construtoraDataSet.PECA);
         }
 
@@ -38,10 +41,138 @@ namespace Construtora
         {
             //Função para Limpar Forms
             this.textBox1.Clear();
-            this.numericUpDown1.Value = 0;
+            this.numericUpDown1.Value = 1;
             this.maskedTextBox1.Clear();
             this.maskedTextBox2.Clear();
             this.maskedTextBox3.Clear();
+            this.dateTimePicker1.Value = DateTime.Now;
+            this.maskedTextBox7.Clear();
+        }
+
+        private void movimentoestoque()
+        {
+            //Movimentação de Estoque
+            SqlConnection conn;
+            SqlCommand comm;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            //Cadastro Movimento Entrada
+            if (radioButton1.Checked)
+            {
+
+
+                comm = new SqlCommand(
+                    "INSERT INTO ESTOQUE (DATA_ENTRADA,QNT_ENTRADA,VALOR,CODPECA,CODVENDA,COMPLEMENTO) " +
+                    "VALUES (@DATA_ENTRADA,@QNT_ENTRADA,@VALOR,@CODPECA,@CODVENDA,@COMPLEMENTO)"
+                                   , conn);
+
+                try
+                {
+
+                    comm.Parameters.Add("@DATA_ENTRADA", System.Data.SqlDbType.Date);
+                    comm.Parameters["@DATA_ENTRADA"].Value = dateTimePicker1.Text;
+
+                    comm.Parameters.Add("@QNT_ENTRADA", System.Data.SqlDbType.SmallInt);
+                    comm.Parameters["@QNT_ENTRADA"].Value = numericUpDown1.Value;
+
+                    comm.Parameters.Add("@VALOR", System.Data.SqlDbType.Money);
+                    comm.Parameters["@VALOR"].Value = maskedTextBox1.Text;
+
+                    comm.Parameters.Add("@CODPECA", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODPECA"].Value = last;
+
+                    comm.Parameters.Add("@CODVENDA", System.Data.SqlDbType.Int);
+                    comm.Parameters["@CODVENDA"].Value = comboBox3.SelectedValue;
+
+                    comm.Parameters.Add("@COMPLEMENTO", System.Data.SqlDbType.NVarChar);
+                    comm.Parameters["@COMPLEMENTO"].Value = textBox1.Text;
+
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Campo Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    try
+                    {
+                        conn.Open();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    try
+                    {
+                        comm.ExecuteNonQuery();
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                catch (Exception error) { }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        private void selectlastinsert()
+        {
+            //Codigo para pegar o codigo do ultima Peça cadastrada
+            SqlConnection conn;
+            SqlCommand comm;
+            SqlDataReader reader;
+
+            string connectionString = Properties.Settings.Default.ConstrutoraConnectionString;
+            conn = new SqlConnection(connectionString);
+
+            comm = new SqlCommand(
+            "SELECT TOP 1 CODPECA " +
+            "FROM PECA ", conn);
+
+
+
+            try
+            {
+                try
+                {
+                    conn.Open();
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    reader = comm.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        last = reader["CODPECA"].ToString();
+                    }
+                    reader.Close();
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message, "Erro ao Abrir ao Executar Comando SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception error) { }
+            finally
+            {
+                conn.Close();
+            }
         }
 
 
@@ -142,6 +273,11 @@ namespace Construtora
             {
                 conn.Close();
                 MessageBox.Show("Registro Cadastrado", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (checkBox1.Checked)
+                {
+                    selectlastinsert();
+                    movimentoestoque();
+                }
                 ClearForm();
                 this.pECATableAdapter.Fill(this.construtoraDataSet.PECA);
             }
@@ -310,6 +446,11 @@ namespace Construtora
         {
             FRelPecas r1 = new FRelPecas();
             r1.Show();
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

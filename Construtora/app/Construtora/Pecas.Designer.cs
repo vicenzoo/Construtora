@@ -91,6 +91,16 @@ namespace Construtora
             this.vALORUNIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cUSTOPRODUCAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cUSTOVENDABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cUSTO_VENDATableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.CUSTO_VENDATableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
             this.panel2.SuspendLayout();
@@ -104,6 +114,7 @@ namespace Construtora
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pECABindingSource
@@ -236,6 +247,7 @@ namespace Construtora
             this.panel5.Size = new System.Drawing.Size(557, 481);
             this.panel5.TabIndex = 20;
             this.panel5.Visible = false;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label17
             // 
@@ -447,6 +459,14 @@ namespace Construtora
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Window;
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.maskedTextBox7);
+            this.panel4.Controls.Add(this.checkBox1);
+            this.panel4.Controls.Add(this.radioButton1);
+            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.comboBox3);
             this.panel4.Controls.Add(this.numericUpDown1);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label7);
@@ -473,9 +493,19 @@ namespace Construtora
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(197, 246);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(35, 20);
             this.numericUpDown1.TabIndex = 15;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label8
             // 
@@ -683,6 +713,93 @@ namespace Construtora
             this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.Name = "pROJCUSTOMAOOBRADataGridViewTextBoxColumn";
             this.pROJCUSTOMAOOBRADataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 405);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(33, 13);
+            this.label18.TabIndex = 72;
+            this.label18.Text = "Data:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(5, 430);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(61, 13);
+            this.label19.TabIndex = 71;
+            this.label19.Text = "Valor Total:";
+            // 
+            // maskedTextBox7
+            // 
+            this.maskedTextBox7.Location = new System.Drawing.Point(76, 427);
+            this.maskedTextBox7.Mask = "$9999999,00";
+            this.maskedTextBox7.Name = "maskedTextBox7";
+            this.maskedTextBox7.Size = new System.Drawing.Size(98, 20);
+            this.maskedTextBox7.TabIndex = 70;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(76, 351);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(123, 17);
+            this.checkBox1.TabIndex = 69;
+            this.checkBox1.Text = "Movimentar Estoque";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(180, 405);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(62, 17);
+            this.radioButton1.TabIndex = 67;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Entrada";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(76, 401);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(98, 20);
+            this.dateTimePicker1.TabIndex = 66;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 377);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(41, 13);
+            this.label20.TabIndex = 65;
+            this.label20.Text = "Venda:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DataSource = this.cUSTOVENDABindingSource;
+            this.comboBox3.DisplayMember = "DESCRICAO";
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(76, 374);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(187, 21);
+            this.comboBox3.TabIndex = 64;
+            this.comboBox3.ValueMember = "CODCUSTOVENDA";
+            // 
+            // cUSTOVENDABindingSource
+            // 
+            this.cUSTOVENDABindingSource.DataMember = "CUSTO_VENDA";
+            this.cUSTOVENDABindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // cUSTO_VENDATableAdapter
+            // 
+            this.cUSTO_VENDATableAdapter.ClearBeforeFill = true;
+            // 
             // Pecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,6 +829,7 @@ namespace Construtora
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUSTOVENDABindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -778,5 +896,15 @@ namespace Construtora
         private System.Windows.Forms.DataGridViewTextBoxColumn vALORUNIDADEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cUSTOPRODUCAODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROJCUSTOMAOOBRADataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.BindingSource cUSTOVENDABindingSource;
+        private ConstrutoraDataSetTableAdapters.CUSTO_VENDATableAdapter cUSTO_VENDATableAdapter;
     }
 }

@@ -47,6 +47,11 @@ namespace Construtora
                     dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LimeGreen;
                 }
 
+                if (SelectedRow.Cells[11].Value.ToString() == "C")
+                {
+                    dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+
             }
             catch (Exception)
             {

@@ -72,6 +72,8 @@
             this.fINANCEIROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.fINANCEIROTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -155,6 +157,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.panel2);
@@ -194,7 +198,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(133, 178);
+            this.label4.Location = new System.Drawing.Point(219, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 72;
@@ -203,7 +207,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel2.Location = new System.Drawing.Point(109, 174);
+            this.panel2.Location = new System.Drawing.Point(195, 174);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(19, 19);
             this.panel2.TabIndex = 71;
@@ -500,6 +504,23 @@
             // 
             this.fINANCEIROTableAdapter.ClearBeforeFill = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(131, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.TabIndex = 75;
+            this.label5.Text = "Cancelado";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Yellow;
+            this.panel3.Location = new System.Drawing.Point(107, 174);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(19, 19);
+            this.panel3.TabIndex = 74;
+            // 
             // Central_Financeira
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,5 +588,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter fINANCEIROTableAdapter;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel3;
     }
 }
