@@ -1785,6 +1785,8 @@ namespace Construtora {
             
             private global::System.Data.DataColumn columnVALOR;
             
+            private global::System.Data.DataColumn columnIMPOSTO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public FINANCEIRO_IMPOSTODataTable() {
@@ -1852,6 +1854,14 @@ namespace Construtora {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IMPOSTOColumn {
+                get {
+                    return this.columnIMPOSTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1887,13 +1897,14 @@ namespace Construtora {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FINANCEIRO_IMPOSTORow AddFINANCEIRO_IMPOSTORow(FINANCEIRORow parentFINANCEIRORowByFK_FINANC_IMPOSTO, IMPOSTORow parentIMPOSTORowByFK_IMPOSTO_FINANC, decimal VALOR) {
+            public FINANCEIRO_IMPOSTORow AddFINANCEIRO_IMPOSTORow(FINANCEIRORow parentFINANCEIRORowByFK_FINANC_IMPOSTO, IMPOSTORow parentIMPOSTORowByFK_IMPOSTO_FINANC, decimal VALOR, string IMPOSTO) {
                 FINANCEIRO_IMPOSTORow rowFINANCEIRO_IMPOSTORow = ((FINANCEIRO_IMPOSTORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
-                        VALOR};
+                        VALOR,
+                        IMPOSTO};
                 if ((parentFINANCEIRORowByFK_FINANC_IMPOSTO != null)) {
                     columnValuesArray[1] = parentFINANCEIRORowByFK_FINANC_IMPOSTO[0];
                 }
@@ -1933,6 +1944,7 @@ namespace Construtora {
                 this.columnCODFINANC = base.Columns["CODFINANC"];
                 this.columnCODIMP = base.Columns["CODIMP"];
                 this.columnVALOR = base.Columns["VALOR"];
+                this.columnIMPOSTO = base.Columns["IMPOSTO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1946,6 +1958,8 @@ namespace Construtora {
                 base.Columns.Add(this.columnCODIMP);
                 this.columnVALOR = new global::System.Data.DataColumn("VALOR", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVALOR);
+                this.columnIMPOSTO = new global::System.Data.DataColumn("IMPOSTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIMPOSTO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCODIMP_FINANC}, true));
                 this.columnCODIMP_FINANC.AutoIncrement = true;
@@ -1957,6 +1971,8 @@ namespace Construtora {
                 this.columnCODFINANC.AllowDBNull = false;
                 this.columnCODIMP.AllowDBNull = false;
                 this.columnVALOR.AllowDBNull = false;
+                this.columnIMPOSTO.AllowDBNull = false;
+                this.columnIMPOSTO.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5358,6 +5374,17 @@ namespace Construtora {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string IMPOSTO {
+                get {
+                    return ((string)(this[this.tableFINANCEIRO_IMPOSTO.IMPOSTOColumn]));
+                }
+                set {
+                    this[this.tableFINANCEIRO_IMPOSTO.IMPOSTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public IMPOSTORow IMPOSTORow {
                 get {
                     return ((IMPOSTORow)(this.GetParentRow(this.Table.ParentRelations["FK_IMPOSTO_FINANC"])));
@@ -7620,7 +7647,7 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARC
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARCE" +
@@ -7639,6 +7666,13 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARC
                 "LA FROM ENTRADA_PARCELAS WHERE (CODFINANC = @CODFINANC)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATU" +
+                "S_PARCELA\r\nFROM            ENTRADA_PARCELAS\r\nWHERE        (CODFINANC = @CODFINAN" +
+                "C)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7685,6 +7719,20 @@ SELECT CODPARCELA, CODFINANC, VALOR_PARCELA, DATA_VENC, COMPLEMENTO, STATUS_PARC
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByParcelasFeitas(ConstrutoraDataSet.ENTRADA_PARCELASDataTable dataTable, int CODFINANC) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CODFINANC));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByParcelasFinanc(ConstrutoraDataSet.ENTRADA_PARCELASDataTable dataTable, int CODFINANC) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CODFINANC));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8417,39 +8465,8 @@ SELECT CODEQUIP, DESCRICAO_EQUIP, QUANTIDADE, PROJ_CUSTO_MUCH, PROJ_CUSTO_FRETE,
             tableMapping.ColumnMappings.Add("CODFINANC", "CODFINANC");
             tableMapping.ColumnMappings.Add("CODIMP", "CODIMP");
             tableMapping.ColumnMappings.Add("VALOR", "VALOR");
+            tableMapping.ColumnMappings.Add("IMPOSTO", "IMPOSTO");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[FINANCEIRO_IMPOSTO] WHERE (([CODIMP_FINANC] = @Original_CODIMP" +
-                "_FINANC) AND ([CODFINANC] = @Original_CODFINANC) AND ([CODIMP] = @Original_CODIM" +
-                "P) AND ([VALOR] = @Original_VALOR))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODIMP_FINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP_FINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODIMP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[FINANCEIRO_IMPOSTO] ([CODFINANC], [CODIMP], [VALOR]) VALUES (@" +
-                "CODFINANC, @CODIMP, @VALOR);\r\nSELECT CODIMP_FINANC, CODFINANC, CODIMP, VALOR FRO" +
-                "M FINANCEIRO_IMPOSTO WHERE (CODIMP_FINANC = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODIMP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[FINANCEIRO_IMPOSTO] SET [CODFINANC] = @CODFINANC, [CODIMP] = @CODIMP, [VALOR] = @VALOR WHERE (([CODIMP_FINANC] = @Original_CODIMP_FINANC) AND ([CODFINANC] = @Original_CODFINANC) AND ([CODIMP] = @Original_CODIMP) AND ([VALOR] = @Original_VALOR));
-SELECT CODIMP_FINANC, CODFINANC, CODIMP, VALOR FROM FINANCEIRO_IMPOSTO WHERE (CODIMP_FINANC = @CODIMP_FINANC)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODIMP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODIMP_FINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP_FINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODFINANC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CODIMP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODIMP_FINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP_FINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8462,11 +8479,27 @@ SELECT CODIMP_FINANC, CODFINANC, CODIMP, VALOR FROM FINANCEIRO_IMPOSTO WHERE (CO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CODIMP_FINANC, CODFINANC, CODIMP, VALOR FROM dbo.FINANCEIRO_IMPOSTO";
+            this._commandCollection[0].CommandText = "SELECT        f.CODIMP_FINANC, f.CODFINANC, f.VALOR, f.CODIMP, i.IMPOSTO\r\nFROM   " +
+                "         FINANCEIRO_IMPOSTO AS f INNER JOIN\r\n                         IMPOSTO AS" +
+                " i ON i.CODIMP = f.CODIMP";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        f.CODIMP_FINANC, f.CODFINANC, f.VALOR, f.CODIMP, i.IMPOSTO\r\nFROM   " +
+                "         FINANCEIRO_IMPOSTO AS f INNER JOIN\r\n                         IMPOSTO AS" +
+                " i ON i.CODIMP = f.CODIMP\r\nWHERE        (f.CODFINANC = @CODFINANC)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        f.CODIMP_FINANC, f.CODFINANC, f.CODIMP, f.VALOR\r\nFROM            FI" +
+                "NANCEIRO_IMPOSTO AS f INNER JOIN\r\n                         IMPOSTO AS i ON i.COD" +
+                "IMP = f.CODIMP\r\nWHERE        (f.CODFINANC = @CODFINANC)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODFINANC", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODFINANC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8496,116 +8529,29 @@ SELECT CODIMP_FINANC, CODFINANC, CODIMP, VALOR FROM FINANCEIRO_IMPOSTO WHERE (CO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ConstrutoraDataSet.FINANCEIRO_IMPOSTODataTable dataTable) {
-            return this.Adapter.Update(dataTable);
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByIMPFINANCEIRO(ConstrutoraDataSet.FINANCEIRO_IMPOSTODataTable dataTable, int CODFINANC) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CODFINANC));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ConstrutoraDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "FINANCEIRO_IMPOSTO");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CODIMP_FINANC, int Original_CODFINANC, int Original_CODIMP, decimal Original_VALOR) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CODIMP_FINANC));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_CODFINANC));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_CODIMP));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_VALOR));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByImpostoFinanceiro(ConstrutoraDataSet.FINANCEIRO_IMPOSTODataTable dataTable, int CODFINANC) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CODFINANC));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
             }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int CODFINANC, int CODIMP, decimal VALOR) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(CODFINANC));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(CODIMP));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(VALOR));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int CODFINANC, int CODIMP, decimal VALOR, int Original_CODIMP_FINANC, int Original_CODFINANC, int Original_CODIMP, decimal Original_VALOR, int CODIMP_FINANC) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(CODFINANC));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(CODIMP));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(VALOR));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_CODIMP_FINANC));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_CODFINANC));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_CODIMP));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_VALOR));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(CODIMP_FINANC));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int CODFINANC, int CODIMP, decimal VALOR, int Original_CODIMP_FINANC, int Original_CODFINANC, int Original_CODIMP, decimal Original_VALOR) {
-            return this.Update(CODFINANC, CODIMP, VALOR, Original_CODIMP_FINANC, Original_CODFINANC, Original_CODIMP, Original_VALOR, Original_CODIMP_FINANC);
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     
@@ -9105,11 +9051,17 @@ SELECT CODIMOVEL, CODFINANC, AVALIACAO, GASTOS FROM IMOVEL WHERE (CODIMOVEL = @C
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CODIMP, IMPOSTO FROM dbo.IMPOSTO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        CODIMP, IMPOSTO\r\nFROM            IMPOSTO\r\nWHERE        (CODIMP = @C" +
+                "ODIMP)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODIMP", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CODIMP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9134,6 +9086,20 @@ SELECT CODIMOVEL, CODFINANC, AVALIACAO, GASTOS FROM IMOVEL WHERE (CODIMOVEL = @C
             ConstrutoraDataSet.IMPOSTODataTable dataTable = new ConstrutoraDataSet.IMPOSTODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPreencheComboImposto(ConstrutoraDataSet.IMPOSTODataTable dataTable, int CODIMP) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(CODIMP));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12373,8 +12339,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
         
         private EQUIPAMENTOTableAdapter _eQUIPAMENTOTableAdapter;
         
-        private FINANCEIRO_IMPOSTOTableAdapter _fINANCEIRO_IMPOSTOTableAdapter;
-        
         private IMOVELTableAdapter _iMOVELTableAdapter;
         
         private IMPOSTOTableAdapter _iMPOSTOTableAdapter;
@@ -12445,20 +12409,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
             }
             set {
                 this._eQUIPAMENTOTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public FINANCEIRO_IMPOSTOTableAdapter FINANCEIRO_IMPOSTOTableAdapter {
-            get {
-                return this._fINANCEIRO_IMPOSTOTableAdapter;
-            }
-            set {
-                this._fINANCEIRO_IMPOSTOTableAdapter = value;
             }
         }
         
@@ -12605,10 +12555,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                             && (this._eQUIPAMENTOTableAdapter.Connection != null))) {
                     return this._eQUIPAMENTOTableAdapter.Connection;
                 }
-                if (((this._fINANCEIRO_IMPOSTOTableAdapter != null) 
-                            && (this._fINANCEIRO_IMPOSTOTableAdapter.Connection != null))) {
-                    return this._fINANCEIRO_IMPOSTOTableAdapter.Connection;
-                }
                 if (((this._iMOVELTableAdapter != null) 
                             && (this._iMOVELTableAdapter.Connection != null))) {
                     return this._iMOVELTableAdapter.Connection;
@@ -12661,9 +12607,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                     count = (count + 1);
                 }
                 if ((this._eQUIPAMENTOTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._iMOVELTableAdapter != null)) {
@@ -12761,15 +12704,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._eNTRADA_PARCELASTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.FINANCEIRO_IMPOSTO.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._fINANCEIRO_IMPOSTOTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12875,14 +12809,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.FINANCEIRO_IMPOSTO.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._fINANCEIRO_IMPOSTOTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._iMOVELTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.IMOVEL.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12954,14 +12880,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._iMOVELTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.FINANCEIRO_IMPOSTO.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._fINANCEIRO_IMPOSTOTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -13075,11 +12993,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
-            if (((this._fINANCEIRO_IMPOSTOTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._fINANCEIRO_IMPOSTOTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
-                        "cadeia de conexão.");
-            }
             if (((this._iMOVELTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._iMOVELTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
@@ -13177,15 +13090,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                     if (this._eQUIPAMENTOTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._eQUIPAMENTOTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._eQUIPAMENTOTableAdapter.Adapter);
-                    }
-                }
-                if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
-                    revertConnections.Add(this._fINANCEIRO_IMPOSTOTableAdapter, this._fINANCEIRO_IMPOSTOTableAdapter.Connection);
-                    this._fINANCEIRO_IMPOSTOTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._fINANCEIRO_IMPOSTOTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._fINANCEIRO_IMPOSTOTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._fINANCEIRO_IMPOSTOTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._fINANCEIRO_IMPOSTOTableAdapter.Adapter);
                     }
                 }
                 if ((this._iMOVELTableAdapter != null)) {
@@ -13329,10 +13233,6 @@ WHERE        (STATUS_PAGAMENTO = @STATUS_PAGAMENTO)";
                 if ((this._eQUIPAMENTOTableAdapter != null)) {
                     this._eQUIPAMENTOTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eQUIPAMENTOTableAdapter]));
                     this._eQUIPAMENTOTableAdapter.Transaction = null;
-                }
-                if ((this._fINANCEIRO_IMPOSTOTableAdapter != null)) {
-                    this._fINANCEIRO_IMPOSTOTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fINANCEIRO_IMPOSTOTableAdapter]));
-                    this._fINANCEIRO_IMPOSTOTableAdapter.Transaction = null;
                 }
                 if ((this._iMOVELTableAdapter != null)) {
                     this._iMOVELTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._iMOVELTableAdapter]));

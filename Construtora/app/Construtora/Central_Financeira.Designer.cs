@@ -56,6 +56,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -66,12 +67,11 @@
             this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.CODIMOVEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aVALIACAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gASTOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iMOVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.STATUS_PAGAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -82,11 +82,43 @@
             this.label21 = new System.Windows.Forms.Label();
             this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.aVALIACAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gASTOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iMOVELBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.construtoraDataSet = new Construtora.ConstrutoraDataSet();
+            this.CODVEICULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vEICULOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.iMPOSTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label26 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.cODIMPFINANCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CODIMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IMPOSTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vALORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fINANCEIROIMPOSTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.eNTRADAPARCELASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cODFINANCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vALORRECEBIDODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rECEBEVEICULODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,24 +130,46 @@
             this.vALORTOTALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dESPESAADICIONALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lUCROTOTALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STATUS_PAGAMENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fINANCEIROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fINANCEIROTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIROTableAdapter();
             this.iMOVELTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.IMOVELTableAdapter();
             this.vEICULOTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.VEICULOTableAdapter();
-            this.CODVEICULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fINANCEIRO_IMPOSTOTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.FINANCEIRO_IMPOSTOTableAdapter();
+            this.iMPOSTOTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.IMPOSTOTableAdapter();
+            this.eNTRADA_PARCELASTableAdapter = new Construtora.ConstrutoraDataSetTableAdapters.ENTRADA_PARCELASTableAdapter();
+            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.cODPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vALORPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAVENCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTATUSPARCELADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cOMPLEMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMOVELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEICULOBindingSource)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iMPOSTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROIMPOSTOBindingSource)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNTRADAPARCELASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -418,11 +472,21 @@
             this.tabPage2.Text = "Imóvel";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(416, 180);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(337, 13);
+            this.label15.TabIndex = 82;
+            this.label15.Text = "Obs: SELECIONE O IMÓVEL QUE DESEJA EDITAR E OU EXCLUIR";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(503, 9);
+            this.label13.Location = new System.Drawing.Point(503, 10);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 30);
@@ -433,7 +497,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(412, 9);
+            this.label12.Location = new System.Drawing.Point(412, 10);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 30);
@@ -524,6 +588,30 @@
             this.CODIMOVEL.ReadOnly = true;
             this.CODIMOVEL.Width = 50;
             // 
+            // aVALIACAODataGridViewTextBoxColumn
+            // 
+            this.aVALIACAODataGridViewTextBoxColumn.DataPropertyName = "AVALIACAO";
+            this.aVALIACAODataGridViewTextBoxColumn.HeaderText = "Avaliação";
+            this.aVALIACAODataGridViewTextBoxColumn.Name = "aVALIACAODataGridViewTextBoxColumn";
+            this.aVALIACAODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gASTOSDataGridViewTextBoxColumn
+            // 
+            this.gASTOSDataGridViewTextBoxColumn.DataPropertyName = "GASTOS";
+            this.gASTOSDataGridViewTextBoxColumn.HeaderText = "Gastos";
+            this.gASTOSDataGridViewTextBoxColumn.Name = "gASTOSDataGridViewTextBoxColumn";
+            this.gASTOSDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iMOVELBindingSource
+            // 
+            this.iMOVELBindingSource.DataMember = "IMOVEL";
+            this.iMOVELBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // construtoraDataSet
+            // 
+            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
+            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tabPage3
             // 
             this.tabPage3.AutoScroll = true;
@@ -544,82 +632,15 @@
             this.tabPage3.Text = "Veículo";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(895, 196);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Imposto";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(895, 196);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Parcela";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cODFINANCDataGridViewTextBoxColumn,
-            this.vALORRECEBIDODataGridViewTextBoxColumn,
-            this.rECEBEVEICULODataGridViewTextBoxColumn,
-            this.iNADIMPLENTEDataGridViewTextBoxColumn,
-            this.rECEBEIMOVELDataGridViewTextBoxColumn,
-            this.pOSSSUIPARCELASDataGridViewTextBoxColumn,
-            this.nUMPARCELASDataGridViewTextBoxColumn,
-            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn,
-            this.vALORTOTALDataGridViewTextBoxColumn,
-            this.dESPESAADICIONALDataGridViewTextBoxColumn,
-            this.lUCROTOTALDataGridViewTextBoxColumn,
-            this.STATUS_PAGAMENTO});
-            this.dataGridView1.DataSource = this.fINANCEIROBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 45);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(902, 222);
-            this.dataGridView1.TabIndex = 14;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView2_CellFormatting);
-            // 
-            // STATUS_PAGAMENTO
-            // 
-            this.STATUS_PAGAMENTO.DataPropertyName = "STATUS_PAGAMENTO";
-            this.STATUS_PAGAMENTO.HeaderText = "Status";
-            this.STATUS_PAGAMENTO.Name = "STATUS_PAGAMENTO";
-            this.STATUS_PAGAMENTO.ReadOnly = true;
-            this.STATUS_PAGAMENTO.Width = 60;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(416, 180);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(337, 13);
-            this.label15.TabIndex = 82;
-            this.label15.Text = "Obs: SELECIONE O IMÓVEL QUE DESEJA EDITAR E OU EXCLUIR";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.Red;
             this.label17.Location = new System.Drawing.Point(416, 181);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(343, 13);
+            this.label17.Size = new System.Drawing.Size(346, 13);
             this.label17.TabIndex = 92;
-            this.label17.Text = "Obs: SELECIONE O VEÍCULO QUE DESEJA EDITAR E OU EXCLUIR";
+            this.label17.Text = "Obs: SELECIONE O IMPOSTO QUE DESEJA EDITAR E OU EXCLUIR";
             // 
             // label18
             // 
@@ -719,34 +740,422 @@
             this.dataGridView3.TabIndex = 83;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
-            // aVALIACAODataGridViewTextBoxColumn
+            // CODVEICULO
             // 
-            this.aVALIACAODataGridViewTextBoxColumn.DataPropertyName = "AVALIACAO";
-            this.aVALIACAODataGridViewTextBoxColumn.HeaderText = "Avaliação";
-            this.aVALIACAODataGridViewTextBoxColumn.Name = "aVALIACAODataGridViewTextBoxColumn";
-            this.aVALIACAODataGridViewTextBoxColumn.ReadOnly = true;
+            this.CODVEICULO.DataPropertyName = "CODVEICULO";
+            this.CODVEICULO.HeaderText = "Cod";
+            this.CODVEICULO.Name = "CODVEICULO";
+            this.CODVEICULO.ReadOnly = true;
+            this.CODVEICULO.Width = 50;
             // 
-            // gASTOSDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.gASTOSDataGridViewTextBoxColumn.DataPropertyName = "GASTOS";
-            this.gASTOSDataGridViewTextBoxColumn.HeaderText = "Gastos";
-            this.gASTOSDataGridViewTextBoxColumn.Name = "gASTOSDataGridViewTextBoxColumn";
-            this.gASTOSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "AVALIACAO";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Avaliação";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // iMOVELBindingSource
+            // dataGridViewTextBoxColumn3
             // 
-            this.iMOVELBindingSource.DataMember = "IMOVEL";
-            this.iMOVELBindingSource.DataSource = this.construtoraDataSet;
-            // 
-            // construtoraDataSet
-            // 
-            this.construtoraDataSet.DataSetName = "ConstrutoraDataSet";
-            this.construtoraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "GASTOS";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Gastos";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // vEICULOBindingSource
             // 
             this.vEICULOBindingSource.DataMember = "VEICULO";
             this.vEICULOBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.AutoScroll = true;
+            this.tabPage4.Controls.Add(this.comboBox2);
+            this.tabPage4.Controls.Add(this.label26);
+            this.tabPage4.Controls.Add(this.button9);
+            this.tabPage4.Controls.Add(this.button10);
+            this.tabPage4.Controls.Add(this.label25);
+            this.tabPage4.Controls.Add(this.maskedTextBox9);
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.label22);
+            this.tabPage4.Controls.Add(this.label23);
+            this.tabPage4.Controls.Add(this.dataGridView4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(895, 196);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Imposto";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.iMPOSTOBindingSource;
+            this.comboBox2.DisplayMember = "IMPOSTO";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(467, 45);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(115, 21);
+            this.comboBox2.TabIndex = 100;
+            this.comboBox2.ValueMember = "CODIMP";
+            // 
+            // iMPOSTOBindingSource
+            // 
+            this.iMPOSTOBindingSource.DataMember = "IMPOSTO";
+            this.iMPOSTOBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(414, 183);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(346, 13);
+            this.label26.TabIndex = 99;
+            this.label26.Text = "Obs: SELECIONE O IMPOSTO QUE DESEJA EDITAR E OU EXCLUIR";
+            // 
+            // button9
+            // 
+            this.button9.Image = global::Construtora.Properties.Resources.Delete_35px;
+            this.button9.Location = new System.Drawing.Point(588, 99);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(97, 45);
+            this.button9.TabIndex = 98;
+            this.button9.Text = "Excluir";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Image = global::Construtora.Properties.Resources.Edit_26px;
+            this.button10.Location = new System.Drawing.Point(588, 48);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(97, 45);
+            this.button10.TabIndex = 97;
+            this.button10.Text = "Editar";
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(414, 75);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(34, 13);
+            this.label25.TabIndex = 96;
+            this.label25.Text = "Valor:";
+            // 
+            // maskedTextBox9
+            // 
+            this.maskedTextBox9.Location = new System.Drawing.Point(467, 72);
+            this.maskedTextBox9.Name = "maskedTextBox9";
+            this.maskedTextBox9.Size = new System.Drawing.Size(115, 20);
+            this.maskedTextBox9.TabIndex = 95;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(414, 48);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 13);
+            this.label24.TabIndex = 94;
+            this.label24.Text = "Imposto:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(503, 10);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(108, 30);
+            this.label22.TabIndex = 93;
+            this.label22.Text = "> Imposto";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(412, 10);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(97, 30);
+            this.label23.TabIndex = 92;
+            this.label23.Text = "Controle";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cODIMPFINANCDataGridViewTextBoxColumn,
+            this.CODIMP,
+            this.IMPOSTO,
+            this.vALORDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.fINANCEIROIMPOSTOBindingSource;
+            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.Size = new System.Drawing.Size(407, 196);
+            this.dataGridView4.TabIndex = 84;
+            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
+            // 
+            // cODIMPFINANCDataGridViewTextBoxColumn
+            // 
+            this.cODIMPFINANCDataGridViewTextBoxColumn.DataPropertyName = "CODIMP_FINANC";
+            this.cODIMPFINANCDataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.cODIMPFINANCDataGridViewTextBoxColumn.Name = "cODIMPFINANCDataGridViewTextBoxColumn";
+            this.cODIMPFINANCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cODIMPFINANCDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // CODIMP
+            // 
+            this.CODIMP.DataPropertyName = "CODIMP";
+            this.CODIMP.HeaderText = "Cod Imposto";
+            this.CODIMP.Name = "CODIMP";
+            this.CODIMP.ReadOnly = true;
+            this.CODIMP.Width = 55;
+            // 
+            // IMPOSTO
+            // 
+            this.IMPOSTO.DataPropertyName = "IMPOSTO";
+            this.IMPOSTO.HeaderText = "Imposto";
+            this.IMPOSTO.Name = "IMPOSTO";
+            this.IMPOSTO.ReadOnly = true;
+            // 
+            // vALORDataGridViewTextBoxColumn
+            // 
+            this.vALORDataGridViewTextBoxColumn.DataPropertyName = "VALOR";
+            this.vALORDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.vALORDataGridViewTextBoxColumn.Name = "vALORDataGridViewTextBoxColumn";
+            this.vALORDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fINANCEIROIMPOSTOBindingSource
+            // 
+            this.fINANCEIROIMPOSTOBindingSource.DataMember = "FINANCEIRO_IMPOSTO";
+            this.fINANCEIROIMPOSTOBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.label35);
+            this.tabPage5.Controls.Add(this.panel4);
+            this.tabPage5.Controls.Add(this.label36);
+            this.tabPage5.Controls.Add(this.panel5);
+            this.tabPage5.Controls.Add(this.label37);
+            this.tabPage5.Controls.Add(this.label38);
+            this.tabPage5.Controls.Add(this.panel7);
+            this.tabPage5.Controls.Add(this.label30);
+            this.tabPage5.Controls.Add(this.maskedTextBox10);
+            this.tabPage5.Controls.Add(this.label33);
+            this.tabPage5.Controls.Add(this.label32);
+            this.tabPage5.Controls.Add(this.dateTimePicker4);
+            this.tabPage5.Controls.Add(this.richTextBox1);
+            this.tabPage5.Controls.Add(this.label29);
+            this.tabPage5.Controls.Add(this.label31);
+            this.tabPage5.Controls.Add(this.label27);
+            this.tabPage5.Controls.Add(this.label28);
+            this.tabPage5.Controls.Add(this.button11);
+            this.tabPage5.Controls.Add(this.button12);
+            this.tabPage5.Controls.Add(this.button13);
+            this.tabPage5.Controls.Add(this.button14);
+            this.tabPage5.Controls.Add(this.dataGridView5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(895, 196);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Parcela";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(607, 179);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(267, 13);
+            this.label33.TabIndex = 103;
+            this.label33.Text = "Obs: SELECIONE A PARCELA QUE DESEJA EDITAR";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(519, 137);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(33, 13);
+            this.label32.TabIndex = 102;
+            this.label32.Text = "Data:";
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker4.Location = new System.Drawing.Point(576, 131);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(82, 20);
+            this.dateTimePicker4.TabIndex = 101;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(576, 50);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(298, 78);
+            this.richTextBox1.TabIndex = 100;
+            this.richTextBox1.Text = "";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(515, 50);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(58, 13);
+            this.label29.TabIndex = 99;
+            this.label29.Text = "Descrição:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(519, 159);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(51, 13);
+            this.label31.TabIndex = 96;
+            this.label31.Text = "Parcelas:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Light", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(503, 10);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(99, 30);
+            this.label27.TabIndex = 95;
+            this.label27.Text = "> Parcela";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(412, 10);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(97, 30);
+            this.label28.TabIndex = 94;
+            this.label28.Text = "Controle";
+            // 
+            // button11
+            // 
+            this.button11.Enabled = false;
+            this.button11.Image = global::Construtora.Properties.Resources.Undo_26px;
+            this.button11.Location = new System.Drawing.Point(412, 43);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(97, 45);
+            this.button11.TabIndex = 80;
+            this.button11.Text = "Desfazer";
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Image = global::Construtora.Properties.Resources.Edit_26px;
+            this.button12.Location = new System.Drawing.Point(777, 127);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(97, 45);
+            this.button12.TabIndex = 79;
+            this.button12.Text = "Editar";
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Image = global::Construtora.Properties.Resources.Delete_35px;
+            this.button13.Location = new System.Drawing.Point(412, 94);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(97, 45);
+            this.button13.TabIndex = 78;
+            this.button13.Text = "Cancelar";
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button14
+            // 
+            this.button14.Image = global::Construtora.Properties.Resources.US_Dollar_35px2;
+            this.button14.Location = new System.Drawing.Point(412, 145);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(97, 45);
+            this.button14.TabIndex = 77;
+            this.button14.Text = "Finalizar";
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cODPARCELADataGridViewTextBoxColumn,
+            this.vALORPARCELADataGridViewTextBoxColumn,
+            this.dATAVENCDataGridViewTextBoxColumn,
+            this.sTATUSPARCELADataGridViewTextBoxColumn,
+            this.cOMPLEMENTODataGridViewTextBoxColumn});
+            this.dataGridView5.DataSource = this.eNTRADAPARCELASBindingSource;
+            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView5.MultiSelect = false;
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView5.Size = new System.Drawing.Size(407, 196);
+            this.dataGridView5.TabIndex = 1;
+            this.dataGridView5.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellClick);
+            this.dataGridView5.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView5_CellFormatting);
+            // 
+            // eNTRADAPARCELASBindingSource
+            // 
+            this.eNTRADAPARCELASBindingSource.DataMember = "ENTRADA_PARCELAS";
+            this.eNTRADAPARCELASBindingSource.DataSource = this.construtoraDataSet;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cODFINANCDataGridViewTextBoxColumn,
+            this.vALORRECEBIDODataGridViewTextBoxColumn,
+            this.rECEBEVEICULODataGridViewTextBoxColumn,
+            this.iNADIMPLENTEDataGridViewTextBoxColumn,
+            this.rECEBEIMOVELDataGridViewTextBoxColumn,
+            this.pOSSSUIPARCELASDataGridViewTextBoxColumn,
+            this.nUMPARCELASDataGridViewTextBoxColumn,
+            this.pOSSSUIIMPOSTOSDataGridViewTextBoxColumn,
+            this.vALORTOTALDataGridViewTextBoxColumn,
+            this.dESPESAADICIONALDataGridViewTextBoxColumn,
+            this.lUCROTOTALDataGridViewTextBoxColumn,
+            this.STATUS_PAGAMENTO});
+            this.dataGridView1.DataSource = this.fINANCEIROBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 45);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(902, 222);
+            this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView2_CellFormatting);
             // 
             // cODFINANCDataGridViewTextBoxColumn
             // 
@@ -835,6 +1244,14 @@
             this.lUCROTOTALDataGridViewTextBoxColumn.Name = "lUCROTOTALDataGridViewTextBoxColumn";
             this.lUCROTOTALDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // STATUS_PAGAMENTO
+            // 
+            this.STATUS_PAGAMENTO.DataPropertyName = "STATUS_PAGAMENTO";
+            this.STATUS_PAGAMENTO.HeaderText = "Status";
+            this.STATUS_PAGAMENTO.Name = "STATUS_PAGAMENTO";
+            this.STATUS_PAGAMENTO.ReadOnly = true;
+            this.STATUS_PAGAMENTO.Width = 60;
+            // 
             // fINANCEIROBindingSource
             // 
             this.fINANCEIROBindingSource.DataMember = "FINANCEIRO";
@@ -852,27 +1269,139 @@
             // 
             this.vEICULOTableAdapter.ClearBeforeFill = true;
             // 
-            // CODVEICULO
+            // fINANCEIRO_IMPOSTOTableAdapter
             // 
-            this.CODVEICULO.DataPropertyName = "CODVEICULO";
-            this.CODVEICULO.HeaderText = "Cod";
-            this.CODVEICULO.Name = "CODVEICULO";
-            this.CODVEICULO.ReadOnly = true;
-            this.CODVEICULO.Width = 50;
+            this.fINANCEIRO_IMPOSTOTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // iMPOSTOTableAdapter
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "AVALIACAO";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Avaliação";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.iMPOSTOTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // eNTRADA_PARCELASTableAdapter
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "GASTOS";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Gastos";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.eNTRADA_PARCELASTableAdapter.ClearBeforeFill = true;
+            // 
+            // maskedTextBox10
+            // 
+            this.maskedTextBox10.Enabled = false;
+            this.maskedTextBox10.Location = new System.Drawing.Point(610, 156);
+            this.maskedTextBox10.Name = "maskedTextBox10";
+            this.maskedTextBox10.Size = new System.Drawing.Size(82, 20);
+            this.maskedTextBox10.TabIndex = 104;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(576, 159);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 13);
+            this.label30.TabIndex = 105;
+            this.label30.Text = "Num";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(731, 30);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(58, 13);
+            this.label35.TabIndex = 113;
+            this.label35.Text = "Cancelado";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Yellow;
+            this.panel4.Location = new System.Drawing.Point(707, 26);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(19, 19);
+            this.panel4.TabIndex = 112;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(819, 30);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(32, 13);
+            this.label36.TabIndex = 111;
+            this.label36.Text = "Pago";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel5.Location = new System.Drawing.Point(795, 26);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(19, 19);
+            this.panel5.TabIndex = 110;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(634, 30);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(67, 13);
+            this.label37.TabIndex = 109;
+            this.label37.Text = "Inadimplente";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(607, 10);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(40, 13);
+            this.label38.TabIndex = 108;
+            this.label38.Text = "Status:";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Red;
+            this.panel7.Location = new System.Drawing.Point(610, 26);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(19, 19);
+            this.panel7.TabIndex = 107;
+            // 
+            // cODPARCELADataGridViewTextBoxColumn
+            // 
+            this.cODPARCELADataGridViewTextBoxColumn.DataPropertyName = "CODPARCELA";
+            this.cODPARCELADataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.cODPARCELADataGridViewTextBoxColumn.Name = "cODPARCELADataGridViewTextBoxColumn";
+            this.cODPARCELADataGridViewTextBoxColumn.ReadOnly = true;
+            this.cODPARCELADataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cODPARCELADataGridViewTextBoxColumn.Width = 50;
+            // 
+            // vALORPARCELADataGridViewTextBoxColumn
+            // 
+            this.vALORPARCELADataGridViewTextBoxColumn.DataPropertyName = "VALOR_PARCELA";
+            this.vALORPARCELADataGridViewTextBoxColumn.HeaderText = "Valor Parcela";
+            this.vALORPARCELADataGridViewTextBoxColumn.Name = "vALORPARCELADataGridViewTextBoxColumn";
+            this.vALORPARCELADataGridViewTextBoxColumn.ReadOnly = true;
+            this.vALORPARCELADataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.vALORPARCELADataGridViewTextBoxColumn.Width = 80;
+            // 
+            // dATAVENCDataGridViewTextBoxColumn
+            // 
+            this.dATAVENCDataGridViewTextBoxColumn.DataPropertyName = "DATA_VENC";
+            this.dATAVENCDataGridViewTextBoxColumn.HeaderText = "Data Vencimento";
+            this.dATAVENCDataGridViewTextBoxColumn.Name = "dATAVENCDataGridViewTextBoxColumn";
+            this.dATAVENCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dATAVENCDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dATAVENCDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // sTATUSPARCELADataGridViewTextBoxColumn
+            // 
+            this.sTATUSPARCELADataGridViewTextBoxColumn.DataPropertyName = "STATUS_PARCELA";
+            this.sTATUSPARCELADataGridViewTextBoxColumn.HeaderText = "Status";
+            this.sTATUSPARCELADataGridViewTextBoxColumn.Name = "sTATUSPARCELADataGridViewTextBoxColumn";
+            this.sTATUSPARCELADataGridViewTextBoxColumn.ReadOnly = true;
+            this.sTATUSPARCELADataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.sTATUSPARCELADataGridViewTextBoxColumn.Width = 60;
+            // 
+            // cOMPLEMENTODataGridViewTextBoxColumn
+            // 
+            this.cOMPLEMENTODataGridViewTextBoxColumn.DataPropertyName = "COMPLEMENTO";
+            this.cOMPLEMENTODataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.cOMPLEMENTODataGridViewTextBoxColumn.Name = "cOMPLEMENTODataGridViewTextBoxColumn";
+            this.cOMPLEMENTODataGridViewTextBoxColumn.ReadOnly = true;
+            this.cOMPLEMENTODataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Central_Financeira
             // 
@@ -892,13 +1421,22 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMOVELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.construtoraDataSet)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vEICULOBindingSource)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iMPOSTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROIMPOSTOBindingSource)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNTRADAPARCELASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fINANCEIROBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -982,5 +1520,52 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CODVEICULO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private ConstrutoraDataSetTableAdapters.FINANCEIRO_IMPOSTOTableAdapter fINANCEIRO_IMPOSTOTableAdapter;
+        private System.Windows.Forms.BindingSource fINANCEIROIMPOSTOBindingSource;
+        private ConstrutoraDataSetTableAdapters.IMPOSTOTableAdapter iMPOSTOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODIMPFINANCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODIMP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IMPOSTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vALORDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox9;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.BindingSource iMPOSTOBindingSource;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.BindingSource eNTRADAPARCELASBindingSource;
+        private ConstrutoraDataSetTableAdapters.ENTRADA_PARCELASTableAdapter eNTRADA_PARCELASTableAdapter;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODPARCELADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vALORPARCELADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAVENCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTATUSPARCELADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cOMPLEMENTODataGridViewTextBoxColumn;
     }
 }
