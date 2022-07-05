@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 
 namespace Construtora
 {
+
     public partial class Equipamento : Form
     {
         decimal valor1;
@@ -107,8 +108,6 @@ namespace Construtora
             conn = new SqlConnection(connectionString);
 
             //Cadastro Movimento Entrada
-            if (radioButton1.Checked)
-            {
 
 
                 comm = new SqlCommand(
@@ -126,7 +125,7 @@ namespace Construtora
                     comm.Parameters["@QNT_ENTRADA"].Value = numericUpDown1.Value;
 
                     comm.Parameters.Add("@VALOR", System.Data.SqlDbType.Money);
-                    comm.Parameters["@VALOR"].Value = maskedTextBox1.Text;
+                    comm.Parameters["@VALOR"].Value = maskedTextBox7.Text;
 
                     comm.Parameters.Add("@CODEQUIP", System.Data.SqlDbType.Int);
                     comm.Parameters["@CODEQUIP"].Value = last;
@@ -170,7 +169,6 @@ namespace Construtora
                 {
                     conn.Close();
                 }
-            }
         }
 
         private void selectlastinsert()
@@ -227,6 +225,12 @@ namespace Construtora
         {
             //Botão Confirmar Cadastro
             newcad = false;
+
+            if (maskedTextBox7.MaskCompleted == false)
+            {
+             MessageBox.Show("Insira o Valor Total!", "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             SqlConnection conn;
             SqlCommand comm;
@@ -445,20 +449,55 @@ namespace Construtora
 
         private void valtotal()
         {
+          //  label10.Text = Convert.ToString(valor1 + valor2 + valor3);
         }
 
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
         {
-            valtotal();
+          //  string um = maskedTextBox1.Text;
+          //  um =  maskedTextBox1.Text.Replace("R$", "");
+          //  um = um.Replace(".", "");
+          //  if (um != null)
+          //  {
+          //      valor1 = Convert.ToDecimal(um);
+          //  }
+          //  else
+          //  {
+          //      valor1 = 0;
+         //   }
+         //   valtotal();
         }
 
         private void maskedTextBox2_TextChanged(object sender, EventArgs e)
         {
-            valtotal();
+        //    string dois = maskedTextBox2.Text;
+        //   dois = maskedTextBox2.Text.Replace("R$", "");
+        //    dois = dois.Replace(".", "");
+        //   if (dois != null)
+        //    {
+        //        MessageBox.Show(dois);
+        //        valor2 = Convert.ToDecimal(dois);
+        //    }
+        //    else
+        //    {
+        //       valor2 = 0;
+        //    }
+        //    valtotal();
         }
 
         private void maskedTextBox3_TextChanged(object sender, EventArgs e)
         {
+           // string tres = maskedTextBox3.Text;
+           // tres = maskedTextBox2.Text.Replace("R$", "");
+           // tres = tres.Replace(".", "");
+           /// if (tres != null)
+          ///  {
+          //      valor3 = Convert.ToDecimal(tres);
+         //   }
+         //   else
+         //   {
+         //       valor3 = 0;
+        //    }
             valtotal();
         }
     }

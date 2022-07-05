@@ -379,10 +379,10 @@ namespace Construtora
                 comm.Parameters["@VALOR"].Value = maskedTextBox2.Text;
 
                 comm.Parameters.Add("@CODEQUIP", System.Data.SqlDbType.Int);
-                comm.Parameters["@CODEQUIP"].Value = comboBox5.SelectedValue;
+                comm.Parameters["@CODEQUIP"].Value = (comboBox5.SelectedValue);
 
                 comm.Parameters.Add("@CODVENDA", System.Data.SqlDbType.Int);
-                comm.Parameters["@CODVENDA"].Value = comboBox4.SelectedValue;
+                comm.Parameters["@CODVENDA"].Value = (comboBox4.SelectedValue);
 
                 comm.Parameters.Add("@COMPLEMENTO", System.Data.SqlDbType.NVarChar);
                 comm.Parameters["@COMPLEMENTO"].Value = richTextBox2.Text;
@@ -453,10 +453,10 @@ namespace Construtora
                 comm.Parameters["@VALOR"].Value = maskedTextBox2.Text;
 
                 comm.Parameters.Add("@CODVENDA", System.Data.SqlDbType.Int);
-                comm.Parameters["@CODVENDA"].Value = comboBox4.SelectedValue;
+                comm.Parameters["@CODVENDA"].Value = (comboBox4.SelectedValue);
 
                 comm.Parameters.Add("@CODPECA", System.Data.SqlDbType.Int);
-                comm.Parameters["@CODPECA"].Value = comboBox6.SelectedValue;
+                comm.Parameters["@CODPECA"].Value = (comboBox6.SelectedValue);
 
                 comm.Parameters.Add("@COMPLEMENTO", System.Data.SqlDbType.NVarChar);
                 comm.Parameters["@COMPLEMENTO"].Value = richTextBox2.Text;

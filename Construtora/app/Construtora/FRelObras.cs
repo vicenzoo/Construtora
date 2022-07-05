@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Construtora
 {
-    public partial class FRelVenda : Form
+    public partial class FRelObras : Form
     {
-        public FRelVenda()
+        public FRelObras()
         {
             InitializeComponent();
         }
 
-        private void FRelVenda_Load(object sender, EventArgs e)
+        private void FRelObras_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.CUSTO_VENDA'. Você pode movê-la ou removê-la conforme necessário.
-            this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
-
+            // TODO: esta linha de código carrega dados na tabela 'construtoraDataSet.OBRA'. Você pode movê-la ou removê-la conforme necessário.
+            this.oBRATableAdapter.Fill(this.construtoraDataSet.OBRA);
             this.reportViewer1.RefreshReport();
+
         }
     }
 }

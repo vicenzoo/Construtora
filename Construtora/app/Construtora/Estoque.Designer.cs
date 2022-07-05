@@ -120,6 +120,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
+            this.pECABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pECABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -144,6 +146,8 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1004,6 +1008,16 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "Editar";
             // 
+            // pECABindingSource1
+            // 
+            this.pECABindingSource1.DataMember = "PECA";
+            this.pECABindingSource1.DataSource = this.construtoraDataSet1;
+            // 
+            // pECABindingSource2
+            // 
+            this.pECABindingSource2.DataMember = "PECA";
+            this.pECABindingSource2.DataSource = this.construtoraDataSet1;
+            // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1048,6 +1062,8 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pECABindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1144,5 +1160,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CODEQUIP;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODPECA;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODVENDA;
+        private System.Windows.Forms.BindingSource pECABindingSource1;
+        private System.Windows.Forms.BindingSource pECABindingSource2;
     }
 }

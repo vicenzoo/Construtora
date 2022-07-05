@@ -59,8 +59,6 @@ namespace Construtora
             conn = new SqlConnection(connectionString);
 
             //Cadastro Movimento Entrada
-            if (radioButton1.Checked)
-            {
 
 
                 comm = new SqlCommand(
@@ -78,7 +76,7 @@ namespace Construtora
                     comm.Parameters["@QNT_ENTRADA"].Value = numericUpDown1.Value;
 
                     comm.Parameters.Add("@VALOR", System.Data.SqlDbType.Money);
-                    comm.Parameters["@VALOR"].Value = maskedTextBox1.Text;
+                    comm.Parameters["@VALOR"].Value = maskedTextBox7.Text;
 
                     comm.Parameters.Add("@CODPECA", System.Data.SqlDbType.Int);
                     comm.Parameters["@CODPECA"].Value = last;
@@ -122,7 +120,6 @@ namespace Construtora
                 {
                     conn.Close();
                 }
-            }
         }
 
         private void selectlastinsert()
@@ -210,6 +207,12 @@ namespace Construtora
         {
             //Botão Confirmar Cadastro
             newcad = false;
+
+            if (maskedTextBox7.MaskCompleted == false)
+            {
+                MessageBox.Show("Insira o Valor Total!", "Erro ao Abrir a Conexão com o Banco de Dados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             SqlConnection conn;
             SqlCommand comm;

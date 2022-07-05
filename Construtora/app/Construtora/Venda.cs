@@ -378,5 +378,11 @@ namespace Construtora
                 this.cUSTO_VENDATableAdapter.Fill(this.construtoraDataSet.CUSTO_VENDA);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FRelVenda r1 = new FRelVenda();
+            r1.Show();
+        }
     }
 }

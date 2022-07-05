@@ -434,5 +434,11 @@ namespace Construtora
                 this.oBRATableAdapter.Fill(this.construtoraDataSet.OBRA);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FRelObras r1 = new FRelObras();
+            r1.Show();
+        }
     }
 }

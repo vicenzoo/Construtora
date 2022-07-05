@@ -138,6 +138,12 @@
     <Compile Include="FRelEstoque.Designer.cs">
       <DependentUpon>FRelEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRelObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRelObras.Designer.cs">
+      <DependentUpon>FRelObras.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRelPecas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     <EmbeddedResource Include="FRelEstoque.resx">
       <DependentUpon>FRelEstoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRelObras.resx">
+      <DependentUpon>FRelObras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRelPecas.resx">
       <DependentUpon>FRelPecas.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +270,7 @@
     </Compile>
     <EmbeddedResource Include="Rel\RelEstoque.rdlc" />
     <EmbeddedResource Include="Rel\RelEquip.rdlc" />
+    <EmbeddedResource Include="Rel\RelObras.rdlc" />
     <EmbeddedResource Include="Rel\RelPeca.rdlc" />
     <EmbeddedResource Include="Rel\RelVenda.rdlc" />
     <EmbeddedResource Include="Venda.resx">
