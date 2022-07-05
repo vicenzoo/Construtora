@@ -214,3 +214,4 @@ C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Const
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Imovel_Financeiro.resources
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Imposto_Financeiro.resources
 C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.Central_Financeira.resources
+C:\Construtora-main\Construtora-main\Construtora\app\Construtora\obj\Debug\Construtora.FRelObras.resources
