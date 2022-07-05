@@ -2,61 +2,52 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix3">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.40282cm</Width>
+              <Width>1.92568cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.23201cm</Width>
+              <Width>2.36965cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.40639cm</Width>
+              <Width>3.69839cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.68048cm</Width>
+              <Width>4.00813cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.30937cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.06784cm</Width>
+              <Width>3.66417cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.05562cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.97042cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox44">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Data Registro</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
+                              <Value>Cod</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox44</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -72,21 +63,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox20">
+                    <Textbox Name="Textbox46">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Data Entrada</Value>
+                              <Value>Custo Estadia</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <rd:DefaultName>Textbox46</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -102,21 +93,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox22">
+                    <Textbox Name="Textbox48">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Qnt. Entrada</Value>
+                              <Value>Custo Desloc.</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox22</rd:DefaultName>
+                      <rd:DefaultName>Textbox48</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -132,21 +123,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox26">
+                    <Textbox Name="Textbox52">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Data Saída</Value>
+                              <Value>Custo Montag. Externa</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox26</rd:DefaultName>
+                      <rd:DefaultName>Textbox52</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -162,30 +153,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox28">
+                    <Textbox Name="Textbox50">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Qnt.</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Saída</Value>
+                              <Value>Data Início</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <rd:DefaultName>Textbox50</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -201,21 +183,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox30">
+                    <Textbox Name="Textbox54">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Valor</Value>
+                              <Value>Data Fim</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox30</rd:DefaultName>
+                      <rd:DefaultName>Textbox54</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -231,21 +213,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox32">
+                    <Textbox Name="Textbox58">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Descrição</Value>
+                              <Value>Vistoria</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox32</rd:DefaultName>
+                      <rd:DefaultName>Textbox58</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -262,25 +244,25 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.57896cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="DATA_REGISTRO">
+                    <Textbox Name="CODOBRA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DATA_REGISTRO.Value</Value>
+                              <Value>=Fields!CODOBRA.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>DATA_REGISTRO</rd:DefaultName>
+                      <rd:DefaultName>CODOBRA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -296,21 +278,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="DATA_ENTRADA">
+                    <Textbox Name="CUSTO_ESTADIA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DATA_ENTRADA.Value</Value>
+                              <Value>=Fields!CUSTO_ESTADIA.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>DATA_ENTRADA</rd:DefaultName>
+                      <rd:DefaultName>CUSTO_ESTADIA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -326,21 +308,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="QNT_ENTRADA">
+                    <Textbox Name="CUSTO_DESLOCAMENTO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!QNT_ENTRADA.Value</Value>
+                              <Value>=Fields!CUSTO_DESLOCAMENTO.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>QNT_ENTRADA</rd:DefaultName>
+                      <rd:DefaultName>CUSTO_DESLOCAMENTO</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -356,21 +338,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="DATA_SAIDA">
+                    <Textbox Name="CUSTO_MONTAG_EXTERNA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DATA_SAIDA.Value</Value>
+                              <Value>=Fields!CUSTO_MONTAG_EXTERNA.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>DATA_SAIDA</rd:DefaultName>
+                      <rd:DefaultName>CUSTO_MONTAG_EXTERNA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -386,21 +368,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="QNT_SAIDA">
+                    <Textbox Name="DATA_INICIO_MONTAG">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!QNT_SAIDA.Value</Value>
+                              <Value>=Fields!DATA_INICIO_MONTAG.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>QNT_SAIDA</rd:DefaultName>
+                      <rd:DefaultName>DATA_INICIO_MONTAG</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -416,21 +398,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="VALOR">
+                    <Textbox Name="DATA_FIM_MONTAG">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!VALOR.Value</Value>
+                              <Value>=Fields!DATA_FIM_MONTAG.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>VALOR</rd:DefaultName>
+                      <rd:DefaultName>DATA_FIM_MONTAG</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -446,21 +428,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="COMPLEMENTO">
+                    <Textbox Name="DATA_VISTORIA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!COMPLEMENTO.Value</Value>
+                              <Value>=Fields!DATA_VISTORIA.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>COMPLEMENTO</rd:DefaultName>
+                      <rd:DefaultName>DATA_VISTORIA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -500,9 +482,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.57891cm</Top>
-        <Height>2.54938cm</Height>
-        <Width>16.15453cm</Width>
+        <Top>0.34078cm</Top>
+        <Height>1.2cm</Height>
+        <Width>20.66602cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -510,10 +492,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>0.69792in</Height>
     <Style />
   </Body>
-  <Width>7.86006in</Width>
+  <Width>8.57372in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -542,7 +524,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Relatório de Mov. de Estoque</Value>
+                  <Value>Relatório de Obras</Value>
                   <Style>
                     <FontFamily>Segoe UI</FontFamily>
                     <FontSize>15pt</FontSize>
@@ -611,7 +593,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>2.49591cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -660,8 +642,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.14111cm</Top>
-          <Left>2.78899cm</Left>
+          <Top>0.25576cm</Top>
+          <Left>2.80663cm</Left>
           <Height>2.02848cm</Height>
           <Width>7.9775cm</Width>
           <Style>
@@ -690,8 +672,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox18</rd:DefaultName>
-          <Top>0.14111cm</Top>
-          <Left>10.80177cm</Left>
+          <Top>0.25576cm</Top>
+          <Left>10.81941cm</Left>
           <Height>0.6cm</Height>
           <Width>2.88396cm</Width>
           <ZIndex>1</ZIndex>
@@ -729,7 +711,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>1c226c64-f5ec-42d0-b878-9e8afcc20938</rd:DataSourceID>
+      <rd:DataSourceID>e64c5752-bb89-4824-b456-41ac7b9e9168</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -739,61 +721,61 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="CODESTOQUE">
-          <DataField>CODESTOQUE</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="DATA_REGISTRO">
-          <DataField>DATA_REGISTRO</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="DATA_ENTRADA">
-          <DataField>DATA_ENTRADA</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="QNT_ENTRADA">
-          <DataField>QNT_ENTRADA</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="DATA_SAIDA">
-          <DataField>DATA_SAIDA</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="QNT_SAIDA">
-          <DataField>QNT_SAIDA</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="VALOR">
-          <DataField>VALOR</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="CODEQUIP">
-          <DataField>CODEQUIP</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="CODPECA">
-          <DataField>CODPECA</DataField>
+        <Field Name="CODOBRA">
+          <DataField>CODOBRA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="CODVENDA">
           <DataField>CODVENDA</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="COMPLEMENTO">
-          <DataField>COMPLEMENTO</DataField>
+        <Field Name="CUSTO_ESTADIA">
+          <DataField>CUSTO_ESTADIA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CUSTO_DESLOCAMENTO">
+          <DataField>CUSTO_DESLOCAMENTO</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CUSTO_MONTAG_EXTERNA">
+          <DataField>CUSTO_MONTAG_EXTERNA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DATA_INICIO_MONTAG">
+          <DataField>DATA_INICIO_MONTAG</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="DATA_FIM_MONTAG">
+          <DataField>DATA_FIM_MONTAG</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="STATUS_VISTORIA">
+          <DataField>STATUS_VISTORIA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DATA_VISTORIA">
+          <DataField>DATA_VISTORIA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="STATUS_OBRA">
+          <DataField>STATUS_OBRA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DATA_FIM_OBRA">
+          <DataField>DATA_FIM_OBRA</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>ConstrutoraDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Construtora-main\Construtora-main\Construtora\app\Construtora\ConstrutoraDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>ESTOQUE</rd:TableName>
+        <rd:TableName>OBRA</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ESTOQUETableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>OBRATableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>a63f98a5-f113-47ff-a29e-09af7620a78a</rd:ReportID>
+  <rd:ReportID>2afcb955-85bf-4f7c-b2e2-cad825cafab2</rd:ReportID>
 </Report>

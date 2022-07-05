@@ -583,7 +583,7 @@
         <Border>
           <Style>None</Style>
         </Border>
-        <BackgroundColor>Silver</BackgroundColor>
+        <BackgroundColor>DimGray</BackgroundColor>
       </Style>
     </PageFooter>
     <PageHeight>14.8cm</PageHeight>
